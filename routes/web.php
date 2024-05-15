@@ -4,7 +4,8 @@ use App\Http\Controllers\ActivityController;
     use App\Http\Controllers\BehaviourController;
     use App\Http\Controllers\InternationalSchoolExportController;
     use App\Http\Controllers\PermissionController;
-use App\Http\Controllers\ProfileController;
+    use App\Http\Controllers\PreUniversityExportController;
+    use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
@@ -50,6 +51,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/export/international-school/academic-transcript-export', [InternationalSchoolExportController::class,'academictranscriptexport'])->name('export.international-school.academic-transcript-export');
     Route::get('/export/international-school/download/{file}', [InternationalSchoolExportController::class,'downloadExample'])->name('export.international-school.download');
 
+    Route::get('/export/pre-university', [PreUniversityExportController::class,'index'])->name('export.pre-university.index');
+    Route::get('/export/pre-university/reportcard', [PreUniversityExportController::class,'reportcard'])->name('export.pre-university.reportcard');
+    Route::post('/export/pre-university/reportcard-export', [PreUniversityExportController::class,'reportcardExport'])->name('export.pre-university.reportcard-export');
 });
 
     //Route::get('class/insert',function(){

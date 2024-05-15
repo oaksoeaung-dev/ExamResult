@@ -1,18 +1,8 @@
-@php use App\Helpers\AcademicTranscriptGradeFormatIS;use Carbon\Carbon; @endphp
 @php
-    /*foreach($records as $record){
-        //echo AcademicTranscriptGradeFormatIS::format($record["Science"]);
-        foreach ($record as $name => $column){
-            echo $name."=>";
-            echo $column;
-            echo "<br/>";
-
-        }
-
-    }*/
-
+    use App\Helpers\AcademicTranscriptGradeFormatIS;
+    use Carbon\Carbon;
 @endphp
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -84,16 +74,6 @@
                                 <td class="px-6 py-1 border">{{ AcademicTranscriptGradeFormatIS::format($mark) }}</td>
                             </tr>
                         @endforeach
-                        {{--<tr>
-                            <td class="px-6 py-1 border">Maths</td>
-                            <td class="px-6 py-1 border">87.5</td>
-                            <td class="px-6 py-1 border">A*</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-1 border">Science</td>
-                            <td class="px-6 py-1 border">87.5</td>
-                            <td class="px-6 py-1 border">A*</td>
-                        </tr>--}}
                         </tbody>
                     </table>
                 </div>
@@ -149,8 +129,7 @@
             </section>
         </div>
     </div>
-    <div
-        class="[width:21cm] [min-height:29.7cm] p-[12px] my-[20px] mx-auto border border-gray-300 rounded-md shadow-md print:m-0 print:border-none print:rounded-none print:break-after-page print:shadow-none text-gray-900">
+    <div class="[width:21cm] [min-height:29.7cm] p-[12px] my-[20px] mx-auto border border-gray-300 rounded-md shadow-md print:m-0 print:border-none print:rounded-none print:break-after-page print:shadow-none text-gray-900">
         <div class="border border-[#00223d] p-3 h-[29cm] rounded-md space-y-4">
             <section class="space-y-1">
                 <h1 class="text-sm font-semibold">Explanatory Notes</h1>

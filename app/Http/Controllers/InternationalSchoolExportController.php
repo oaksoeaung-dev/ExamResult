@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UploadCSVRequest;
+use App\Http\Requests\UploadCSVISRequest;
 use App\Models\Learninghour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -22,7 +22,7 @@ class InternationalSchoolExportController extends Controller
         return view('export.international-school.academic-transcript');
     }
 
-    public function academictranscriptexport(UploadCSVRequest $request)
+    public function academictranscriptexport(UploadCSVISRequest $request)
     {
         $learningHours = Learninghour::all();
         $reader = Reader::createFromPath($request->csv, 'r');

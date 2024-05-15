@@ -100,7 +100,7 @@
             </li>--}}
             <li>
                 <x-dropdown :active="request()->routeIs('export.*')" dropDownId="dropdown-export" dropDownName="Multiples Export" icon="fi fi-rr-move-to-folder">
-                    <x-dropdown-link :href="route('students.index')" :active="request()->routeIs('students.index')" class="pl-11" icon="fi fi-rr-apartment">
+                    <x-dropdown-link :href="route('export.pre-university.index')" :active="request()->routeIs('export.pre-university.*')" class="pl-11" icon="fi fi-rr-apartment">
                         <p>Pre-University</p>
                     </x-dropdown-link>
                     <x-dropdown-link :href="route('export.international-school.index')" :active="request()->routeIs('export.international-school.*')" class="pl-11" icon="fi fi-rr-school">
