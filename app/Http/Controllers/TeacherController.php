@@ -12,7 +12,9 @@ class TeacherController extends Controller
 {
     public function index()
     {
-        $teachers = Teacher::all();
+        $teachers = Teacher::when(request('search'), function($query) {
+            $query->where('name', 'like', '%' . request('search') . '%')->orWhere('email', 'like', '%' . request('search') . '%');
+        })->paginate(7);
         return view('teachers.index', compact('teachers'));
     }
 
