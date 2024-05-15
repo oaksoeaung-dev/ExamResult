@@ -15,7 +15,7 @@
                             <option value="80marks">80 Marks</option>
                             <option value="50marks">50 Marks</option>
                         </select>
-                        <a href="{{ route("export.international-school.download","GraduationExample.csv") }}" class="w-52 py-2 text-sm border-y border-r rounded-r-lg border-gray-200 bg-gray-50 flex gap-3 justify-center items-center peer-focus:border-gray-500 hover:bg-gray-100"><i class="fi fi-rr-file-download"></i><span>Example CSV</span></a>
+                        <a href="{{ route("export.pre-university.download","preuni_example.csv") }}" class="w-52 py-2 text-sm border-y border-r rounded-r-lg border-gray-200 bg-gray-50 flex gap-3 justify-center items-center peer-focus:border-gray-500 hover:bg-gray-100"><i class="fi fi-rr-file-download"></i><span>Example CSV</span></a>
                     </div>
                     @error('csv')
                         <p class="text-red-500 mt-1">{{ $message }}</p>

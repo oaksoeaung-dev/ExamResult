@@ -54,6 +54,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/export/pre-university', [PreUniversityExportController::class,'index'])->name('export.pre-university.index');
     Route::get('/export/pre-university/reportcard', [PreUniversityExportController::class,'reportcard'])->name('export.pre-university.reportcard');
     Route::post('/export/pre-university/reportcard-export', [PreUniversityExportController::class,'reportcardExport'])->name('export.pre-university.reportcard-export');
+    Route::get('/export/pre-university/download/{file}', [PreUniversityExportController::class,'downloadExample'])->name('export.pre-university.download');
 });
 
     //Route::get('class/insert',function(){

@@ -60,4 +60,9 @@ class PreUniversityExportController extends Controller
 
         return view('export.pre-university.output',compact('students','marks'));
     }
+
+    public function downloadExample($file)
+    {
+        return response()->download(public_path()."/examples/$file");
+    }
 }
