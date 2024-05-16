@@ -25,7 +25,7 @@
                 </div>
             </main>
         </div>
-        <img src="{{ asset('images/background/snowmen.svg') }}" alt="snowmen" class="h-52 object-cover absolute bottom-0 right-0 -z-10" />
+        <img src="{{ asset('images/background/snowmen.svg') }}" alt="snowmen" class="h-52 object-cover fixed bottom-0 right-0 -z-10" />
     </body>
     @yield('scripts')
 </html>
