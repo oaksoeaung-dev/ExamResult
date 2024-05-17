@@ -19,7 +19,7 @@
                     case ($mark >= 0 && $mark <= 20) || $mark == "D" :
                         return "D";
                     default :
-                        return "Error";
+                        return $mark;
                 }
             }
             else if($baseMark == "50marks")
@@ -33,7 +33,7 @@
                     case ($mark >= 0 && $mark <= 15) || $mark == "C" :
                         return "C";
                     default :
-                        return "Error";
+                        return $mark;
                 }
             }
         }

@@ -42,7 +42,7 @@
                     <span>{{ $student["Campus"] }}</span>
                 </p>
                 <p class="text-sm">
-                    <span class="font-semibold">Date Of Birth : </span>
+                    <span class="font-semibold">Date : </span>
                     <span>{{ Carbon::parse($student["Date"])->format("d-M-Y") }}</span>
                 </p>
             </div>
