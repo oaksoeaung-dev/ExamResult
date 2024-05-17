@@ -8,32 +8,50 @@
         {
             if($baseMark == "80marks")
             {
-                switch ($mark)
+                if(is_numeric($mark))
                 {
-                    case ((int)$mark >= 61 && (int)$mark <= 80) || $mark == "A" :
+                    if((int)$mark >= 61 && (int)$mark <= 80)
+                    {
                         return "A";
-                    case ($mark >= 41 && $mark <= 60) || $mark == "B" :
+                    }
+                    elseif((int)$mark >= 41 && (int)$mark <= 60)
+                    {
                         return "B";
-                    case ($mark >= 21 && $mark <= 40) || $mark == "C" :
+                    }
+                    elseif ((int)$mark >= 21 && (int)$mark <= 40)
+                    {
                         return "C";
-                    case ($mark >= 0 && $mark <= 20) || $mark == "D" :
+                    }
+                    elseif ((int)$mark >= 0 && (int)$mark <= 20)
+                    {
                         return "D";
-                    default :
-                        return $mark;
+                    }
+                }
+                else
+                {
+                    return $mark;
                 }
             }
             else if($baseMark == "50marks")
             {
-                switch ($mark)
+                if(is_numeric($mark))
                 {
-                    case ($mark >= 31 && $mark <= 50) || $mark == "A" :
+                    if((int)$mark >= 31 && (int)$mark <= 50)
+                    {
                         return "A";
-                    case ($mark >= 16 && $mark <= 30) || $mark == "B" :
+                    }
+                    elseif((int)$mark >= 16 && (int)$mark <= 30)
+                    {
                         return "B";
-                    case ($mark >= 0 && $mark <= 15) || $mark == "C" :
+                    }
+                    elseif ((int)$mark >= 0 && (int)$mark <= 15)
+                    {
                         return "C";
-                    default :
-                        return $mark;
+                    }
+                }
+                else
+                {
+                    return $mark;
                 }
             }
         }
