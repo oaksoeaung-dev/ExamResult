@@ -29,7 +29,7 @@
                 <p class=""><span class="text-red-500">အကြီးအသေး၊white space များကအစလွဲလို့မရပါ</span>။</p>
             </li>
             <li>
-                <span class="badge-green">Program</span> column တွင် <span class="badge-violet">dual</span><span class="badge-violet">cpc</span> နှစ်ခုပဲထည့်လို့ရပါတယ်။
+                <span class="badge-green">Program</span> column တွင် <span class="badge-violet">dual</span><span class="badge-violet">cpc</span><span class="badge-violet">cec</span> ပဲထည့်လို့ရပါတယ်။
             </li>
             <li>
                 <span class="badge-green">Campus</span> column တွင် <span class="badge-violet">online</span><span class="badge-violet">oncampus</span> နှစ်ခုပဲထည့်လို့ရပါတယ်။
