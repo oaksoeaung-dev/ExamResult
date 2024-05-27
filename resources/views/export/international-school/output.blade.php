@@ -120,7 +120,7 @@
                             <p class="text-xs font-bold">Signature of Dean (Upper Primary)</p>
                             @break
                         @case("secondary")
-                            <p class="text-xs font-bold">Signature of Dean (Upper Primary)</p>
+                            <p class="text-xs font-bold">Signature of Dean (Secondary Division)</p>
                             @break
                         @default
                             <p class="text-xs font-bold">Error</p>
