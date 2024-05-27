@@ -77,6 +77,32 @@
                     "Music" : "29.25"
                 }
             }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "60",
+                    "Social Studies" : "60"
+                },
+                "addonsubjects" : {
+                    "Phonics/Poem" : "60",
+                    "ESL" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "60",
+                    "Social Studies" : "60"
+                },
+                "addonsubjects" : {
+                    "Phonics/Poem" : "60",
+                    "ESL" : "30"
+                }
+            }
         }
     },
     "Primary 1" : {
@@ -163,6 +189,34 @@
                     "Physical Education" : "29.25",
                     "Art" : "29.25",
                     "Music" : "29.25"
+                }
+            }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "60",
+                    "Social Studies" : "60"
+                },
+                "addonsubjects" : {
+                    "Grammar" : "60",
+                    "Global Perspective" : "30",
+                    "ESL" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "60",
+                    "Social Studies" : "60"
+                },
+                "addonsubjects" : {
+                    "Grammar" : "60",
+                    "Global Perspective" : "30",
+                    "ESL" : "30"
                 }
             }
         }
@@ -253,6 +307,34 @@
                     "Music" : "29.25"
                 }
             }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "60",
+                    "Social Studies" : "60"
+                },
+                "addonsubjects" : {
+                    "Grammar" : "60",
+                    "Global Perspective" : "30",
+                    "ESL" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "60",
+                    "Social Studies" : "60"
+                },
+                "addonsubjects" : {
+                    "Grammar" : "60",
+                    "Global Perspective" : "30",
+                    "ESL" : "30"
+                }
+            }
         }
     },
     "Primary 3" : {
@@ -339,6 +421,32 @@
                     "Physical Education" : "29.25",
                     "Art" : "29.25",
                     "Music" : "29.25"
+                }
+            }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "90",
+                    "Social Studies" : "90"
+                },
+                "addonsubjects" : {
+                    "ESL" : "30",
+                    "Global Perspective" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "90",
+                    "Social Studies" : "90"
+                },
+                "addonsubjects" : {
+                    "ESL" : "30",
+                    "Global Perspective" : "30"
                 }
             }
         }
@@ -429,6 +537,32 @@
                     "Music" : "29.25"
                 }
             }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "90",
+                    "Social Studies" : "90"
+                },
+                "addonsubjects" : {
+                    "ESL" : "30",
+                    "Global Perspective" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "90",
+                    "Social Studies" : "90"
+                },
+                "addonsubjects" : {
+                    "ESL" : "30",
+                    "Global Perspective" : "30"
+                }
+            }
         }
     },
     "Primary 5" : {
@@ -515,6 +649,32 @@
                     "Physical Education" : "29.25",
                     "Art" : "29.25",
                     "Music" : "29.25"
+                }
+            }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "90",
+                    "Social Studies" : "90"
+                },
+                "addonsubjects" : {
+                    "ESL" : "30",
+                    "Global Perspective" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "90",
+                    "Social Studies" : "90"
+                },
+                "addonsubjects" : {
+                    "ESL" : "30",
+                    "Global Perspective" : "30"
                 }
             }
         }
@@ -607,6 +767,32 @@
                     "Physical Education" : "29.25",
                     "Art" : "29.25",
                     "Music" : "29.25"
+                }
+            }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "90",
+                    "Social Studies" : "90"
+                },
+                "addonsubjects" : {
+                    "ESL" : "30",
+                    "Global Perspective" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "90",
+                    "Maths" : "120",
+                    "Science" : "90",
+                    "Social Studies" : "90"
+                },
+                "addonsubjects" : {
+                    "ESL" : "30",
+                    "Global Perspective" : "30"
                 }
             }
         }
@@ -705,6 +891,32 @@
                     "Music" : "29.25"
                 }
             }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "120",
+                    "Maths" : "120",
+                    "Physics" : "60",
+                    "Chemistry" : "60",
+                    "Biology" : "60"
+                },
+                "addonsubjects" : {
+                    "Global Perspective" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "120",
+                    "Maths" : "120",
+                    "Physics" : "60",
+                    "Chemistry" : "60",
+                    "Biology" : "60"
+                },
+                "addonsubjects" : {
+                    "Global Perspective" : "30"
+                }
+            }
         }
     },
     "Secondary 2" : {
@@ -801,6 +1013,32 @@
                     "Music" : "29.25"
                 }
             }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "120",
+                    "Maths" : "120",
+                    "Physics" : "60",
+                    "Chemistry" : "60",
+                    "Biology" : "60"
+                },
+                "addonsubjects" : {
+                    "Global Perspective" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "120",
+                    "Maths" : "120",
+                    "Physics" : "60",
+                    "Chemistry" : "60",
+                    "Biology" : "60"
+                },
+                "addonsubjects" : {
+                    "Global Perspective" : "30"
+                }
+            }
         }
     },
     "Secondary 3" : {
@@ -894,6 +1132,32 @@
                     "ICT" : "29.25",
                     "Physical Education" : "29.25",
                     "Art" : "29.25"
+                }
+            }
+        },
+        "cec" : {
+            "oncampus" : {
+                "mainsubjects" : {
+                    "English" : "120",
+                    "Maths" : "120",
+                    "Physics" : "60",
+                    "Chemistry" : "60",
+                    "Biology" : "60"
+                },
+                "addonsubjects" : {
+                    "Global Perspective" : "30"
+                }
+            },
+            "online" : {
+                "mainsubjects" : {
+                    "English" : "120",
+                    "Maths" : "120",
+                    "Physics" : "60",
+                    "Chemistry" : "60",
+                    "Biology" : "60"
+                },
+                "addonsubjects" : {
+                    "Global Perspective" : "30"
                 }
             }
         }
