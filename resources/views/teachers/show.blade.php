@@ -16,7 +16,7 @@
             </div>
             <div class="space-y-5">
                 <img src="{{ asset('storage/signs/'.$teacher->sign) }}"
-                     class="w-40 h-40 object-cover bg-white border border-gray-300 ring-1 ring-gray-500 ring-offset-4" />
+                     class="w-40 h-40 object-contain bg-white border border-gray-300 ring-1 ring-gray-500 ring-offset-4" />
                 <h1 class="text-xl font-bold text-gray-700">{{ $teacher->name }}</h1>
                 <hr />
             </div>

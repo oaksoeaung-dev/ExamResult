@@ -209,7 +209,7 @@
         <section class="mt-5 flex justify-end">
             <div class="flex flex-col justify-center items-center gap-1">
                 <p class="text-xs font-bold">Class Teacher's Sign</p>
-                <img src="{{ asset('storage/signs/'.$student["Class Teacher Sign"].".png") }}" class="h-28 w-28 object-cover" alt="SignatureOfClassTeacher">
+                <img src="{{ asset('storage/signs/'.$student["Class Teacher Sign"].".png") }}" class="h-28 w-28 object-contain" alt="SignatureOfClassTeacher">
             </div>
         </section>
     </div>

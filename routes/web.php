@@ -50,6 +50,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/export/international-school/academic-transcript', [InternationalSchoolExportController::class,'academictranscript'])->name('export.international-school.academic-transcript');
     Route::post('/export/international-school/academic-transcript-export', [InternationalSchoolExportController::class,'academictranscriptexport'])->name('export.international-school.academic-transcript-export');
     Route::get('/export/international-school/download/{file}', [InternationalSchoolExportController::class,'downloadExample'])->name('export.international-school.download');
+    Route::get('/export/international-school/report-card', [InternationalSchoolExportController::class,'reportcard'])->name('export.international-school.report-card');
+    Route::post('/export/international-school/report-card-export', [InternationalSchoolExportController::class,'reportcardExport'])->name('export.international-school.report-card-export');
 
     Route::get('/export/pre-university', [PreUniversityExportController::class,'index'])->name('export.pre-university.index');
     Route::get('/export/pre-university/reportcard', [PreUniversityExportController::class,'reportcard'])->name('export.pre-university.reportcard');

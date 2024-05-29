@@ -9,8 +9,15 @@
             <li>
                 CSV file ထဲရှိ header column များကိုပြင်လို့မရပါ။
             </li>
-            <li>
-                Date များကိုထည့်ရာတွင် <span class="badge-red">Day/Month/Year</span> format အတိုင်းထည့်ရမည်။
+            <li class="space-y-3">
+                <p>Date များကိုထည့်ရာတွင် <span class="badge-red">Day-Month-Year</span> format အတိုင်းထည့်ရမည်။</p>
+                <p>
+                    <span>Example :</span>
+                    <span class="badge-violet">05.03.2000</span>
+                    <span class="badge-violet">05.Mar.2000</span>
+                    <span class="badge-violet">05-Mar-2000</span>
+                    <span class="badge-violet">05-03-2000</span>
+                </p>
             </li>
             <li class="space-y-3">
                 <p><span class="badge-green">Grade</span> column တွင်သတိပြုပေးပါ။ column ထဲတွင် ထည့်ရမည့်အတန်းနာမည်များကလွဲလို့မရပါ။</p>
