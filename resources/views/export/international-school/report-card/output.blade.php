@@ -261,14 +261,15 @@
                 @endif
             </section>
         @else
-            <section class="text-xs mt-3">
-                <table class="border border-collapse table-fixed h-fit w-full">
-                    <thead style="background-color: #00223d;">
+            @if(isset($student["Activity"]))
+                <section class="text-xs mt-3">
+                    <table class="border border-collapse table-fixed h-fit w-full">
+                        <thead style="background-color: #00223d;">
                         <tr>
                             <th colspan="{{ count($student["Activity"]) }}" class="border py-1 text-white">Grading For Activities Subjects</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             @foreach($student["Activity"] as $name => $activity)
                                 <td style="background-color: #00223d;" class="border py-1 w-[14%] text-white text-center">{{ $name }}</td>
@@ -279,9 +280,10 @@
                                 <td class="border py-1 w-[14%] text-center">{{ $activity }}</td>
                             @endforeach
                         </tr>
-                    </tbody>
-                </table>
-            </section>
+                        </tbody>
+                    </table>
+                </section>
+            @endif
         @endif
 
         <section class="mt-3 text-xs">
