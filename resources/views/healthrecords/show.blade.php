@@ -11,7 +11,7 @@
                 <div class="grid gap-4 place-items-center">
                     <img src="{{ !empty($record->image) ? asset('storage/studentphotos/'.$record->image) : asset('images/profiles/'. $record->gender.".png")  }}" class="w-36 h-36 overflow-hidden object-cover" alt="student image" />
 
-                    <h1 class="text-2xl font-bold">{{ $record->name }}</h1>
+                    <h1 class="text-2xl font-bold text-center">{{ $record->name }}</h1>
 
                     <div class="w-full grid md:grid-cols-2 gap-5">
 
