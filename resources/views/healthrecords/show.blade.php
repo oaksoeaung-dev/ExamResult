@@ -1,7 +1,8 @@
 @php use Carbon\Carbon; @endphp
 <x-app-layout>
     <div class="container mx-auto py-10 text-zinc-700">
-        <div class="my-5 flex justify-end">
+        <div class="my-5 flex justify-end gap-5">
+            <a href="{{ route('healthrecords.viewqr',$record->id) }}" class="btn-zinc">View QR</a>
             <a href="{{ route('healthrecords.edit',$record->id) }}" class="btn-zinc">Edit</a>
         </div>
         <div class="grid md:grid-cols-6 md:grid-rows-12 gap-3">
@@ -386,4 +387,3 @@
         </div>
     </div>
 </x-app-layout>
-

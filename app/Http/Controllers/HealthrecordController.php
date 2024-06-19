@@ -256,6 +256,12 @@ class HealthrecordController extends Controller
         return redirect()->route('healthrecords.show',$healthrecord->id);
     }
 
+    public function viewQr(Student $healthrecord)
+    {
+        $qrcode = $healthrecord->healthrecordqrcode;
+        return view('healthrecords.viewqr',compact('qrcode'));
+    }
+
     public function destroy(Healthrecord $healthrecord)
     {
         //

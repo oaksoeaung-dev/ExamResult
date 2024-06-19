@@ -55,6 +55,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/export/pre-university/download/{file}', [PreUniversityExportController::class,'downloadExample'])->name('export.pre-university.download');
 
     Route::resource('/healthrecords', HealthrecordController::class);
+    Route::get('/healthrecords/viewqr/{healthrecord}', [HealthrecordController::class,'viewQr'])->name('healthrecords.viewqr');
 
 
     Route::get('/permission', [PermissionController::class,'index'])->name('permission.index');
