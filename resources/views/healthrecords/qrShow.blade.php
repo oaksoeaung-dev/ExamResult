@@ -33,7 +33,7 @@
                         </div>
                         <div>
                             <p class="text-sm font-bold">Gender</p>
-                            <p class="text-zinc-600 text-xs font-medium">{{ $record->gender }}</p>
+                            <p class="text-zinc-600 text-xs font-medium">{{ ucfirst($record->gender) }}</p>
                         </div>
                     </div>
                     <div class="flex gap-4 bg-white px-4 py-3 rounded-lg">
