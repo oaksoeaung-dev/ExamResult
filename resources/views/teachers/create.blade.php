@@ -20,13 +20,13 @@
                 <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden items-center">
                     <div class="">
                         <input id="upload" type="file" name="sign" class="hidden"  />
-                        <div id="image-preview" class="max-w-sm p-6 bg-gray-50 rounded-lg items-center mx-auto text-center cursor-pointer">
+                        <div id="image-preview" class="max-w-sm p-6 bg-zinc-50 rounded-lg items-center mx-auto text-center cursor-pointer">
                             <label for="upload" class="cursor-pointer">
                                 <i class="fi fi-sr-inbox-out text-4xl mb-2"></i>
-                                <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-700">Upload teacher's sign</h5>
-                                <p class="font-normal text-sm text-gray-400 md:px-6">Choose photo size should be less than <b class="text-gray-600">2MB</b></p>
-                                <p class="font-normal text-sm text-gray-400 md:px-6">and should be in <b class="text-gray-600">PNG</b> format.</p>
-                                <span id="filename" class="text-gray-500 bg-gray-200 z-50"></span>
+                                <h5 class="mb-2 text-xl font-bold tracking-tight text-zinc-700">Upload teacher's sign</h5>
+                                <p class="font-normal text-sm text-zinc-400 md:px-6">Choose photo size should be less than <b class="text-zinc-600">2MB</b></p>
+                                <p class="font-normal text-sm text-zinc-400 md:px-6">and should be in <b class="text-zinc-600">PNG</b> format.</p>
+                                <span id="filename" class="text-zinc-500 bg-zinc-200 z-50"></span>
                             </label>
                         </div>
                     </div>
@@ -38,8 +38,8 @@
 
 
             <div class="flex gap-10 justify-end mt-5 w-1/3">
-                <a href="{{ route('teachers.index') }}" class="btn-outline-gray w-full">Cancel</a>
-                <button type="submit" class="btn-gray w-full">Create</button>
+                <a href="{{ route('teachers.index') }}" class="btn-outline-zinc w-full">Cancel</a>
+                <button type="submit" class="btn-zinc w-full">Create</button>
             </div>
         </form>
     </div>

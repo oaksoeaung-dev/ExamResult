@@ -7,7 +7,7 @@
         <div class="py-28 px-10">
             <x-auth-session-status class="mb-4" :status="session('status')" />
 
-            <h1 class="text-4xl text-gray-800 text-center my-4">WELCOME</h1>
+            <h1 class="text-4xl text-zinc-800 text-center my-4">WELCOME</h1>
 
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -27,13 +27,13 @@
                 <!-- Remember Me -->
                 <div class="block mt-4">
                     <label for="remember_me" class="inline-flex items-center">
-                        <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-gray-600 shadow-sm focus:ring-gray-500" name="remember">
-                        <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                        <input id="remember_me" type="checkbox" class="rounded border-zinc-300 text-zinc-600 shadow-sm focus:ring-zinc-500" name="remember">
+                        <span class="ms-2 text-sm text-zinc-600">{{ __('Remember me') }}</span>
                     </label>
                 </div>
 
                 <div class="flex items-center justify-end mt-4">
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" href="{{ route('register') }}">
+                    <a class="underline text-sm text-zinc-600 hover:text-zinc-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-500" href="{{ route('register') }}">
                         {{ __('Register here!') }}
                     </a>
                     <x-primary-button class="ms-3">

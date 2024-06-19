@@ -12,8 +12,8 @@
             </div>
 
             <div>
-                <p class="block mb-2 text-sm font-medium text-gray-700">Permissions For Subject</p>
-                <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white divide-x divide-gray-200 border border-gray-200 rounded-lg sm:flex shadow">
+                <p class="block mb-2 text-sm font-medium text-zinc-700">Permissions For Subject</p>
+                <ul class="items-center w-full text-sm font-medium text-zinc-900 bg-white divide-x divide-zinc-200 border border-zinc-200 rounded-lg sm:flex shadow">
                     <li class="w-full ps-3">
                         <x-select-box name="subject_create">Create</x-select-box>
                     </li>
@@ -30,8 +30,8 @@
             </div>
 
             <div class="flex gap-10 justify-end mt-5">
-                <a href="{{ route('role.index') }}" class="btn-outline-gray w-full">Cancel</a>
-                <button type="submit" class="btn-gray w-full">Create</button>
+                <a href="{{ route('role.index') }}" class="btn-outline-zinc w-full">Cancel</a>
+                <button type="submit" class="btn-zinc w-full">Create</button>
             </div>
         </form>
     </div>

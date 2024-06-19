@@ -21,7 +21,7 @@
                 <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden items-center">
                     <div class="">
                         <input id="upload" type="file" name="sign" class="hidden"  />
-                        <div id="image-preview" class="max-w-sm p-6 bg-gray-50 rounded-lg items-center mx-auto text-center cursor-pointer">
+                        <div id="image-preview" class="max-w-sm p-6 bg-zinc-50 rounded-lg items-center mx-auto text-center cursor-pointer">
                             <img src="{{ asset('storage/signs/'.$teacher->sign) }}" class="w-48 h-48 object-cover rounded-lg mx-auto" alt="Image preview" />
                         </div>
                     </div>
@@ -33,8 +33,8 @@
 
 
             <div class="flex gap-10 justify-end mt-5 w-1/3">
-                <a href="{{ route('teachers.index') }}" class="btn-outline-gray w-full">Cancel</a>
-                <button type="submit" class="btn-gray w-full">Update</button>
+                <a href="{{ route('teachers.index') }}" class="btn-outline-zinc w-full">Cancel</a>
+                <button type="submit" class="btn-zinc w-full">Update</button>
             </div>
         </form>
     </div>

@@ -19,14 +19,14 @@
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <i class="fi fi-rr-calendar"></i>
                         </div>
-                        <input name="start" type="text" value="{{ old('start',Carbon::parse($class->startdate)->format("d-M-Y")) }}" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5" placeholder="Select date start">
+                        <input name="start" type="text" value="{{ old('start',Carbon::parse($class->startdate)->format("d-M-Y")) }}" class="border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5" placeholder="Select date start">
                     </div>
-                    <span class="mx-4 text-gray-500">to</span>
+                    <span class="mx-4 text-zinc-500">to</span>
                     <div class="relative">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <i class="fi fi-rr-calendar"></i>
                         </div>
-                        <input name="end" type="text" value="{{ old('end',Carbon::parse($class->enddate)->format("d-M-Y")) }}" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 " placeholder="Select date end">
+                        <input name="end" type="text" value="{{ old('end',Carbon::parse($class->enddate)->format("d-M-Y")) }}" class="border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5 " placeholder="Select date end">
                     </div>
                 </div>
 
@@ -80,8 +80,8 @@
             </div>
 
             <div class="flex gap-10 justify-end mt-5 w-1/2">
-                <a href="{{ route('classes.index') }}" class="btn-outline-gray w-full">Cancel</a>
-                <button type="submit" class="btn-gray w-full">Update</button>
+                <a href="{{ route('classes.index') }}" class="btn-outline-zinc w-full">Cancel</a>
+                <button type="submit" class="btn-zinc w-full">Update</button>
             </div>
         </form>
     </div>

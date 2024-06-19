@@ -4,7 +4,7 @@
             <img src="{{ asset('images/background/citylife.svg') }}" class="w-full object-cover"/>
         </div>
         <div class="py-16 px-10">
-            <h1 class="text-4xl text-gray-800 text-center my-4">User Registration</h1>
+            <h1 class="text-4xl text-zinc-800 text-center my-4">User Registration</h1>
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="flex items-center justify-end mt-4">
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" href="{{ route('login') }}">
+                    <a class="underline text-sm text-zinc-600 hover:text-zinc-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-500" href="{{ route('login') }}">
                         {{ __('Already registered?') }}
                     </a>
 

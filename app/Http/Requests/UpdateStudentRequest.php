@@ -18,6 +18,7 @@ class UpdateStudentRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:50', new Letter()],
             'email' => ['required','email',new KbtcMail(),'unique:students,email,'.$this->route('student')->id],
+            'stdId' => ['required','unique:students,stdId,'.$this->route('student')->id],
             'phone' => ['required','numeric'],
             'gender' => ['required','in:male,female'],
             'studentphoto' => ['extensions:jpg,jpeg,png','mimes:jpg,jpeg,png','file','max:2048'],

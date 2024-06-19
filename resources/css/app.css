@@ -6,7 +6,7 @@
 
 @layer base {
     * {
-        @apply font-roboto text-gray-800;
+        @apply font-roboto text-zinc-800;
     }
 
     i {
@@ -27,6 +27,10 @@
         @apply text-white bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300;
     }
 
+    .btn-zinc {
+        @apply text-white bg-zinc-900 focus:ring-4 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300;
+    }
+
     .btn-sky {
         @apply text-white bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300;
     }
@@ -41,6 +45,10 @@
 
     .btn-outline-gray {
         @apply text-gray-700 focus:ring-4 border border-gray-300 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300;
+    }
+
+    .btn-outline-zinc {
+        @apply text-zinc-700 focus:ring-4 border border-zinc-300 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300;
     }
 
     .badge-red {

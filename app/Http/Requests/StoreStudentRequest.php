@@ -21,6 +21,7 @@ class StoreStudentRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:50', new Letter()],
             'email' => ['required','email',new KbtcMail(),'unique:students,email'],
+            'stdId' => ['required','unique:students,stdId'],
             'phone' => ['required','numeric'],
             'gender' => ['required','in:male,female'],
             'studentphoto' => ['extensions:jpg,jpeg,png','mimes:jpg,jpeg,png','file','max:2048'],

@@ -1,14 +1,14 @@
 @props(['disabled' => false,'messages','icon'])
 
 <div class="relative">
-    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none {{ !empty($messages) ? 'text-red-500' : 'text-gray-600' }}">
+    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none {{ !empty($messages) ? 'text-red-500' : 'text-zinc-600' }}">
         <i class=" {{ !empty($icon) ? $icon : '' }}"></i>
     </div>
     <input
         {{ $disabled ? 'disabled' : '' }}
         {{ $attributes }}
         @class([
-            "bg-white border-gray-300 border text-gray-900 text-sm rounded-lg shadow-sm focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5",
+            "bg-white border-zinc-300 border text-zinc-900 text-sm rounded-lg shadow-sm focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5",
             "border-red-400" => !empty($messages)
         ])
     >
@@ -22,4 +22,4 @@
     </ul>
 @endif
 
-{{-- {!! $attributes->merge(['class' => "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg shadow-sm focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5"]) !!} --}}
+{{-- {!! $attributes->merge(['class' => "bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg shadow-sm focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"]) !!} --}}

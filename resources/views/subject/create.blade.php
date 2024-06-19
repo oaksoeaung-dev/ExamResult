@@ -12,7 +12,7 @@
             </div>
 
             <div class="">
-                <p class="text-sm font-medium text-gray-700 mb-2">Skills</p>
+                <p class="text-sm font-medium text-zinc-700 mb-2">Skills</p>
                 <div class="space-y-3">
                     @for($i = 1; $i <=6; $i++)
                         <div>
@@ -23,8 +23,8 @@
             </div>
 
             <div class="flex gap-10 justify-end mt-5">
-                <a href="{{ route('subjects.index') }}" class="btn-outline-gray w-full">Cancel</a>
-                <button type="submit" class="btn-gray w-full">Create</button>
+                <a href="{{ route('subjects.index') }}" class="btn-outline-zinc w-full">Cancel</a>
+                <button type="submit" class="btn-zinc w-full">Create</button>
             </div>
         </form>
     </div>

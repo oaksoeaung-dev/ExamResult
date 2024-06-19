@@ -5,8 +5,8 @@
         </div>
 
         <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left text-gray-500">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+            <table class="w-full text-sm text-left text-zinc-500">
+                <thead class="text-xs text-zinc-700 uppercase bg-zinc-100">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             Name
@@ -25,19 +25,19 @@
                 <tbody>
                     @foreach( $users as $user)
                         <tr class="bg-white border-b">
-                            <th class="px-6 py-4 font-normal text-gray-700 whitespace-nowrap">
+                            <th class="px-6 py-4 font-normal text-zinc-700 whitespace-nowrap">
                                 {{ $user->name }}
                             </th>
 
-                            <th class="px-6 py-4 font-normal text-gray-700 whitespace-nowrap">
+                            <th class="px-6 py-4 font-normal text-zinc-700 whitespace-nowrap">
                                 {{ $user->email }}
                             </th>
 
-                            <th class="px-6 py-4 font-normal text-gray-700 whitespace-nowrap">
+                            <th class="px-6 py-4 font-normal text-zinc-700 whitespace-nowrap">
                                 {{ $user->role->slug ??  "" }}
                             </th>
 
-                            <th class="px-6 py-4 font-normal text-gray-700 whitespace-nowrap flex gap-4">
+                            <th class="px-6 py-4 font-normal text-zinc-700 whitespace-nowrap flex gap-4">
                                 <a href="#" class="text-sky-500 hover:text-sky-700 transition-all duration-300">Edit</a>
                                 <a href="#" class="text-rose-500 hover:text-rose-700 transition-all duration-300">Delete</a>
                             </th>

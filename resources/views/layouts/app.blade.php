@@ -19,7 +19,7 @@
             @include('layouts.navigation')
             @include('layouts.aside')
             <!-- Page Content -->
-            <main class="p-4 sm:ml-64">
+            <main class="p-4 sm:ml-72">
                 <div class="p-4 mt-14">
                     {{ $slot }}
                 </div>

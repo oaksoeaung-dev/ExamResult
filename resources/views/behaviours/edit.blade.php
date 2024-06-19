@@ -13,8 +13,8 @@
             </div>
 
             <div class="flex gap-10 justify-end mt-5">
-                <a href="{{ route('behaviours.index') }}" class="btn-outline-gray w-full">Cancel</a>
-                <button type="submit" class="btn-gray w-full">Update</button>
+                <a href="{{ route('behaviours.index') }}" class="btn-outline-zinc w-full">Cancel</a>
+                <button type="submit" class="btn-zinc w-full">Update</button>
             </div>
         </form>
     </div>

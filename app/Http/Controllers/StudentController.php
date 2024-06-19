@@ -6,6 +6,7 @@ use App\Models\Academicclass;
 use App\Models\Student;
 use App\Http\Requests\StoreStudentRequest;
 use App\Http\Requests\UpdateStudentRequest;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -31,10 +32,17 @@ class StudentController extends Controller
             Storage::disk('public')->put('studentphotos/'.$newimagename,$image->get());
         }
 
+        $stdKey = Str::random(30);
+
         $student = Student::create([
+            "stdId" => $request->stdId,
+            "stdKey" => $stdKey,
             "name" => $request->name,
             "email" => $request->email,
             "phone" => $request->phone,
+            "address" => $request->address,
+            "dob" => Carbon::parse($request->dob),
+            "guardian_name" => $request->guardian_name,
             "gender" => $request->gender,
             "image" => empty($newimagename) ? "" : $newimagename,
         ]);
@@ -78,9 +86,12 @@ class StudentController extends Controller
                 $student->image = Str::of($request->email)->before("@")->lower().'.'.Str::of($student->image)->after('.');
             }
         }
-
+        $student->stdId = $request->stdId;
         $student->name = $request->name;
         $student->phone = $request->phone;
+        $student->address = $request->address;
+        $student->dob = Carbon::parse($request->dob);
+        $student->guardian_name = $request->guardian_name;
         $student->gender = $request->gender;
         $student->save();
 
@@ -90,6 +101,11 @@ class StudentController extends Controller
     public function destroy(Student $student)
     {
         Storage::disk('public')->delete('studentphotos/'.$student->image);
+        if(!empty($student->healthrecordqrcode->qrcode_path))
+        {
+            Storage::disk('public')->delete('healthrecordqrcodes/'.$student->healthrecordqrcode->qrcode_path);
+        }
+
         $student->delete();
         return redirect()->route('students.index');
     }
