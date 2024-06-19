@@ -26,7 +26,7 @@ class Student extends Model
 
     public function academicClasses() : BelongsToMany
     {
-        return $this->belongsToMany(AcademicClass::class);
+        return $this->belongsToMany(Academicclass::class);
     }
 
     public function historytaking() : HasOne
