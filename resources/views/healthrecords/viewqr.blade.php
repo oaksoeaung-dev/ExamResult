@@ -1,9 +1,14 @@
+@php
+    use SimpleSoftwareIO\QrCode\Facades\QrCode;
+@endphp
 <x-app-layout>
     
     <div class="p-10 border rounded-xl w-[70%] shadow-xl">
         <div id="capture-area" class="bg-gray-900 grid grid-cols-2 p-12 w-full h-[500px]">
             <div class="flex items-center justify-center">
-                <img src="{{ asset('storage/healthrecordqrcodes/'.$qrcode->qrcode_path) }}" class="p-5 bg-white rounded-xl" />
+                <div class="p-5 bg-white rounded-xl">
+                    {{ QrCode::size(200)->color(17, 24, 39)->generate(env('APP_URL')."/healthrecords/student/"."{$stdId}?"."stdKey="."{$stdKey}") }}
+                </div>
             </div>
             <div class="border-l-2 flex items-center justify-center">
                 <h1 class="text-zinc-50">{{ $name }}</h1>

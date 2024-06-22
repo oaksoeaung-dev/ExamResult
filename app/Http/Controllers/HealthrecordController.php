@@ -134,13 +134,6 @@ class HealthrecordController extends Controller
                 $sign->student()->associate($student);
                 $sign->save();
 
-                QrCode::size(200)->color(17, 24, 39)->generate(env('APP_URL')."/healthrecords/student/"."{$student->stdId}?"."stdKey="."{$student->stdKey}", storage_path("/app/public/healthrecordqrcodes/{$student->stdId}.svg"));
-                $healthrecordqrcode = new Healthrecordqrcode();
-                $healthrecordqrcode->url = env('APP_URL')."/healthrecords/student/"."{$student->stdId}?"."stdKey="."{$student->stdKey}";
-                $healthrecordqrcode->qrcode_path = "{$student->stdId}.svg";
-                $healthrecordqrcode->student()->associate($student);
-                $healthrecordqrcode->save();
-
                 return redirect()->route('healthrecords.show',$student->id);
             }
             else
@@ -259,8 +252,10 @@ class HealthrecordController extends Controller
     public function viewQr(Student $healthrecord)
     {
         $name = $healthrecord->name;
+        $stdId = $healthrecord->stdId;
+        $stdKey = $healthrecord->stdKey;
         $qrcode = $healthrecord->healthrecordqrcode;
-        return view('healthrecords.viewqr',compact('qrcode','name'));
+        return view('healthrecords.viewqr',compact('qrcode','name','stdId','stdKey'));
     }
 
     public function destroy(Healthrecord $healthrecord)
