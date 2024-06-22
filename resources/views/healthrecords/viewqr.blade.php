@@ -14,7 +14,16 @@
     
     @section('scripts')
         <script src="{{ asset('lib/html2canvas.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/screenshotqrcode.js') }}"></script>
+        <script type="text/javascript">
+            document.getElementById('capture-btn').addEventListener('click', function () {
+                html2canvas(document.querySelector("#capture-area")).then(canvas => {
+                    let link = document.createElement('a');
+                    link.download = "{{ $name }}";
+                    link.href = canvas.toDataURL();
+                    link.click();
+                });
+            });
+        </script>
     @endsection
     
 </x-app-layout>
