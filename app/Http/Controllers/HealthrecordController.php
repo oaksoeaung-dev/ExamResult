@@ -254,8 +254,7 @@ class HealthrecordController extends Controller
         $name = $healthrecord->name;
         $stdId = $healthrecord->stdId;
         $stdKey = $healthrecord->stdKey;
-        $qrcode = $healthrecord->healthrecordqrcode;
-        return view('healthrecords.viewqr',compact('qrcode','name','stdId','stdKey'));
+        return view('healthrecords.viewqr',compact('name','stdId','stdKey'));
     }
 
     public function destroy(Healthrecord $healthrecord)
