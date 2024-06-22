@@ -258,8 +258,9 @@ class HealthrecordController extends Controller
 
     public function viewQr(Student $healthrecord)
     {
+        $name = $healthrecord->name;
         $qrcode = $healthrecord->healthrecordqrcode;
-        return view('healthrecords.viewqr',compact('qrcode'));
+        return view('healthrecords.viewqr',compact('qrcode','name'));
     }
 
     public function destroy(Healthrecord $healthrecord)
