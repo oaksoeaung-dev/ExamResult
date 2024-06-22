@@ -134,7 +134,7 @@ class HealthrecordController extends Controller
                 $sign->student()->associate($student);
                 $sign->save();
 
-                QrCode::size(200)->color(39, 39, 42)->generate(env('APP_URL')."/healthrecords/student/"."{$student->stdId}?"."stdKey="."{$student->stdKey}", storage_path("/app/public/healthrecordqrcodes/{$student->stdId}.svg"));
+                QrCode::size(200)->color(17, 24, 39)->generate(env('APP_URL')."/healthrecords/student/"."{$student->stdId}?"."stdKey="."{$student->stdKey}", storage_path("/app/public/healthrecordqrcodes/{$student->stdId}.svg"));
                 $healthrecordqrcode = new Healthrecordqrcode();
                 $healthrecordqrcode->url = env('APP_URL')."/healthrecords/student/"."{$student->stdId}?"."stdKey="."{$student->stdKey}";
                 $healthrecordqrcode->qrcode_path = "{$student->stdId}.svg";
