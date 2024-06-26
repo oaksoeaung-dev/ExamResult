@@ -1,1163 +1,1163 @@
 {
-    "Kindergarten" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "87.75",
-                    "Science" : "58.5"
+    "Kindergarten": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "87.75",
+                    "Science": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "87.75",
-                    "Phonics/Poem" : "58.5",
-                    "Ethics/Moral" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "58.5",
-                    "Music " : "58.5",
-                    "Art " : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "87.75",
+                    "Phonics/Poem": "58.5",
+                    "Ethics/Moral": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "58.5",
+                    "Music ": "58.5",
+                    "Art ": "58.5"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "87.75",
-                    "Phonics/Poem" : "58.5",
-                    "Ethics/Moral" : "29.25",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "58.5",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "PE " : "29.25",
-                    "Art " : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "87.75",
+                    "Phonics/Poem": "58.5",
+                    "Ethics/Moral": "29.25",
+                    "STEM": "58.5",
+                    "Innovative Science": "58.5",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "PE ": "29.25",
+                    "Art ": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Phonics/Poem" : "58.5",
-                    "Ethics/Moral" : "58.5",
-                    "ESL" : "58.5",
-                    "ICT" : "58.5",
-                    "Physical Education " : "58.5",
-                    "Music " : "58.5",
-                    "Art " : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Phonics/Poem": "58.5",
+                    "Ethics/Moral": "58.5",
+                    "ESL": "58.5",
+                    "ICT": "58.5",
+                    "Physical Education ": "58.5",
+                    "Music ": "58.5",
+                    "Art ": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Phonics/Poem" : "58.5",
-                    "Ethics/Moral" : "29.25",
-                    "ESL" : "58.5",
-                    "ICT" : "58.5",
-                    "Physical Education " : "29.25",
-                    "Art " : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Phonics/Poem": "58.5",
+                    "Ethics/Moral": "29.25",
+                    "ESL": "58.5",
+                    "ICT": "58.5",
+                    "Physical Education ": "29.25",
+                    "Art ": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "60",
-                    "Social Studies" : "60"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "60",
+                    "Social Studies": "60"
                 },
-                "addonsubjects" : {
-                    "Phonics/Poem" : "60",
-                    "ESL" : "30"
+                "addonsubjects": {
+                    "Phonics/Poem": "60",
+                    "ESL": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "60",
-                    "Social Studies" : "60"
+            "online": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "60",
+                    "Social Studies": "60"
                 },
-                "addonsubjects" : {
-                    "Phonics/Poem" : "60",
-                    "ESL" : "30"
+                "addonsubjects": {
+                    "Phonics/Poem": "60",
+                    "ESL": "30"
                 }
             }
         }
     },
-    "Primary 1" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75"
+    "Primary 1": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "Phonics/Poem" : "58.5",
-                    "Ethics/Moral" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "Phonics/Poem": "58.5",
+                    "Ethics/Moral": "58.5",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "29.25",
-                    "Social Studies (Government)" : "29.25",
-                    "Phonics/Poem" : "29.25",
-                    "Ethics/Moral" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "PE" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "29.25",
+                    "Social Studies (Government)": "29.25",
+                    "Phonics/Poem": "29.25",
+                    "Ethics/Moral": "58.5",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "PE": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "Phonics/Poem" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "ESL" : "58.5",
-                    "ICT" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "Phonics/Poem": "58.5",
+                    "Global Perspective": "58.5",
+                    "ESL": "58.5",
+                    "ICT": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "29.25"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "29.25"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "Phonics/Poem" : "58.5",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "Phonics/Poem": "58.5",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "60",
-                    "Social Studies" : "60"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "60",
+                    "Social Studies": "60"
                 },
-                "addonsubjects" : {
-                    "Grammar" : "60",
-                    "Global Perspective" : "30",
-                    "ESL" : "30"
+                "addonsubjects": {
+                    "Grammar": "60",
+                    "Global Perspective": "30",
+                    "ESL": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "60",
-                    "Social Studies" : "60"
+            "online": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "60",
+                    "Social Studies": "60"
                 },
-                "addonsubjects" : {
-                    "Grammar" : "60",
-                    "Global Perspective" : "30",
-                    "ESL" : "30"
+                "addonsubjects": {
+                    "Grammar": "60",
+                    "Global Perspective": "30",
+                    "ESL": "30"
                 }
             }
         }
     },
-    "Primary 2" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75"
+    "Primary 2": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "Phonics/Poem" : "58.5",
-                    "Ethics/Moral" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "Phonics/Poem": "58.5",
+                    "Ethics/Moral": "58.5",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "29.25",
-                    "Social Studies (Government)" : "29.25",
-                    "Phonics/Poem" : "29.25",
-                    "Ethics/Moral" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "PE" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "29.25",
+                    "Social Studies (Government)": "29.25",
+                    "Phonics/Poem": "29.25",
+                    "Ethics/Moral": "58.5",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "PE": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "Phonics/Poem" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "ESL" : "58.5",
-                    "ICT" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "Phonics/Poem": "58.5",
+                    "Global Perspective": "58.5",
+                    "ESL": "58.5",
+                    "ICT": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "29.25"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "29.25"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "Phonics/Poem" : "58.5",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "Phonics/Poem": "58.5",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "60",
-                    "Social Studies" : "60"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "60",
+                    "Social Studies": "60"
                 },
-                "addonsubjects" : {
-                    "Grammar" : "60",
-                    "Global Perspective" : "30",
-                    "ESL" : "30"
+                "addonsubjects": {
+                    "Grammar": "60",
+                    "Global Perspective": "30",
+                    "ESL": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "60",
-                    "Social Studies" : "60"
+            "online": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "60",
+                    "Social Studies": "60"
                 },
-                "addonsubjects" : {
-                    "Grammar" : "60",
-                    "Global Perspective" : "30",
-                    "ESL" : "30"
+                "addonsubjects": {
+                    "Grammar": "60",
+                    "Global Perspective": "30",
+                    "ESL": "30"
                 }
             }
         }
     },
-    "Primary 3" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "58.5"
+    "Primary 3": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "58.5",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "ESL" : "58.5",
-                    "ICT" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "ESL": "58.5",
+                    "ICT": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "90",
-                    "Social Studies" : "90"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "90",
+                    "Social Studies": "90"
                 },
-                "addonsubjects" : {
-                    "ESL" : "30",
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "ESL": "30",
+                    "Global Perspective": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "90",
-                    "Social Studies" : "90"
+            "online": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "90",
+                    "Social Studies": "90"
                 },
-                "addonsubjects" : {
-                    "ESL" : "30",
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "ESL": "30",
+                    "Global Perspective": "30"
                 }
             }
         }
     },
-    "Primary 4" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "58.5"
+    "Primary 4": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "58.5",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "ESL" : "58.5",
-                    "ICT" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "ESL": "58.5",
+                    "ICT": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "90",
-                    "Social Studies" : "90"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "90",
+                    "Social Studies": "90"
                 },
-                "addonsubjects" : {
-                    "ESL" : "30",
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "ESL": "30",
+                    "Global Perspective": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "90",
-                    "Social Studies" : "90"
+            "online": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "90",
+                    "Social Studies": "90"
                 },
-                "addonsubjects" : {
-                    "ESL" : "30",
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "ESL": "30",
+                    "Global Perspective": "30"
                 }
             }
         }
     },
-    "Primary 5" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+    "Primary 5": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "58.5",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "29.25",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "PE" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "29.25",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "PE": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "ESL" : "58.5",
-                    "ICT" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "ESL": "58.5",
+                    "ICT": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Social Studies (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Social Studies (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "90",
-                    "Social Studies" : "90"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "90",
+                    "Social Studies": "90"
                 },
-                "addonsubjects" : {
-                    "ESL" : "30",
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "ESL": "30",
+                    "Global Perspective": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "90",
-                    "Social Studies" : "90"
+            "online": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "90",
+                    "Social Studies": "90"
                 },
-                "addonsubjects" : {
-                    "ESL" : "30",
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "ESL": "30",
+                    "Global Perspective": "30"
                 }
             }
         }
     },
-    "Primary 6" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+    "Primary 6": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government)" : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "58.5",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "58.5",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government)": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "58.5",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "58.5",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "87.75",
-                    "Social Studies" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "87.75",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "29.25",
-                    "Geography (Government)" : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "29.25",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "PE" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "29.25",
+                    "Geography (Government)": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "29.25",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "PE": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government) " : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "58.5",
-                    "ICT" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government) ": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "58.5",
+                    "ICT": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "117",
-                    "Science" : "58.5",
-                    "Social Studies" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "117",
+                    "Science": "58.5",
+                    "Social Studies": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government) " : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government) ": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "90",
-                    "Social Studies" : "90"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "90",
+                    "Social Studies": "90"
                 },
-                "addonsubjects" : {
-                    "ESL" : "30",
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "ESL": "30",
+                    "Global Perspective": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "90",
-                    "Maths" : "120",
-                    "Science" : "90",
-                    "Social Studies" : "90"
+            "online": {
+                "mainsubjects": {
+                    "English": "90",
+                    "Maths": "120",
+                    "Science": "90",
+                    "Social Studies": "90"
                 },
-                "addonsubjects" : {
-                    "ESL" : "30",
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "ESL": "30",
+                    "Global Perspective": "30"
                 }
             }
         }
     },
-    "Secondary 1" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "146.25",
-                    "Chemistry" : "58.5",
-                    "Physics " : "58.5",
-                    "Biology" : "58.5"
+    "Secondary 1": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "146.25",
+                    "Chemistry": "58.5",
+                    "Physics ": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government)" : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government)": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "117",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "117",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "29.25",
-                    "Geography (Government)" : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "29.25",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "PE" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "29.25",
+                    "Geography (Government)": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "29.25",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "PE": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "146.25",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "146.25",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government) " : "58.5",
-                    "History (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government) ": "58.5",
+                    "History (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "87.75",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "87.75",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government) " : "58.5",
-                    "History (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government) ": "58.5",
+                    "History (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "120",
-                    "Maths" : "120",
-                    "Physics" : "60",
-                    "Chemistry" : "60",
-                    "Biology" : "60"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "120",
+                    "Maths": "120",
+                    "Physics": "60",
+                    "Chemistry": "60",
+                    "Biology": "60"
                 },
-                "addonsubjects" : {
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "Global Perspective": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "120",
-                    "Maths" : "120",
-                    "Physics" : "60",
-                    "Chemistry" : "60",
-                    "Biology" : "60"
+            "online": {
+                "mainsubjects": {
+                    "English": "120",
+                    "Maths": "120",
+                    "Physics": "60",
+                    "Chemistry": "60",
+                    "Biology": "60"
                 },
-                "addonsubjects" : {
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "Global Perspective": "30"
                 }
             }
         }
     },
-    "Secondary 2" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "146.25",
-                    "Chemistry" : "58.5",
-                    "Physics " : "58.5",
-                    "Biology" : "58.5"
+    "Secondary 2": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "146.25",
+                    "Chemistry": "58.5",
+                    "Physics ": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government)" : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government)": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "117",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "117",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "29.25",
-                    "Geography (Government)" : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "29.25",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "PE" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "29.25",
+                    "Geography (Government)": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "29.25",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "PE": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "146.25",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "146.25",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government) " : "58.5",
-                    "History (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government) ": "58.5",
+                    "History (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "87.75",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "87.75",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government) " : "58.5",
-                    "History (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government) ": "58.5",
+                    "History (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25",
+                    "Music": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "120",
-                    "Maths" : "120",
-                    "Physics" : "60",
-                    "Chemistry" : "60",
-                    "Biology" : "60"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "120",
+                    "Maths": "120",
+                    "Physics": "60",
+                    "Chemistry": "60",
+                    "Biology": "60"
                 },
-                "addonsubjects" : {
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "Global Perspective": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "120",
-                    "Maths" : "120",
-                    "Physics" : "60",
-                    "Chemistry" : "60",
-                    "Biology" : "60"
+            "online": {
+                "mainsubjects": {
+                    "English": "120",
+                    "Maths": "120",
+                    "Physics": "60",
+                    "Chemistry": "60",
+                    "Biology": "60"
                 },
-                "addonsubjects" : {
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "Global Perspective": "30"
                 }
             }
         }
     },
-    "Secondary 3" : {
-        "cpc" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "117",
-                    "Maths" : "146.25",
-                    "Chemistry" : "58.5",
-                    "Physics " : "58.5",
-                    "Biology" : "58.5"
+    "Secondary 3": {
+        "cpc": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "117",
+                    "Maths": "146.25",
+                    "Chemistry": "58.5",
+                    "Physics ": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government)" : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "58.5",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government)": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "58.5",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "117",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "117",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "29.25",
-                    "Geography (Government)" : "29.25",
-                    "History (Government)" : "29.25",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "58.5",
-                    "STEM" : "29.25",
-                    "Innovative Science" : "29.25",
-                    "ESL" : "58.5",
-                    "NCC" : "29.25",
-                    "Language (Japanese/Chinese)" : "58.5",
-                    "PE" : "29.25",
-                    "Art" : "29.25",
-                    "Music" : "58.5"
+                "addonsubjects": {
+                    "Myanmar": "29.25",
+                    "Geography (Government)": "29.25",
+                    "History (Government)": "29.25",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "58.5",
+                    "STEM": "29.25",
+                    "Innovative Science": "29.25",
+                    "ESL": "58.5",
+                    "NCC": "29.25",
+                    "Language (Japanese/Chinese)": "58.5",
+                    "PE": "29.25",
+                    "Art": "29.25",
+                    "Music": "58.5"
                 }
             }
         },
-        "dual" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "146.25",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+        "dual": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "146.25",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government) " : "58.5",
-                    "History (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Music" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government) ": "58.5",
+                    "History (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Music": "29.25",
+                    "Art": "29.25"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "87.75",
-                    "Maths" : "87.75",
-                    "Chemistry" : "58.5",
-                    "Physics" : "58.5",
-                    "Biology" : "58.5"
+            "online": {
+                "mainsubjects": {
+                    "English": "87.75",
+                    "Maths": "87.75",
+                    "Chemistry": "58.5",
+                    "Physics": "58.5",
+                    "Biology": "58.5"
                 },
-                "addonsubjects" : {
-                    "Myanmar" : "58.5",
-                    "Geography (Government) " : "58.5",
-                    "History (Government)" : "58.5",
-                    "English (Grammar)" : "29.25",
-                    "Global Perspective" : "29.25",
-                    "ESL" : "29.25",
-                    "ICT" : "29.25",
-                    "Physical Education" : "29.25",
-                    "Art" : "29.25"
+                "addonsubjects": {
+                    "Myanmar": "58.5",
+                    "Geography (Government) ": "58.5",
+                    "History (Government)": "58.5",
+                    "English (Grammar)": "29.25",
+                    "Global Perspective": "29.25",
+                    "ESL": "29.25",
+                    "ICT": "29.25",
+                    "Physical Education": "29.25",
+                    "Art": "29.25"
                 }
             }
         },
-        "cec" : {
-            "oncampus" : {
-                "mainsubjects" : {
-                    "English" : "120",
-                    "Maths" : "120",
-                    "Physics" : "60",
-                    "Chemistry" : "60",
-                    "Biology" : "60"
+        "cec": {
+            "oncampus": {
+                "mainsubjects": {
+                    "English": "120",
+                    "Maths": "120",
+                    "Physics": "60",
+                    "Chemistry": "60",
+                    "Biology": "60"
                 },
-                "addonsubjects" : {
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "Global Perspective": "30"
                 }
             },
-            "online" : {
-                "mainsubjects" : {
-                    "English" : "120",
-                    "Maths" : "120",
-                    "Physics" : "60",
-                    "Chemistry" : "60",
-                    "Biology" : "60"
+            "online": {
+                "mainsubjects": {
+                    "English": "120",
+                    "Maths": "120",
+                    "Physics": "60",
+                    "Chemistry": "60",
+                    "Biology": "60"
                 },
-                "addonsubjects" : {
-                    "Global Perspective" : "30"
+                "addonsubjects": {
+                    "Global Perspective": "30"
                 }
             }
         }

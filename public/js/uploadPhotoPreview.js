@@ -1,11 +1,11 @@
-const uploadInput = document.getElementById('upload');
-const filenameLabel = document.getElementById('filename');
-const imagePreview = document.getElementById('image-preview');
+const uploadInput = document.getElementById("upload");
+const filenameLabel = document.getElementById("filename");
+const imagePreview = document.getElementById("image-preview");
 
 // Check if the event listener has been added before
 let isEventListenerAdded = false;
 
-uploadInput.addEventListener('change', (event) => {
+uploadInput.addEventListener("change", (event) => {
     const file = event.target.files[0];
 
     if (file) {
@@ -13,13 +13,12 @@ uploadInput.addEventListener('change', (event) => {
 
         const reader = new FileReader();
         reader.onload = (e) => {
-            imagePreview.innerHTML =
-                `<img src="${e.target.result}" class="w-48 h-48 object-cover rounded-lg mx-auto" alt="Image preview" />`;
-            imagePreview.classList.remove('border-dashed', 'border-2', 'border-gray-400');
+            imagePreview.innerHTML = `<img src="${e.target.result}" class="w-48 h-48 object-cover rounded-lg mx-auto" alt="Image preview" />`;
+            imagePreview.classList.remove("border-dashed", "border-2", "border-gray-400");
 
             // Add event listener for image preview only once
             if (!isEventListenerAdded) {
-                imagePreview.addEventListener('click', () => {
+                imagePreview.addEventListener("click", () => {
                     uploadInput.click();
                 });
 
@@ -28,13 +27,12 @@ uploadInput.addEventListener('change', (event) => {
         };
         reader.readAsDataURL(file);
     } else {
-        filenameLabel.textContent = '';
-        imagePreview.innerHTML =
-            `<div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-500">No image preview</div>`;
-        imagePreview.classList.add('border-dashed', 'border-2', 'border-gray-400');
+        filenameLabel.textContent = "";
+        imagePreview.innerHTML = `<div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-500">No image preview</div>`;
+        imagePreview.classList.add("border-dashed", "border-2", "border-gray-400");
 
         // Remove the event listener when there's no image
-        imagePreview.removeEventListener('click', () => {
+        imagePreview.removeEventListener("click", () => {
             uploadInput.click();
         });
 
@@ -42,6 +40,6 @@ uploadInput.addEventListener('change', (event) => {
     }
 });
 
-uploadInput.addEventListener('click', (event) => {
+uploadInput.addEventListener("click", (event) => {
     event.stopPropagation();
 });

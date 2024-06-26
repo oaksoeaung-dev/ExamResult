@@ -1,72 +1,92 @@
-@php use Carbon\Carbon; @endphp
+@php
+    use Carbon\Carbon;
+@endphp
+
 <x-app-layout>
     <div class="container mx-auto py-10 text-zinc-700">
         <div class="my-5 flex justify-end gap-5">
-            <a href="{{ route('healthrecords.viewqr',$record->id) }}" class="btn-zinc">View QR</a>
-            <a href="{{ route('healthrecords.edit',$record->id) }}" class="btn-zinc">Edit</a>
+            <a href="{{ route("healthrecords.viewqr", $record->id) }}" class="btn-zinc">View QR</a>
+            <a href="{{ route("healthrecords.edit", $record->id) }}" class="btn-zinc">Edit</a>
         </div>
-        <div class="grid md:grid-cols-6 md:grid-rows-12 gap-3">
+        <div class="grid gap-3 md:grid-cols-6 md:grid-rows-12">
             {{-- Start Personal Information --}}
-            <div class="w-full p-5 bg-gray-50 rounded-lg md:col-start-1 md:col-span-3 md:row-start-1 md:row-span-4">
-                <div class="grid gap-4 place-items-center">
-                    <img src="{{ !empty($record->image) ? asset('storage/studentphotos/'.$record->image) : asset('images/profiles/'. $record->gender.".png")  }}" class="w-36 h-36 overflow-hidden object-cover" alt="student image" />
+            <div class="w-full rounded-lg bg-gray-50 p-5 md:col-span-3 md:col-start-1 md:row-span-4 md:row-start-1">
+                <div class="grid place-items-center gap-4">
+                    <img
+                        src="{{ ! empty($record->image) ? asset("storage/studentphotos/" . $record->image) : asset("images/profiles/" . $record->gender . ".png") }}"
+                        class="h-36 w-36 overflow-hidden object-cover"
+                        alt="student image"
+                    />
 
-                    <h1 class="text-2xl font-bold text-center">{{ $record->name }}</h1>
+                    <h1 class="text-center text-2xl font-bold">{{ $record->name }}</h1>
 
-                    <div class="w-full grid md:grid-cols-2 gap-5">
-
-                        <div class="flex gap-4 bg-white px-4 py-3 rounded-lg">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center bg-violet-100 text-violet-500 flex-none">
+                    <div class="grid w-full gap-5 md:grid-cols-2">
+                        <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
+                            <div
+                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-violet-100 text-violet-500"
+                            >
                                 <i class="fi fi-rs-venus-mars"></i>
                             </div>
                             <div>
                                 <p class="text-sm font-bold">Gender</p>
-                                <p class="text-zinc-600 text-xs font-medium">{{ ucfirst($record->gender) }}</p>
+                                <p class="text-xs font-medium text-zinc-600">{{ ucfirst($record->gender) }}</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 bg-white px-4 py-3 rounded-lg">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center bg-teal-100 text-teal-500 flex-none">
+                        <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
+                            <div
+                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-teal-100 text-teal-500"
+                            >
                                 <i class="fi fi-rs-cake-wedding"></i>
                             </div>
                             <div>
                                 <p class="text-sm font-bold">Date Of Birth</p>
-                                <p class="text-zinc-600 text-xs font-medium">{{ Carbon::parse($record->dob)->format("d-M-Y") }}</p>
+                                <p class="text-xs font-medium text-zinc-600">
+                                    {{ Carbon::parse($record->dob)->format("d-M-Y") }}
+                                </p>
                             </div>
                         </div>
-                        <div class="flex gap-4 bg-white px-4 py-3 rounded-lg">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center bg-rose-100 text-rose-500 flex-none">
+                        <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
+                            <div
+                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-rose-100 text-rose-500"
+                            >
                                 <i class="fi fi-rs-envelopes"></i>
                             </div>
                             <div>
                                 <p class="text-sm font-bold">Email</p>
-                                <p class="text-zinc-600 text-xs font-medium">{{ $record->email }}</p>
+                                <p class="text-xs font-medium text-zinc-600">{{ $record->email }}</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 bg-white px-4 py-3 rounded-lg">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center bg-yellow-100 text-yellow-500 flex-none">
+                        <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
+                            <div
+                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
+                            >
                                 <i class="fi fi-rs-mobile-button"></i>
                             </div>
                             <div>
                                 <p class="text-sm font-bold">Phone</p>
-                                <p class="text-zinc-600 text-xs font-medium">{{ $record->phone }}</p>
+                                <p class="text-xs font-medium text-zinc-600">{{ $record->phone }}</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 bg-white px-4 py-3 rounded-lg">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center bg-lime-100 text-lime-500 flex-none">
+                        <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
+                            <div
+                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-lime-100 text-lime-500"
+                            >
                                 <i class="fi fi-rs-route"></i>
                             </div>
                             <div>
                                 <p class="text-sm font-bold">Address</p>
-                                <p class="text-zinc-600 text-xs font-medium">{{ $record->address }}</p>
+                                <p class="text-xs font-medium text-zinc-600">{{ $record->address }}</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 bg-white px-4 py-3 rounded-lg">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center bg-sky-100 text-cyan-500 flex-none">
+                        <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
+                            <div
+                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-sky-100 text-cyan-500"
+                            >
                                 <i class="fi fi-rs-users"></i>
                             </div>
                             <div>
                                 <p class="text-sm font-bold">Guardian</p>
-                                <p class="text-zinc-600 text-xs font-medium">{{ $record->guardian_name }}</p>
+                                <p class="text-xs font-medium text-zinc-600">{{ $record->guardian_name }}</p>
                             </div>
                         </div>
                     </div>
@@ -75,10 +95,10 @@
             {{-- End Personal Information --}}
 
             {{-- Start History Taking --}}
-            <div class="w-full bg-gray-50 rounded-lg p-5 md:col-start-4 md:col-span-3 md:row-start-1 md:row-span-4">
+            <div class="w-full rounded-lg bg-gray-50 p-5 md:col-span-3 md:col-start-4 md:row-span-4 md:row-start-1">
                 <div class="grid gap-4">
                     <div>
-                        <img src="{{ asset('images/icons/contract.png') }}" alt="history-taking" class="w-24" />
+                        <img src="{{ asset("images/icons/contract.png") }}" alt="history-taking" class="w-24" />
                     </div>
 
                     <h1 class="text-lg font-bold">History Taking</h1>
@@ -112,10 +132,14 @@
             {{-- End History Taking --}}
 
             {{-- Start Body & Nutritional status --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-1 md:col-span-2 md:row-start-5 md:row-span-3">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-1 md:row-span-3 md:row-start-5">
                 <div class="grid gap-4">
                     <div class="flex-none">
-                        <img src="{{ asset('images/icons/humanoid.png') }}" alt="Body & Nutritional status" class="w-16" />
+                        <img
+                            src="{{ asset("images/icons/humanoid.png") }}"
+                            alt="Body & Nutritional status"
+                            class="w-16"
+                        />
                     </div>
 
                     <h1 class="text-lg font-bold">Body & Nutritional status</h1>
@@ -144,10 +168,10 @@
             {{-- End Body & Nutritional status --}}
 
             {{-- Start Heart --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-3 md:col-span-2 md:row-start-5 md:row-span-1">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-1 md:row-start-5">
                 <div class="flex gap-4">
                     <div class="flex-none">
-                        <img src="{{ asset('images/icons/heart.png') }}" alt="Heart" class="w-16" />
+                        <img src="{{ asset("images/icons/heart.png") }}" alt="Heart" class="w-16" />
                     </div>
 
                     <div class="">
@@ -159,10 +183,10 @@
             {{-- End Heart --}}
 
             {{-- Start Lungs --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-3 md:col-span-2 md:row-start-6 md:row-span-1">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-1 md:row-start-6">
                 <div class="flex gap-4">
                     <div class="flex-none">
-                        <img src="{{ asset('images/icons/lungs.png') }}" alt="Lungs" class="w-16" />
+                        <img src="{{ asset("images/icons/lungs.png") }}" alt="Lungs" class="w-16" />
                     </div>
 
                     <div class="">
@@ -174,10 +198,10 @@
             {{-- End Lungs --}}
 
             {{-- Start Abdomen --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-3 md:col-span-2 md:row-start-7 md:row-span-1">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-1 md:row-start-7">
                 <div class="flex gap-4">
                     <div class="flex-none">
-                        <img src="{{ asset('images/icons/stomach.png') }}" alt="Abdomen" class="w-16" />
+                        <img src="{{ asset("images/icons/stomach.png") }}" alt="Abdomen" class="w-16" />
                     </div>
 
                     <div class="">
@@ -189,10 +213,10 @@
             {{-- End Abdomen --}}
 
             {{-- Start Mouth --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-5 md:col-span-2 md:row-start-5 md:row-span-3">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-5 md:row-span-3 md:row-start-5">
                 <div class="grid gap-4">
                     <div class="flex-none">
-                        <img src="{{ asset('images/icons/mouth.png') }}" alt="Mouth" class="w-16" />
+                        <img src="{{ asset("images/icons/mouth.png") }}" alt="Mouth" class="w-16" />
                     </div>
 
                     <h1 class="text-lg font-bold">Mouth</h1>
@@ -221,10 +245,10 @@
             {{-- End Mouth --}}
 
             {{-- Start Eye --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-1 md:col-span-2 md:row-start-8 md:row-span-2">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-1 md:row-span-2 md:row-start-8">
                 <div class="grid gap-4">
                     <div class="">
-                        <img src="{{ asset('images/icons/eye.png') }}" alt="Eye" class="w-16" />
+                        <img src="{{ asset("images/icons/eye.png") }}" alt="Eye" class="w-16" />
                     </div>
 
                     <h1 class="text-lg font-bold">Eye</h1>
@@ -243,10 +267,10 @@
             {{-- End Eye --}}
 
             {{-- Start Ear --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-3 md:col-span-2 md:row-start-8 md:row-span-2">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-2 md:row-start-8">
                 <div class="grid gap-4">
                     <div class="">
-                        <img src="{{ asset('images/icons/ear.png') }}" alt="Ear" class="w-16" />
+                        <img src="{{ asset("images/icons/ear.png") }}" alt="Ear" class="w-16" />
                     </div>
 
                     <h1 class="text-lg font-bold">Ear</h1>
@@ -265,10 +289,10 @@
             {{-- End Ear --}}
 
             {{-- Start Neck --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-5 md:col-span-2 md:row-start-8 md:row-span-2">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-5 md:row-span-2 md:row-start-8">
                 <div class="grid gap-4">
                     <div class="">
-                        <img src="{{ asset('images/icons/neck.png') }}" alt="Neck" class="w-16" />
+                        <img src="{{ asset("images/icons/neck.png") }}" alt="Neck" class="w-16" />
                     </div>
 
                     <h1 class="text-lg font-bold">Neck</h1>
@@ -287,10 +311,10 @@
             {{-- End Neck --}}
 
             {{-- Start Musuloskeletal --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-1 md:col-span-2 md:row-start-10 md:row-span-3">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-1 md:row-span-3 md:row-start-10">
                 <div class="grid gap-4">
                     <div class="">
-                        <img src="{{ asset('images/icons/muscular.png') }}" alt="Musuloskeletal" class="w-16" />
+                        <img src="{{ asset("images/icons/muscular.png") }}" alt="Musuloskeletal" class="w-16" />
                     </div>
 
                     <h1 class="text-lg font-bold">Musculoskeletal</h1>
@@ -314,10 +338,10 @@
             {{-- End Musuloskeletal --}}
 
             {{-- Start Allergy --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-3 md:col-span-2 md:row-start-10 md:row-span-2">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-2 md:row-start-10">
                 <div class="grid gap-4">
                     <div class="">
-                        <img src="{{ asset('images/icons/allergies.png') }}" alt="Allergy" class="w-16" />
+                        <img src="{{ asset("images/icons/allergies.png") }}" alt="Allergy" class="w-16" />
                     </div>
 
                     <h1 class="text-lg font-bold">Allergy</h1>
@@ -336,10 +360,10 @@
             {{-- End Allergy --}}
 
             {{-- Start Immunization --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-3 md:col-span-2 md:row-start-12 md:row-span-1">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-1 md:row-start-12">
                 <div class="flex gap-4">
                     <div class="flex-none">
-                        <img src="{{ asset('images/icons/immune-system.png') }}" alt="Immunization" class="w-16" />
+                        <img src="{{ asset("images/icons/immune-system.png") }}" alt="Immunization" class="w-16" />
                     </div>
 
                     <div class="">
@@ -351,10 +375,10 @@
             {{-- End Immunization --}}
 
             {{-- Start Personal Hygiene --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-5 md:col-span-2 md:row-start-10 md:row-span-1">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-5 md:row-span-1 md:row-start-10">
                 <div class="flex gap-4">
                     <div class="flex-none">
-                        <img src="{{ asset('images/icons/protection.png') }}" alt="Personal Hygiene" class="w-16" />
+                        <img src="{{ asset("images/icons/protection.png") }}" alt="Personal Hygiene" class="w-16" />
                     </div>
 
                     <div class="">
@@ -366,20 +390,26 @@
             {{-- End Personal Hygiene --}}
 
             {{-- Start Sign --}}
-            <div class="bg-gray-50 rounded-lg p-5 md:col-start-5 md:col-span-2 md:row-start-11 md:row-span-2">
+            <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-5 md:row-span-2 md:row-start-11">
                 <div class="grid gap-4">
                     <div class="">
-                        <img src="{{ asset('images/icons/doctor.png') }}" alt="Doctor" class="w-14" />
+                        <img src="{{ asset("images/icons/doctor.png") }}" alt="Doctor" class="w-14" />
                     </div>
 
                     <div class="space-y-1">
                         <h1 class="text-sm font-bold">Name</h1>
-                        <p class="text-sm">{{ $record->doctorsign->sign == "doctor1" ? "Dr. Aung Pyae Phyo" : "Dr. Khun Nyo Thway" }}</p>
+                        <p class="text-sm">
+                            {{ $record->doctorsign->sign == "doctor1" ? "Dr. Aung Pyae Phyo" : "Dr. Khun Nyo Thway" }}
+                        </p>
                     </div>
 
                     <div class="space-y-3">
                         <h1 class="text-sm font-bold">Sign</h1>
-                        <img src="{{ asset('storage/signs/'.$record->doctorsign->sign).'.png' }}" alt="signature" class="w-14 object-contain" />
+                        <img
+                            src="{{ asset("storage/signs/" . $record->doctorsign->sign) . ".png" }}"
+                            alt="signature"
+                            class="w-14 object-contain"
+                        />
                     </div>
                 </div>
             </div>

@@ -1,7 +1,10 @@
 <x-app-layout>
     <div class="space-y-10">
         <div>
-            <h1 class="flex gap-2 items-center"><i class="fi fi-rr-lesson-class"></i><span>Teachers</span></h1>
+            <h1 class="flex items-center gap-2">
+                <i class="fi fi-rr-lesson-class"></i>
+                <span>Teachers</span>
+            </h1>
         </div>
 
         <div>
@@ -9,39 +12,36 @@
         </div>
 
         <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left text-zinc-500">
-                <thead class="text-xs text-zinc-700 uppercase bg-zinc-100">
-                <tr>
-                    <th scope="col" class="px-6 py-3">
-                        Name
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Email
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Keyword
-                    </th>
-                </tr>
+            <table class="w-full text-left text-sm text-zinc-500">
+                <thead class="bg-zinc-100 text-xs uppercase text-zinc-700">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">Name</th>
+                        <th scope="col" class="px-6 py-3">Email</th>
+                        <th scope="col" class="px-6 py-3">Keyword</th>
+                    </tr>
                 </thead>
                 <tbody>
-                @foreach($teachers as $teacher)
-                    <tr class="bg-white border-b hover:bg-zinc-50 cursor-pointer transition-all duration-300" onclick="window.location.href='{{ route('teachers.show',$teacher->id) }}';">
-                        <th class="px-6 py-4 font-normal text-zinc-700 whitespace-nowrap">
-                            {{ $teacher->name }}
-                        </th>
-                        <th class="px-6 py-4 font-normal text-zinc-700 whitespace-nowrap">
-                            {{ $teacher->email }}
-                        </th>
-                        <th class="px-6 py-4 font-normal text-zinc-700 whitespace-nowrap">
-                            {{ $teacher->slug }}
-                        </th>
-                    </tr>
-                @endforeach
+                    @foreach ($teachers as $teacher)
+                        <tr
+                            class="cursor-pointer border-b bg-white transition-all duration-300 hover:bg-zinc-50"
+                            onclick="window.location.href='{{ route("teachers.show", $teacher->id) }}';"
+                        >
+                            <th class="whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
+                                {{ $teacher->name }}
+                            </th>
+                            <th class="whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
+                                {{ $teacher->email }}
+                            </th>
+                            <th class="whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
+                                {{ $teacher->slug }}
+                            </th>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
 
             <div class="mt-3">
-                {{ $teachers->links('vendor.pagination.tailwind') }}
+                {{ $teachers->links("vendor.pagination.tailwind") }}
             </div>
         </div>
     </div>
