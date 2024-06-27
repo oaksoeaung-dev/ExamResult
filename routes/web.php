@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\AcademicclassController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\BehaviourController;
@@ -28,48 +29,47 @@ Route::middleware('auth')->group(function () {
     Route::middleware(RedirectToNotFound::class)->group(function () {
         Route::resource('/activities', ActivityController::class);
 
-        Route::resource('/behaviours',BehaviourController::class);
+        Route::resource('/behaviours', BehaviourController::class);
 
         Route::resource('/classes', AcademicclassController::class);
-
-        Route::resource('/role', RoleController::class);
 
         Route::resource('/subjects', SubjectController::class);
     });
 
 
 
-    Route::view('/documentation/addTeacherAndSign','documentations.addTeacherAndSign')->name('documentation.addTeacherAndSign');
-    Route::view('/documentation/uploadTranscript','documentations.uploadTranscript')->name('documentation.uploadTranscript');
+    Route::view('/documentation/addTeacherAndSign', 'documentations.addTeacherAndSign')->name('documentation.addTeacherAndSign');
+    Route::view('/documentation/uploadTranscript', 'documentations.uploadTranscript')->name('documentation.uploadTranscript');
 
-    Route::get('/export/international-school', [InternationalSchoolExportController::class,'index'])->name('export.international-school.index');
-    Route::get('/export/international-school/academic-transcript', [InternationalSchoolExportController::class,'academictranscript'])->name('export.international-school.academic-transcript');
-    Route::post('/export/international-school/academic-transcript-export', [InternationalSchoolExportController::class,'academictranscriptexport'])->name('export.international-school.academic-transcript-export');
-    Route::get('/export/international-school/download/{file}', [InternationalSchoolExportController::class,'downloadExample'])->name('export.international-school.download');
-    Route::get('/export/international-school/report-card', [InternationalSchoolExportController::class,'reportcard'])->name('export.international-school.report-card');
-    Route::post('/export/international-school/report-card-export', [InternationalSchoolExportController::class,'reportcardExport'])->name('export.international-school.report-card-export');
+    Route::get('/export/international-school', [InternationalSchoolExportController::class, 'index'])->name('export.international-school.index');
+    Route::get('/export/international-school/academic-transcript', [InternationalSchoolExportController::class, 'academictranscript'])->name('export.international-school.academic-transcript');
+    Route::post('/export/international-school/academic-transcript-export', [InternationalSchoolExportController::class, 'academictranscriptexport'])->name('export.international-school.academic-transcript-export');
+    Route::get('/export/international-school/download/{file}', [InternationalSchoolExportController::class, 'downloadExample'])->name('export.international-school.download');
+    Route::get('/export/international-school/report-card', [InternationalSchoolExportController::class, 'reportcard'])->name('export.international-school.report-card');
+    Route::post('/export/international-school/report-card-export', [InternationalSchoolExportController::class, 'reportcardExport'])->name('export.international-school.report-card-export');
 
-    Route::get('/export/pre-university', [PreUniversityExportController::class,'index'])->name('export.pre-university.index');
-    Route::get('/export/pre-university/reportcard', [PreUniversityExportController::class,'reportcard'])->name('export.pre-university.reportcard');
-    Route::post('/export/pre-university/reportcard-export', [PreUniversityExportController::class,'reportcardExport'])->name('export.pre-university.reportcard-export');
-    Route::get('/export/pre-university/download/{file}', [PreUniversityExportController::class,'downloadExample'])->name('export.pre-university.download');
+    Route::get('/export/pre-university', [PreUniversityExportController::class, 'index'])->name('export.pre-university.index');
+    Route::get('/export/pre-university/reportcard', [PreUniversityExportController::class, 'reportcard'])->name('export.pre-university.reportcard');
+    Route::post('/export/pre-university/reportcard-export', [PreUniversityExportController::class, 'reportcardExport'])->name('export.pre-university.reportcard-export');
+    Route::get('/export/pre-university/download/{file}', [PreUniversityExportController::class, 'downloadExample'])->name('export.pre-university.download');
 
     Route::resource('/healthrecords', HealthrecordController::class);
-    Route::get('/healthrecords/viewqr/{healthrecord}', [HealthrecordController::class,'viewQr'])->name('healthrecords.viewqr');
+    Route::get('/healthrecords/viewqr/{healthrecord}', [HealthrecordController::class, 'viewQr'])->name('healthrecords.viewqr');
 
 
-    Route::get('/permission', [PermissionController::class,'index'])->name('permission.index');
+    Route::get('/permission', [PermissionController::class, 'index'])->name('permission.index');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::resource('/role', RoleController::class);
 
 
-    Route::resource('/students',StudentController::class);
-    Route::post('students/addacademicclass/{student}',[StudentController::class,'addAcademicClass'])->name('student.addAcademicClass');
-    Route::delete('students/removeacademicclass/{student}/{id}',[StudentController::class,'removeAcademicClass'])->name('student.removeAcademicClass');
-    Route::get('students/addresults/{student}/{class}',[StudentController::class,'addResults'])->name('student.addResults');
+    Route::resource('/students', StudentController::class);
+    Route::post('students/addacademicclass/{student}', [StudentController::class, 'addAcademicClass'])->name('student.addAcademicClass');
+    Route::delete('students/removeacademicclass/{student}/{id}', [StudentController::class, 'removeAcademicClass'])->name('student.removeAcademicClass');
+    Route::get('students/addresults/{student}/{class}', [StudentController::class, 'addResults'])->name('student.addResults');
 
 
 
@@ -78,4 +78,4 @@ Route::middleware('auth')->group(function () {
     Route::resource("/users", UserController::class);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

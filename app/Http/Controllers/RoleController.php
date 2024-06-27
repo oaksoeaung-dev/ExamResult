@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Role;
 use App\Http\Requests\StoreRoleRequest;
 use App\Http\Requests\UpdateRoleRequest;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Gate;
 
 class RoleController extends Controller
@@ -13,7 +14,7 @@ class RoleController extends Controller
     {
         Gate::authorize('viewAny', Role::class);
         $roles = Role::all();
-        return view('role.index',compact('roles'));
+        return view('role.index', compact('roles'));
     }
 
     /**
@@ -21,6 +22,7 @@ class RoleController extends Controller
      */
     public function create()
     {
+        Gate::allows('canCreate') ? Response::allow() : abort('404');
         return view('role.create');
     }
 

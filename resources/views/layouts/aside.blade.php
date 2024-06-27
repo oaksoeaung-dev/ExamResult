@@ -71,14 +71,16 @@
                     >
                         <p>All Roles</p>
                     </x-dropdown-link>
-                    <x-dropdown-link
-                        :href="route('role.create')"
-                        :active="request()->routeIs('role.create')"
-                        class="pl-11"
-                        icon="fi fi-rr-add"
-                    >
-                        <p>Create</p>
-                    </x-dropdown-link>
+                    @can("canCreate", Auth::user())
+                        <x-dropdown-link
+                            :href="route('role.create')"
+                            :active="request()->routeIs('role.create')"
+                            class="pl-11"
+                            icon="fi fi-rr-add"
+                        >
+                            <p>Create</p>
+                        </x-dropdown-link>
+                    @endcan
                 </x-dropdown>
             </li>
 

@@ -39,6 +39,26 @@
                 </ul>
             </div>
 
+            <div>
+                <p class="mb-2 block text-sm font-medium text-zinc-700">Permissions For Teacher</p>
+                <ul
+                    class="w-full items-center divide-x divide-zinc-200 rounded-lg border border-zinc-200 bg-white text-sm font-medium text-zinc-900 shadow sm:flex"
+                >
+                    <li class="w-full ps-3">
+                        <x-select-box name="teacher_create">Create</x-select-box>
+                    </li>
+                    <li class="w-full ps-3">
+                        <x-select-box name="teacher_read">Read</x-select-box>
+                    </li>
+                    <li class="w-full ps-3">
+                        <x-select-box name="teacher_update">Update</x-select-box>
+                    </li>
+                    <li class="w-full ps-3">
+                        <x-select-box name="teacher_delete">Delete</x-select-box>
+                    </li>
+                </ul>
+            </div>
+
             <div class="mt-5 flex justify-end gap-10">
                 <a href="{{ route("role.index") }}" class="btn-outline-zinc w-full">Cancel</a>
                 <button type="submit" class="btn-zinc w-full">Create</button>

@@ -36,7 +36,7 @@
                         :value="old('password')"
                         :messages="$errors->get('password')"
                         icon="fi fi-rr-lock"
-                        placeholder="name@example.com"
+                        placeholder=""
                     />
                 </div>
 

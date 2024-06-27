@@ -27,9 +27,9 @@ class RolePolicy
     /**
      * Determine whether the user can create models.
      */
-    public function create(User $user): bool
+    public function create(User $user): Response
     {
-        //
+        return $user->role->id === 1 ? Response::allow() : Response::denyWithStatus('404');
     }
 
     /**
