@@ -4,24 +4,26 @@ namespace App\Helpers;
 
 class BadgeColorFormatter
 {
-    public static function format ($condition) : string
+    public static function format($condition): string
     {
         $badgeColor = "";
-        switch($condition)
-        {
-            case "create":
+        switch ($condition) {
+            case "active":
                 $badgeColor = "badge-green";
                 break;
-            case "read":
+            case "disable":
+                $badgeColor = "badge-zinc";
+                break;
+            case "administrator":
+                $badgeColor = "badge-red";
+                break;
+            case "user":
                 $badgeColor = "badge-sky";
                 break;
-            case "update":
-                $badgeColor = "badge-yellow";
+            case "guest":
+                $badgeColor = "badge-zinc";
                 break;
-            case "delete":
-                $badgeColor = "badge-rose";
-                break;
-            default :
+            default:
                 $badgeColor = "";
         }
 

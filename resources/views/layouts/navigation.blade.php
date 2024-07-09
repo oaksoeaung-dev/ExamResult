@@ -59,7 +59,9 @@
                                 {{ Auth::user()->email }}
                             </p>
                             <p class="truncate text-sm font-medium text-zinc-900" role="none">
-                                <span class="badge-red">{{ Auth::user()->role->slug ?? "" }}</span>
+                                <span class="{{ $badgeColorFormatter::format(Auth::user()->role->slug) }}">
+                                    {{ Auth::user()->role->slug ?? "" }}
+                                </span>
                             </p>
                         </div>
                         <ul class="py-1" role="none">

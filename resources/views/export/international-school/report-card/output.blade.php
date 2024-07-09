@@ -32,33 +32,6 @@
                                 <span>{{ strtotime($info) ? Carbon::parse($info)->format("d-M-Y") : $info }}</span>
                             </p>
                         @endforeach
-
-                        {{--
-                            <p class="text-sm">
-                            <span class="font-semibold">Name : </span>
-                            <span>{{ $student["Name"]["Value"] }}</span>
-                            </p>
-                            <p class="text-sm">
-                            <span class="font-semibold">School Year : </span>
-                            <span>{{ $student["School Year"]["Value"] }}</span>
-                            </p>
-                            <p class="text-sm">
-                            <span class="font-semibold">Grade : </span>
-                            <span>{{ $student["Grade"]["Value"] }}</span>
-                            </p>
-                            <p class="text-sm">
-                            <span class="font-semibold">Term : </span>
-                            <span>{{ $student["Term"]["Value"] }}</span>
-                            </p>
-                            <p class="text-sm">
-                            <span class="font-semibold">Campus : </span>
-                            <span>{{ $student["Campus"]["Value"] }}</span>
-                            </p>
-                        --}}
-                        {{-- <p class="text-sm"> --}}
-                        {{-- <span class="font-semibold">Date : </span> --}}
-                        {{-- <span>{{ Carbon::parse($student["Date"])->format("d-M-Y") }}</span> --}}
-                        {{-- </p> --}}
                     </div>
                 </section>
                 <section class="mt-3 grid grid-cols-2 gap-x-2 text-xs">

@@ -31,22 +31,19 @@ class InternationalSchoolExportController extends Controller
         $reader->setHeaderOffset(0);
         $records = $reader->getRecords();
         $students = [];
-        foreach($records as $record)
-        {
+        foreach ($records as $record) {
             $newRecord = $record;
             $MainSubjects = [];
-            foreach($record as $column => $data)
-            {
-                if(Str::contains($column, '.'))
-                {
-                     $MainSubjects[Str::after($column, '.')] = $data;
-                     unset($newRecord[$column]);
+            foreach ($record as $column => $data) {
+                if (Str::contains($column, '.')) {
+                    $MainSubjects[Str::after($column, '.')] = $data;
+                    unset($newRecord[$column]);
                 }
             }
             $newRecord["MainSubjects"] = $MainSubjects;
-            array_push($students,$newRecord);
+            array_push($students, $newRecord);
         }
-        return view('export.international-school.academic-transcript.output', compact('students','learningHours'));
+        return view('export.international-school.academic-transcript.output', compact('students', 'learningHours'));
     }
 
     public function reportcard()
@@ -61,33 +58,26 @@ class InternationalSchoolExportController extends Controller
         $records = $reader->getRecords();
         $students = [];
 
-        foreach($records as $record)
-        {
+        foreach ($records as $record) {
             $newRecord = [];
-            foreach($record as $header => $data)
-            {
-                if(Str::contains($header, '.'))
-                {
-                    if(count(Str::of($header)->explode(".")) == 3)
-                    {
+            foreach ($record as $header => $data) {
+                if (Str::contains($header, '.')) {
+                    if (count(Str::of($header)->explode(".")) == 3) {
                         $newRecord[Str::of($header)->explode(".")[0]][Str::of($header)->explode(".")[1]][Str::of($header)->explode(".")[2]] = $data;
-                    }elseif(count(Str::of($header)->explode(".")) == 2)
-                    {
-                        $newRecord[Str::before($header,'.')][Str::after($header,'.')] = $data;
+                    } elseif (count(Str::of($header)->explode(".")) == 2) {
+                        $newRecord[Str::before($header, '.')][Str::after($header, '.')] = $data;
                     }
-                }
-                else
-                {
+                } else {
                     abort("500");
                 }
             }
-            array_push($students,$newRecord);
+            array_push($students, $newRecord);
         }
-        return view('export.international-school.report-card.output',compact('students'));
+        return view('export.international-school.report-card.output', compact('students'));
     }
 
     public function downloadExample($file)
     {
-        return response()->download(public_path()."/examples/$file");
+        return response()->download(public_path() . "/examples/$file");
     }
 }

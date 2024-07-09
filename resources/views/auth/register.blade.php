@@ -51,7 +51,7 @@
 
                 <!-- Confirm Password -->
                 <div class="mt-4">
-                    <x-input-label for="password_confirmation">Password</x-input-label>
+                    <x-input-label for="password_confirmation">Confirm Password</x-input-label>
                     <x-text-input
                         id="password_confirmation"
                         type="password"

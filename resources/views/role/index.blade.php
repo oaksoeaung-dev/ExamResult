@@ -9,6 +9,7 @@
                 <thead class="bg-zinc-100 text-xs uppercase text-zinc-700">
                     <tr>
                         <th scope="col" class="px-6 py-3">Name</th>
+                        <th scope="col" class="px-6 py-3">Status</th>
                         <th scope="col" class="px-6 py-3">Action</th>
                     </tr>
                 </thead>
@@ -19,11 +20,14 @@
                                 {{ $role->name }}
                             </th>
 
+                            <th class="whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
+                                <span class="{{ $badgeColorFormatter::format($role->status) }}">
+                                    {{ $role->status }}
+                                </span>
+                            </th>
+
                             <th class="flex gap-4 whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
                                 <a href="#" class="text-sky-500 transition-all duration-300 hover:text-sky-700">Edit</a>
-                                <a href="#" class="text-rose-500 transition-all duration-300 hover:text-rose-700">
-                                    Delete
-                                </a>
                             </th>
                         </tr>
                     @endforeach

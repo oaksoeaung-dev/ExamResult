@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UploadCSVISRequest;
 use App\Http\Requests\UploadCSVPreUniRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -16,7 +17,7 @@ class PreUniversityExportController extends Controller
 
     public function reportcard()
     {
-        return view('export.pre-university.reportcard');
+        return view('export.pre-university.report-card.index');
     }
 
     public function reportcardExport(UploadCSVPreUniRequest $request)
@@ -26,43 +27,50 @@ class PreUniversityExportController extends Controller
         $records = $reader->getRecords();
         $students = [];
         $marks = $request->marks;
+        foreach ($records as $record) {
+            $newRecord = [];
 
-        foreach($records as $record)
-        {
-            $newRecord = $record;
-            $subjects = [];
-            $months = [];
-            $behaviour = [];
-            foreach($record as $column => $data)
-            {
-                if(Str::contains($column, '.'))
-                {
-                    if(Str::before($column,'.') == "Subject")
-                    {
-                        $subjects[Str::after($column, '.')] = $data;
+            foreach ($record as $header => $data) {
+                if (Str::contains($header, '.')) {
+                    if (count(Str::of($header)->explode(".")) == 3) {
+                        $newRecord[Str::of($header)->explode(".")[0]][Str::of($header)->explode(".")[1]][Str::of($header)->explode(".")[2]] = $data;
+                    } elseif (count(Str::of($header)->explode(".")) == 2) {
+                        $newRecord[Str::before($header, '.')][Str::after($header, '.')] = $data;
                     }
-                    elseif(Str::before($column, '.') == "Month")
-                    {
-                        $months[Str::after($column, '.')] = $data;
-                    }
-                    elseif(Str::before($column, '.') == "Behaviour")
-                    {
-                        $behaviour[Str::after($column, '.')] = $data;
-                    }
-                    unset($newRecord[$column]);
+                } else {
+                    abort("500");
                 }
             }
-            $newRecord["subjects"] = $subjects;
-            $newRecord["months"] = $months;
-            $newRecord["behaviour"] = $behaviour;
-            array_push($students,$newRecord);
+            array_push($students, $newRecord);
         }
 
-        return view('export.pre-university.output',compact('students','marks'));
+        return view('export.pre-university.report-card.output', compact('students', 'marks'));
+    }
+
+    public function certificate()
+    {
+        return view('export.pre-university.certificate.index');
+    }
+
+    public function certificateExport(UploadCSVISRequest $request)
+    {
+        $reader = Reader::createFromPath($request->csv, 'r');
+        $reader->setHeaderOffset(0);
+        $records = $reader->getRecords();
+        $students = [];
+        foreach ($records as $record) {
+            $newRecord = [];
+
+            foreach ($record as $header => $data) {
+                $newRecord[$header] = $data;
+            }
+            array_push($students, $newRecord);
+        }
+        return view('export.pre-university.certificate.output', compact('students'));
     }
 
     public function downloadExample($file)
     {
-        return response()->download(public_path()."/examples/$file");
+        return response()->download(public_path() . "/examples/$file");
     }
 }

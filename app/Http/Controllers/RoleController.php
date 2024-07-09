@@ -13,6 +13,7 @@ class RoleController extends Controller
     public function index()
     {
         Gate::authorize('viewAny', Role::class);
+        // Gate::allows('AdminOrActive') ? Response::allow() : abort('404');
         $roles = Role::all();
         return view('role.index', compact('roles'));
     }
@@ -22,8 +23,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        Gate::allows('canCreate') ? Response::allow() : abort('404');
-        return view('role.create');
+        //
     }
 
     /**
@@ -31,7 +31,7 @@ class RoleController extends Controller
      */
     public function store(StoreRoleRequest $request)
     {
-        dd($request->all());
+        //
     }
 
     /**

@@ -45,6 +45,7 @@
 
             <p class="border-t border-t-zinc-100 pt-3 text-xs">Users Management</p>
             {{-- Users --}}
+
             <li>
                 <x-nav-link
                     :href="route('users.index')"
@@ -56,22 +57,22 @@
             </li>
 
             {{-- Role --}}
-            <li>
-                <x-dropdown
-                    :active="request()->routeIs('role.*')"
-                    dropDownId="dropdown-role"
-                    dropDownName="Role"
-                    icon="fi fi-rr-admin-alt"
-                >
-                    <x-dropdown-link
-                        :href="route('role.index')"
-                        :active="request()->routeIs('role.index')"
-                        class="pl-11"
-                        icon="fi fi-rr-rectangle-list"
+            @can("viewAny", App\Models\Role::class)
+                <li>
+                    <x-dropdown
+                        :active="request()->routeIs('role.*')"
+                        dropDownId="dropdown-role"
+                        dropDownName="Role"
+                        icon="fi fi-rr-admin-alt"
                     >
-                        <p>All Roles</p>
-                    </x-dropdown-link>
-                    @can("canCreate", Auth::user())
+                        <x-dropdown-link
+                            :href="route('role.index')"
+                            :active="request()->routeIs('role.index')"
+                            class="pl-11"
+                            icon="fi fi-rr-rectangle-list"
+                        >
+                            <p>All Roles</p>
+                        </x-dropdown-link>
                         <x-dropdown-link
                             :href="route('role.create')"
                             :active="request()->routeIs('role.create')"
@@ -80,20 +81,9 @@
                         >
                             <p>Create</p>
                         </x-dropdown-link>
-                    @endcan
-                </x-dropdown>
-            </li>
-
-            {{-- Permission --}}
-            <li>
-                <x-nav-link
-                    :href="route('permission.index')"
-                    :active="request()->routeIs('permission.*')"
-                    icon="fi fi-rr-lock-open-alt"
-                >
-                    <p>Permission</p>
-                </x-nav-link>
-            </li>
+                    </x-dropdown>
+                </li>
+            @endcan
 
             <p class="border-t border-t-zinc-100 pt-3 text-xs">Academic Management</p>
             {{-- Subjects --}}

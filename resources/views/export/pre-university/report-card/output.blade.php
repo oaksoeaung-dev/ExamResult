@@ -25,30 +25,12 @@
             >
                 <section class="mt-48">
                     <div class="grid grid-cols-3 gap-2">
-                        <p class="text-sm">
-                            <span class="font-semibold">Name :</span>
-                            <span>{{ $student["Name"] }}</span>
-                        </p>
-                        <p class="text-sm">
-                            <span class="font-semibold">School Year :</span>
-                            <span>{{ $student["School Year"] }}</span>
-                        </p>
-                        <p class="text-sm">
-                            <span class="font-semibold">Grade :</span>
-                            <span>{{ $student["Grade"] }}</span>
-                        </p>
-                        <p class="text-sm">
-                            <span class="font-semibold">Term :</span>
-                            <span>{{ $student["Term"] }}</span>
-                        </p>
-                        <p class="text-sm">
-                            <span class="font-semibold">Campus :</span>
-                            <span>{{ $student["Campus"] }}</span>
-                        </p>
-                        <p class="text-sm">
-                            <span class="font-semibold">Date :</span>
-                            <span>{{ Carbon::parse($student["Date"])->format("d-M-Y") }}</span>
-                        </p>
+                        @foreach ($student["Info"] as $name => $info)
+                            <p class="text-sm">
+                                <span class="font-semibold">{{ $name }} :</span>
+                                <span>{{ strtotime($info) ? Carbon::parse($info)->format("d-M-Y") : $info }}</span>
+                            </p>
+                        @endforeach
                     </div>
                 </section>
                 <section class="mt-3">
@@ -113,7 +95,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($student["subjects"] as $name => $mark)
+                            @foreach ($student["Subject"] as $name => $mark)
                                 <tr>
                                     <td class="border px-6 py-2 text-xs">
                                         {{ $name }}
@@ -128,6 +110,7 @@
                             @endforeach
                         </tbody>
                     </table>
+
                     <table class="h-fit w-full border-collapse border">
                         <thead class="bg-[#00223d]">
                             <tr>
@@ -142,7 +125,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($student["months"] as $name => $percentage)
+                            @foreach ($student["Month"] as $name => $percentage)
                                 <tr>
                                     <td class="border px-6 py-2 text-xs">
                                         {{ $name }}
@@ -166,6 +149,7 @@
                     </table>
                 </section>
             </div>
+
             <div
                 class="mx-auto my-[20px] rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [min-height:29.7cm] [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none"
             >
@@ -199,7 +183,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($student["behaviour"] as $name => $grade)
+                            @foreach ($student["Behaviour"] as $name => $grade)
                                 <tr>
                                     <td class="border px-6 py-2 text-xs">{{ $name }}</td>
                                     @foreach ($defaultGrades as $defaultGrade)
@@ -216,20 +200,24 @@
                 </section>
 
                 <section class="mt-5">
-                    <h2 class="text-sm font-semibold">Feedback Of The Class Teacher</h2>
-                    <p class="mt-3 text-justify text-sm">
-                        {{ $student["Feedback Of The Class Teacher"] }}
-                    </p>
+                    @foreach ($student["Remark"] as $name => $remark)
+                        <h2 class="text-xs font-semibold">{{ $name }}</h2>
+                        <p class="mt-3 text-justify text-xs">
+                            {{ $remark }}
+                        </p>
+                    @endforeach
                 </section>
 
                 <section class="mt-5 flex justify-end">
                     <div class="flex flex-col items-center justify-center gap-1">
-                        <p class="text-xs font-bold">Class Teacher's Sign</p>
-                        <img
-                            src="{{ asset("storage/signs/" . $student["Class Teacher Sign"] . ".png") }}"
-                            class="h-28 w-28 object-contain"
-                            alt="SignatureOfClassTeacher"
-                        />
+                        @foreach ($student["Sign"] as $name => $sign)
+                            <p class="text-xs font-bold">{{ $name }}</p>
+                            <img
+                                src="{{ asset("storage/signs/" . $sign . ".png") }}"
+                                class="h-28 w-28 object-contain"
+                                alt="SignatureOfClassTeacher"
+                            />
+                        @endforeach
                     </div>
                 </section>
             </div>

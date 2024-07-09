@@ -17,11 +17,19 @@ class RoleSeeder extends Seeder
         Role::create([
             "name" => "Administrator",
             "slug" => Str::slug("administrator"),
+            "status" => "active",
         ]);
 
         Role::create([
             "name" => "User",
             "slug" => Str::slug("user"),
+            "status" => "active",
+        ]);
+
+        Role::create([
+            "name" => "Guest",
+            "slug" => Str::slug("guest"),
+            "status" => "active",
         ]);
     }
 }

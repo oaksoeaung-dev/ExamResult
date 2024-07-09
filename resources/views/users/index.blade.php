@@ -1,7 +1,10 @@
 <x-app-layout>
     <div class="space-y-10">
         <div>
-            <h1 class="">Users</h1>
+            <h1 class="flex items-center gap-2">
+                <i class="fi fi-rr-users-alt"></i>
+                <span>Users</span>
+            </h1>
         </div>
 
         <div class="relative overflow-x-auto">
@@ -26,15 +29,24 @@
                             </th>
 
                             <th class="whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
-                                {{ $user->role->slug ?? "" }}
+                                <span class="{{ $badgeColorFormatter::format($user->role->slug) }}">
+                                    {{ $user->role->slug ?? "" }}
+                                </span>
                             </th>
 
-                            <th class="flex gap-4 whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
-                                <a href="#" class="text-sky-500 transition-all duration-300 hover:text-sky-700">Edit</a>
-                                <a href="#" class="text-rose-500 transition-all duration-300 hover:text-rose-700">
-                                    Delete
-                                </a>
-                            </th>
+                            @can("view", $user)
+                                <th class="flex gap-4 whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
+                                    <a
+                                        href="{{ route("users.edit", $user->id) }}"
+                                        class="text-sky-500 transition-all duration-300 hover:text-sky-700"
+                                    >
+                                        Edit
+                                    </a>
+                                    <a href="#" class="text-rose-500 transition-all duration-300 hover:text-rose-700">
+                                        Delete
+                                    </a>
+                                </th>
+                            @endcan
                         </tr>
                     @endforeach
                 </tbody>

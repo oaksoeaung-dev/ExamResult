@@ -6,6 +6,7 @@
                 <span>International School</span>
             </h1>
         </div>
+
         <div class="max-w-2xl">
             <a
                 href="{{ route("export.international-school.academic-transcript") }}"

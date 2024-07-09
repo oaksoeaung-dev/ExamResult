@@ -10,9 +10,14 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
+            $table->string('stdId')->unique();
+            $table->string('stdKey')->unique();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone');
+            $table->string("address")->nullable();
+            $table->date("dob")->nullable();
+            $table->string("guardian_name")->nullable();
             $table->enum('gender', ['male', 'female']);
             $table->string('image')->nullable();
             $table->timestamps();

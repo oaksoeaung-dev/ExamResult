@@ -26,8 +26,8 @@ class AppServiceProvider extends ServiceProvider
             $view->with('badgeColorFormatter', new BadgeColorFormatter());
         });
 
-        Gate::define("canCreate", function (User $user) {
-            return $user->role->id === 1;
+        Gate::define("AdminOrActive", function (User $user) {
+            return $user->role->status === "active" || $user->role->id === 1;
         });
     }
 }
