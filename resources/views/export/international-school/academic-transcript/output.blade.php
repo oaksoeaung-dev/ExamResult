@@ -101,7 +101,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($learningHours->where("grade", "=", $student["Grade"])->where("program", "=", $student["Program"])->where("campus", "=", $student["Campus"])->where("subjectcategory", "=", "addonsubjects")as $subject)
+                                    @foreach ($learningHours->where("grade", "=", $student["Grade"])->where("program", "=", $student["Program"])->where("campus", "=", $student["Campus"])->where("subjectcategory", "=", "addonsubjects") as $subject)
                                         <tr>
                                             <td class="border px-6 py-1">{{ $subject->subjectname }}</td>
                                             <td class="border px-6 py-1">{{ $subject->hour }}</td>
