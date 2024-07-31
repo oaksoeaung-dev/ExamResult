@@ -136,15 +136,15 @@
                             @switch(strtolower($student["Division"]))
                                 @case("lower")
                                     <p class="text-xs font-bold">Signature of Dean (Lower Primary)</p>
-
                                     @break
                                 @case("upper")
                                     <p class="text-xs font-bold">Signature of Dean (Upper Primary)</p>
-
                                     @break
                                 @case("secondary")
                                     <p class="text-xs font-bold">Signature of Dean (Secondary Division)</p>
-
+                                    @break
+                                @case("centerhead")
+                                    <p class="text-xs font-bold">Signature of Center Head</p>
                                     @break
                                 @default
                                     <p class="text-xs font-bold">Error</p>

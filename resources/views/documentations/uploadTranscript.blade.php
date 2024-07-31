@@ -102,6 +102,8 @@
                 <span class="badge-violet">upper</span>
                 secondary dean အတွက်
                 <span class="badge-violet">secondary</span>
+                Center Head အတွက်
+                <span class="badge-violet">centerhead</span>
                 လို့ထည့်ပေးရပါမယ်။
             </li>
         </ul>
