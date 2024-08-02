@@ -21,15 +21,17 @@
         @foreach ($students as $student)
             <div
                 class="mx-auto my-[20px] min-h-[29.7cm] rounded-md border border-gray-300 bg-cover bg-center bg-no-repeat p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none"
-                style="background-image: url('{{ asset("images/reportcardBackground/preuni_rcbg.png") }}')"
+                style="background-image: url('{{ asset("images/reportcardBackground/") }}{{ "/" }}{{ $student["Info"]["Background"] == "is" ? "is_rcbg.png" : "preuni_rcbg.png" }}')"
             >
                 <section class="mt-48">
                     <div class="grid grid-cols-3 gap-2">
                         @foreach ($student["Info"] as $name => $info)
-                            <p class="text-sm">
-                                <span class="font-semibold">{{ $name }} :</span>
-                                <span>{{ strtotime($info) ? Carbon::parse($info)->format("d-M-Y") : $info }}</span>
-                            </p>
+                            @if($name != "Background")
+                                <p class="text-sm">
+                                    <span class="font-semibold">{{ $name }} :</span>
+                                    <span>{{ strtotime($info) ? Carbon::parse($info)->format("d-M-Y") : $info }}</span>
+                                </p>
+                            @endif
                         @endforeach
                     </div>
                 </section>

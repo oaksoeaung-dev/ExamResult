@@ -1,4 +1,5 @@
 {
-    "printWidth": 120,
+    "printWidth": 9999,
+    "proseWrap": "never",
     "plugins": ["prettier-plugin-blade", "prettier-plugin-tailwindcss"]
 }

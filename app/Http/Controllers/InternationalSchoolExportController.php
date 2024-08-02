@@ -32,17 +32,21 @@ class InternationalSchoolExportController extends Controller
         $records = $reader->getRecords();
         $students = [];
         foreach ($records as $record) {
-            $newRecord = $record;
-            $MainSubjects = [];
-            foreach ($record as $column => $data) {
-                if (Str::contains($column, '.')) {
-                    $MainSubjects[Str::after($column, '.')] = $data;
-                    unset($newRecord[$column]);
+            $newRecord = [];
+            foreach ($record as $header => $data) {
+                if (Str::contains($header, '.')) {
+                    if (count(Str::of($header)->explode(".")) == 3) {
+                        $newRecord[Str::of($header)->explode(".")[0]][Str::of($header)->explode(".")[1]][Str::of($header)->explode(".")[2]] = $data;
+                    } elseif (count(Str::of($header)->explode(".")) == 2) {
+                        $newRecord[Str::before($header, '.')][Str::after($header, '.')] = $data;
+                    }
+                } else {
+                    abort("500");
                 }
             }
-            $newRecord["MainSubjects"] = $MainSubjects;
             array_push($students, $newRecord);
         }
+        // dd($students);
         return view('export.international-school.academic-transcript.output', compact('students', 'learningHours'));
     }
 
