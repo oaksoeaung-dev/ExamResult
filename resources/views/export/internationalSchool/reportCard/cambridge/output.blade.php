@@ -9,10 +9,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>{{ config("app.name", "Laravel") }}</title>
         <!-- Scripts -->
@@ -20,10 +17,7 @@
     </head>
     <body>
         @foreach ($students as $student)
-            <div
-                class="mx-auto my-[20px] min-h-[29.7cm] rounded-md border border-gray-300 bg-cover bg-center bg-no-repeat p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none"
-                style="background-image: url('{{ asset("images/reportcardBackground/is_rcbg.png") }}')"
-            >
+            <div class="mx-auto my-[20px] min-h-[29.7cm] rounded-md border border-gray-300 bg-cover bg-center bg-no-repeat p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none" style="background-image: url('{{ asset("images/reportcardBackground/is_rcbg.png") }}')">
                 <section class="mt-48">
                     <div class="grid grid-cols-3 gap-3">
                         @foreach ($student["Info"] as $name => $info)
@@ -92,9 +86,7 @@
                             <tr>
                                 <th class="w-[10%] border px-2 py-1 text-white">No</th>
                                 <th class="w-[45%] border px-2 py-1 text-white">Subjects</th>
-                                <th class="w-[45%] border px-2 py-1 text-white" colspan="5">
-                                    Grade For Subjects & Academic Improvement
-                                </th>
+                                <th class="w-[45%] border px-2 py-1 text-white" colspan="5">Grade For Subjects & Academic Improvement</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -196,9 +188,7 @@
                     </table>
                 </section>
             </div>
-            <div
-                class="print:m- mx-auto my-[20px] rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [min-height:29.7cm] [width:21cm] print:break-after-page print:rounded-none print:border-none print:shadow-none"
-            >
+            <div class="print:m- mx-auto my-[20px] rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [min-height:29.7cm] [width:21cm] print:break-after-page print:rounded-none print:border-none print:shadow-none">
                 @if (count($student["Subject"]) > 3)
                     <section class="mt-3 grid grid-cols-2 gap-x-2 text-xs">
                         <table class="h-fit table-fixed border-collapse border">
@@ -244,9 +234,7 @@
                             <table class="h-fit table-fixed border-collapse border">
                                 <thead style="background-color: #00223d">
                                     <tr>
-                                        <th class="border py-1 text-white" colspan="2">
-                                            Grading For Activities Subjects
-                                        </th>
+                                        <th class="border py-1 text-white" colspan="2">Grading For Activities Subjects</th>
                                     </tr>
                                     <tr>
                                         <th class="w-1/2 border py-1 text-white">Subjects</th>
@@ -270,18 +258,13 @@
                             <table class="h-fit w-full table-fixed border-collapse border">
                                 <thead style="background-color: #00223d">
                                     <tr>
-                                        <th colspan="{{ count($student["Activity"]) }}" class="border py-1 text-white">
-                                            Grading For Activities Subjects
-                                        </th>
+                                        <th colspan="{{ count($student["Activity"]) }}" class="border py-1 text-white">Grading For Activities Subjects</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         @foreach ($student["Activity"] as $name => $activity)
-                                            <td
-                                                style="background-color: #00223d"
-                                                class="w-[14%] border py-1 text-center text-white"
-                                            >
+                                            <td style="background-color: #00223d" class="w-[14%] border py-1 text-center text-white">
                                                 {{ $name }}
                                             </td>
                                         @endforeach
@@ -301,10 +284,7 @@
                     <table class="h-fit w-full border-collapse border">
                         <thead style="background-color: #00223d">
                             <tr class="border">
-                                <th colspan="6" class="py-1 text-white">
-                                    Grade for overall behaviour (A - Above 90, B - Between 80 and 90, C - Between 70 and
-                                    79, D - Between 60 and 69, E - Under 60)
-                                </th>
+                                <th colspan="6" class="py-1 text-white">Grade for overall behaviour (A - Above 90, B - Between 80 and 90, C - Between 70 and 79, D - Between 60 and 69, E - Under 60)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -333,34 +313,13 @@
                     @endforeach
                 </section>
 
-                <section class="mt-5 text-xs">
-                    @if (count($student["Sign"]) > 1)
-                        <div class="flex justify-between">
-                            @foreach ($student["Sign"] as $name => $sign)
-                                <div class="flex flex-col gap-2">
-                                    <img
-                                        src="{{ asset("storage/signs/" . $sign . ".png") }}"
-                                        alt="sign"
-                                        class="h-28 w-28 object-contain"
-                                    />
-                                    <p class="w-32 text-center font-semibold">{{ $name }}</p>
-                                </div>
-                            @endforeach
+                <section class="mt-5 flex {{ count($student["Sign"]) == 1 ? "justify-end" : "justify-between"  }}">
+                    @foreach($student["Sign"] as $text => $sign)
+                        <div class="flex flex-col items-center justify-center gap-1">
+                            <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="h-20 w-20 object-cover" alt="Signature" />
+                            <p class="w-32 text-center text-wrap text-xs font-bold">{{ $text }}</p>
                         </div>
-                    @else
-                        <div class="flex justify-end">
-                            @foreach ($student["Sign"] as $name => $sign)
-                                <div class="flex flex-col gap-2">
-                                    <img
-                                        src="{{ asset("storage/signs/" . $sign . ".png") }}"
-                                        alt="sign"
-                                        class="h-28 w-28 object-contain"
-                                    />
-                                    <p class="w-28 text-center font-semibold">{{ $name }}</p>
-                                </div>
-                            @endforeach
-                        </div>
-                    @endif
+                    @endforeach
                 </section>
             </div>
         @endforeach

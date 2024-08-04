@@ -42,19 +42,48 @@ Route::middleware('auth')->group(function () {
         Route::view('/documentation/addTeacherAndSign', 'documentations.addTeacherAndSign')->name('documentation.addTeacherAndSign');
         Route::view('/documentation/uploadTranscript', 'documentations.uploadTranscript')->name('documentation.uploadTranscript');
 
-        Route::get('/export/international-school', [InternationalSchoolExportController::class, 'index'])->name('export.international-school.index');
-        Route::get('/export/international-school/academic-transcript', [InternationalSchoolExportController::class, 'academictranscript'])->name('export.international-school.academic-transcript');
-        Route::post('/export/international-school/academic-transcript-export', [InternationalSchoolExportController::class, 'academictranscriptexport'])->name('export.international-school.academic-transcript-export');
-        Route::get('/export/international-school/download/{file}', [InternationalSchoolExportController::class, 'downloadExample'])->name('export.international-school.download');
-        Route::get('/export/international-school/report-card', [InternationalSchoolExportController::class, 'reportcard'])->name('export.international-school.report-card');
-        Route::post('/export/international-school/report-card-export', [InternationalSchoolExportController::class, 'reportcardExport'])->name('export.international-school.report-card-export');
+        // International School
+        Route::prefix("export/internationalSchool")->name("export.internationalSchool")->group(function () {
+            Route::get('/', [InternationalSchoolExportController::class, 'index']);
 
-        Route::get('/export/pre-university', [PreUniversityExportController::class, 'index'])->name('export.pre-university.index');
-        Route::get('/export/pre-university/reportcard', [PreUniversityExportController::class, 'reportcard'])->name('export.pre-university.reportcard');
-        Route::post('/export/pre-university/reportcard-export', [PreUniversityExportController::class, 'reportcardExport'])->name('export.pre-university.reportcard-export');
-        Route::get('/export/pre-university/download/{file}', [PreUniversityExportController::class, 'downloadExample'])->name('export.pre-university.download');
-        Route::get('/export/pre-university/certificate', [PreUniversityExportController::class, 'certificate'])->name('export.pre-university.certificate');
-        Route::post('/export/pre-university/certificate-export', [PreUniversityExportController::class, 'certificateExport'])->name('export.pre-university.certificate-export');
+            Route::get('download/{file}', [InternationalSchoolExportController::class, 'downloadExample'])->name('.download');
+
+            Route::prefix("academicTranscript")->name(".academicTranscript")->group(function () {
+                Route::get('/uploadFile', [InternationalSchoolExportController::class, 'academicTranscript'])->name('.uploadFile');
+                Route::post('/generate', [InternationalSchoolExportController::class, 'academicTranscriptExport'])->name('.generate');
+            });
+
+            Route::prefix("reportCard")->name(".reportCard")->group(function () {
+                Route::prefix("cambridge")->name(".cambridge")->group(function () {
+                    Route::get('uploadFile', [InternationalSchoolExportController::class, 'cambridgeReportCard'])->name('.uploadFile');
+                    Route::post('generate', [InternationalSchoolExportController::class, 'cambridgeReportCardExport'])->name('.generate');
+                });
+
+                Route::prefix("government")->name(".government")->group(function () {
+                    Route::get('uploadFile', [InternationalSchoolExportController::class, 'governmentReportcard'])->name('.uploadFile');
+                    Route::post('generate', [InternationalSchoolExportController::class, 'governmentReportcardExport'])->name('.generate');
+                });
+            });
+        });
+
+
+        // Pre University
+        Route::prefix("export/preUniversity")->name("export.preUniversity")->group(function () {
+            Route::get('/', [PreUniversityExportController::class, 'index']);
+
+            Route::get('/download/{file}', [PreUniversityExportController::class, 'downloadExample'])->name('.download');
+
+            Route::prefix("reportCard")->name(".reportCard")->group(function () {
+                Route::get('/uploadFile', [PreUniversityExportController::class, 'reportCard'])->name('.uploadFile');
+                Route::post('/generate', [PreUniversityExportController::class, 'reportCardExport'])->name('.generate');
+            });
+
+            Route::prefix("certificate")->name(".certificate")->group(function () {
+                Route::get('/uploadFile', [PreUniversityExportController::class, 'certificate'])->name('.uploadFile');
+                Route::post('/generate', [PreUniversityExportController::class, 'certificateExport'])->name('.generate'); 
+            });
+                       
+        });
 
 
         Route::resource('/healthrecords', HealthrecordController::class);

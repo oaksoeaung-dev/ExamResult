@@ -12,15 +12,15 @@ class PreUniversityExportController extends Controller
 {
     public function index()
     {
-        return view('export.pre-university.index');
+        return view('export.preUniversity.index');
     }
 
-    public function reportcard()
+    public function reportCard()
     {
-        return view('export.pre-university.report-card.index');
+        return view('export.preUniversity.reportCard.index');
     }
 
-    public function reportcardExport(UploadCSVPreUniRequest $request)
+    public function reportCardExport(UploadCSVPreUniRequest $request)
     {
         $reader = Reader::createFromPath($request->csv, 'r');
         $reader->setHeaderOffset(0);
@@ -44,12 +44,12 @@ class PreUniversityExportController extends Controller
             array_push($students, $newRecord);
         }
 
-        return view('export.pre-university.report-card.output', compact('students', 'marks'));
+        return view('export.preUniversity.reportCard.output', compact('students', 'marks'));
     }
 
     public function certificate()
     {
-        return view('export.pre-university.certificate.index');
+        return view('export.preUniversity.certificate.index');
     }
 
     public function certificateExport(UploadCSVISRequest $request)
@@ -66,7 +66,7 @@ class PreUniversityExportController extends Controller
             }
             array_push($students, $newRecord);
         }
-        return view('export.pre-university.certificate.output', compact('students'));
+        return view('export.preUniversity.certificate.output', compact('students'));
     }
 
     public function downloadExample($file)
