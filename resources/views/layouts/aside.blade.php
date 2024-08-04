@@ -133,10 +133,10 @@
             {{-- Multiples Export --}}
             <li>
                 <x-dropdown :active="request()->routeIs('export.*')" dropDownId="dropdown-export" dropDownName="Multiples Export" icon="fi fi-rr-move-to-folder">
-                    <x-dropdown-link :href="route('export.preUniversity')" :active="request()->routeIs('export.preUniversity.*')" class="pl-11" icon="fi fi-rr-apartment">
+                    <x-dropdown-link :href="route('export.preUniversity')" :active="request()->routeIs('export.preUniversity.*') || request()->routeIs('export.preUniversity')" class="pl-11" icon="fi fi-rr-apartment">
                         <p>Pre-University</p>
                     </x-dropdown-link>
-                    <x-dropdown-link :href="route('export.internationalSchool')" :active="request()->routeIs('export.internationalSchool.*')" class="pl-11" icon="fi fi-rr-school">
+                    <x-dropdown-link :href="route('export.internationalSchool')" :active="request()->routeIs('export.internationalSchool.*') || request()->routeIs('export.internationalSchool')" class="pl-11" icon="fi fi-rr-school">
                         <p>International School</p>
                     </x-dropdown-link>
                 </x-dropdown>
