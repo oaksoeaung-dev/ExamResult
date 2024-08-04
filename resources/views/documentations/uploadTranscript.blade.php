@@ -10,12 +10,7 @@
         <ul class="list-disc space-y-3 ps-5">
             <li class="">
                 Download example CSV
-                <a
-                    href="{{ route("export.international-school.download", "GraduationExample.csv") }}"
-                    class="text-sky-500"
-                >
-                    here
-                </a>
+                <a href="{{ route("export.internationalSchool.download", "GraduationExample.csv") }}" class="text-sky-500">here</a>
                 .
             </li>
             <li>CSV file ထဲရှိ header column များကိုပြင်လို့မရပါ။</li>

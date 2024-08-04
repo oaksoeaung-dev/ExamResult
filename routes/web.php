@@ -39,8 +39,11 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::middleware("can:AdminOrActive")->group(function () {
-        Route::view('/documentation/addTeacherAndSign', 'documentations.addTeacherAndSign')->name('documentation.addTeacherAndSign');
-        Route::view('/documentation/uploadTranscript', 'documentations.uploadTranscript')->name('documentation.uploadTranscript');
+        Route::prefix("/documentation")->name("documentation.")->group(function(){
+            Route::view('/addTeacherAndSign', 'documentations.addTeacherAndSign')->name('addTeacherAndSign');
+            Route::view('/uploadTranscript', 'documentations.uploadTranscript')->name('uploadTranscript');
+            Route::view('/howToCreateGovernmentReportCard', 'documentations.howToCreateGovernmentReportCard')->name('howToCreateGovernmentReportCard');
+        });
 
         // International School
         Route::prefix("export/internationalSchool")->name("export.internationalSchool")->group(function () {

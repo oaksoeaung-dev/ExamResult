@@ -17,6 +17,9 @@
                     <x-dropdown-link :href="route('documentation.uploadTranscript')" :active="request()->routeIs('documentation.uploadTranscript')" class="pl-11" icon="fi fi-rr-angle-small-right">
                         <p>Upload Transcript</p>
                     </x-dropdown-link>
+                    <x-dropdown-link :href="route('documentation.howToCreateGovernmentReportCard')" :active="request()->routeIs('documentation.howToCreateGovernmentReportCard')" class="pl-11" icon="fi fi-rr-angle-small-right">
+                        <p class="truncate">How To Create Government Report Card</p>
+                    </x-dropdown-link>
                 </x-dropdown>
             </li>
 

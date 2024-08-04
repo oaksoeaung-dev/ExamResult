@@ -110,13 +110,20 @@
                             $studentMarks = [];
                             foreach($student["Month"] as $month => $marks)
                             {
-                                $subjectMarks = explode(",",$marks);
-                                $markArray = [];
-                                foreach($subjectMarks as $mark)
+                                if(!empty($marks))
                                 {
-                                    $markArray[explode("=",$mark)[0]] = explode("=",$mark)[1];
+                                    $subjectMarks = explode(",",$marks);
+                                    $markArray = [];
+                                    foreach($subjectMarks as $mark)
+                                    {
+                                        $markArray[explode("=",$mark)[0]] = explode("=",$mark)[1];
+                                    }
+                                    $studentMarks[$month] = $markArray;
                                 }
-                                $studentMarks[$month] = $markArray;
+                                else
+                                {
+                                    $studentMarks[$month] = "";
+                                }
                             }
                         @endphp
                         @foreach ($subjects as $subject)
@@ -125,7 +132,7 @@
                             <td class="border text-xs text-zinc-800 py-2 px-3">{{ $subject }}</td>
                             @foreach($studentMarks as $month => $mark)
                                 <td class="border text-xs text-zinc-800 py-2 text-center w-10">
-                                    {{ $mark[$subject] }}
+                                    {{ !empty($mark[$subject]) ? $mark[$subject] : "" }}
                                 </td>
                             @endforeach
                         </tr>
