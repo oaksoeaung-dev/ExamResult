@@ -82,7 +82,7 @@
 
             <p><span class="badge-sky">Info.</span>ပါသည့် column header များကို <span class="font-semibold">ဖျက်လို့မရ ပြင်လို့မရ</span> ပါ။</p>
 
-            <p><span class="badge-sky">Info.Division</span>တွင် <span class="badge-rose">lower</span><span class="badge-rose">upper</span><span class="badge-rose">secondary</span> <span class="font-semibold">သုံး</span> မျိုးသာထည့်လို့ရပါသည်။</p>
+            <p><span class="badge-sky">Info.Division</span>တွင် <span class="badge-rose">lower</span><span class="badge-rose">upper</span><span class="badge-rose">secondary</span> <span class="font-semibold">သုံး</span> မျိုးသာထည့်လို့ရပါသည်။ Grading format <span class="font-semibold">A,S,E</span> အတွက် <span class="badge-rose">lower</span> <span class="font-semibold">A,B,C,D</span> အတွက် <span class="badge-rose">upper</span><span class="badge-rose">secondary</span> ဖြစ်ပါသည်။</p>
 
             <p><span class="badge-sky">Info.Subjects</span>column တွင် ကျောင်းသားများဖြေဆိုသည့် ဘာသာရပ်များကို column များခံပြီးထည့်ပေးရမည်။</p>
 
