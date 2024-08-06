@@ -3,10 +3,13 @@
         <div>
             <h1 class="flex items-center gap-2">
                 <i class="fi fi-rr-document"></i>
-                <span>Upload Transcript</span>
+                <span>How to add teacher and sign</span>
             </h1>
         </div>
         <ul class="list-disc space-y-3 ps-5">
+            <li class="">
+                Create လုပ်ရန်အတွက် <a class="text-sky-500" href="{{ route("teachers.create") }}" target="_blank">ဒီနေရာကိုနှိပ်ပါ။</a>
+            </li>
             <li class="">
                 <span class="badge-green">Name</span>
                 နေရာတွင် ဆရာ/ဆရာမ နာမည်ထည့်ပေးရမည်။ (eg. Tr. Su Su)
