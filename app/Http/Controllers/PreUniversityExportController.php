@@ -26,15 +26,15 @@ class PreUniversityExportController extends Controller
         $reader->setHeaderOffset(0);
         $records = $reader->getRecords();
         $students = [];
-        $marks = $request->marks;
         foreach ($records as $record) {
             $newRecord = [];
 
             foreach ($record as $header => $data) {
                 if (Str::contains($header, '.')) {
-                    if (count(Str::of($header)->explode(".")) == 3) {
-                        $newRecord[Str::of($header)->explode(".")[0]][Str::of($header)->explode(".")[1]][Str::of($header)->explode(".")[2]] = $data;
-                    } elseif (count(Str::of($header)->explode(".")) == 2) {
+                    $explodedHeader = Str::of($header)->explode(".");
+                    if (count($explodedHeader) == 3) {
+                        $newRecord[$explodedHeader[0]][$explodedHeader[1]][$explodedHeader[2]] = $data;
+                    } elseif (count($explodedHeader) == 2) {
                         $newRecord[Str::before($header, '.')][Str::after($header, '.')] = $data;
                     }
                 } else {
@@ -43,8 +43,7 @@ class PreUniversityExportController extends Controller
             }
             array_push($students, $newRecord);
         }
-
-        return view('export.preUniversity.reportCard.output', compact('students', 'marks'));
+        return view('export.preUniversity.reportCard.output', compact('students'));
     }
 
     public function certificate()

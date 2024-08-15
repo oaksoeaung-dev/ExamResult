@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware("can:AdminOrActive")->group(function () {
         Route::prefix("/documentation")->name("documentation.")->group(function(){
-            Route::view('/addTeacherAndSign', 'documentations.addTeacherAndSign')->name('addTeacherAndSign');
+            Route::view('/addTeacherAndSign', 'documentations.howToAddTeacherAndSign')->name('addTeacherAndSign');
             Route::view('/uploadTranscript', 'documentations.uploadTranscript')->name('uploadTranscript');
             Route::view('/howToCreateGovernmentReportCard', 'documentations.howToCreateGovernmentReportCard')->name('howToCreateGovernmentReportCard');
         });

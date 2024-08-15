@@ -18,11 +18,6 @@
                 <div>
                     <div class="flex">
                         <input type="file" name="csv" id="file-input" class="peer block w-full rounded-l-lg border-y border-l border-zinc-200 text-sm shadow-sm file:me-4 file:border-0 file:bg-zinc-50 file:px-4 file:py-3 focus:border-zinc-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50" />
-                        <select name="marks" class="border bg-zinc-50 text-sm focus:border-zinc-500 focus:outline-none peer-focus:border-zinc-500">
-                            <option selected disabled>Choose Mark</option>
-                            <option value="80marks">80 Marks</option>
-                            <option value="50marks">50 Marks</option>
-                        </select>
                         <a href="{{ route("export.preUniversity.download", "preuni_example.csv") }}" class="flex w-52 items-center justify-center gap-3 rounded-r-lg border-y border-r border-zinc-200 bg-zinc-50 py-2 text-sm hover:bg-zinc-100 peer-focus:border-zinc-500">
                             <i class="fi fi-rr-file-download"></i>
                             <span>Example CSV</span>
