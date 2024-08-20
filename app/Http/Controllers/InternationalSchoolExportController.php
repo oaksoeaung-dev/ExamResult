@@ -52,7 +52,7 @@ class InternationalSchoolExportController extends Controller
 
     public function cambridgeReportCard()
     {
-        return view('export.InternationalSchool.ReportCard.Cambridge.index');
+        return view('export.internationalSchool.reportCard.cambridge.index');
     }
     public function cambridgeReportCardExport(UploadCSVISRequest $request)
     {
