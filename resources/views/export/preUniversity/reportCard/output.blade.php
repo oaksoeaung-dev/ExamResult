@@ -109,7 +109,7 @@
                                         {{ $name }}
                                     </td>
                                     <td class="whitespace-nowrap border py-2 text-center text-xs">
-                                        {{ $program == "igcse" ? $mark . "%" : $mark }}
+                                        {{ $program == "igcse" ? (empty($mark) ? "" : $mark . "%") : $mark }}
                                     </td>
                                     <td class="whitespace-nowrap border py-2 text-center text-xs">
                                         {{ ReportCardGradeFormatPreUni::format($mark, $program) }}
