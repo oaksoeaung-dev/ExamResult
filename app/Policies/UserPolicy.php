@@ -44,9 +44,9 @@ class UserPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, User $model): bool
+    public function delete(User $user, User $model): Response
     {
-        //
+        return $user->role->id === 1 && $model->id !== $user->id && $model->role->id !== 1 ? Response::allow() : Response::denyWithStatus('404');
     }
 
     /**

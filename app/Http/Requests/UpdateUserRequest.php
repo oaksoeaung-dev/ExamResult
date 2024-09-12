@@ -18,7 +18,7 @@ class UpdateUserRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', new KbtcMail(), 'unique:users,email,' . $this->route('user')->id],
-            'password' => [Password::min(8)->letters()->mixedCase()->numbers()->symbols()->uncompromised(), "nullable"],
+            'password' => [Password::min(8)->letters()->mixedCase()->numbers()->symbols()->uncompromised(),"nullable"],
             'password_confirmation' => ["same:password"],
         ];
     }
