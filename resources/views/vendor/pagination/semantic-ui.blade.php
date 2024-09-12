@@ -6,12 +6,7 @@
                 <i class="left chevron icon"></i>
             </a>
         @else
-            <a
-                class="icon item"
-                href="{{ $paginator->previousPageUrl() }}"
-                rel="prev"
-                aria-label="@lang("pagination.previous")"
-            >
+            <a class="icon item" href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang("pagination.previous")">
                 <i class="left chevron icon"></i>
             </a>
         @endif
@@ -37,12 +32,7 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <a
-                class="icon item"
-                href="{{ $paginator->nextPageUrl() }}"
-                rel="next"
-                aria-label="@lang("pagination.next")"
-            >
+            <a class="icon item" href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang("pagination.next")">
                 <i class="right chevron icon"></i>
             </a>
         @else

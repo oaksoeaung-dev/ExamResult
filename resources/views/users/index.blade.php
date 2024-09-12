@@ -36,15 +36,8 @@
 
                             @can("view", $user)
                                 <th class="flex gap-4 whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
-                                    <a
-                                        href="{{ route("users.edit", $user->id) }}"
-                                        class="text-sky-500 transition-all duration-300 hover:text-sky-700"
-                                    >
-                                        Edit
-                                    </a>
-                                    <a href="#" class="text-rose-500 transition-all duration-300 hover:text-rose-700">
-                                        Delete
-                                    </a>
+                                    <a href="{{ route("users.edit", $user->id) }}" class="text-sky-500 transition-all duration-300 hover:text-sky-700">Edit</a>
+                                    <a href="#" class="text-rose-500 transition-all duration-300 hover:text-rose-700">Delete</a>
                                 </th>
                             @endcan
                         </tr>

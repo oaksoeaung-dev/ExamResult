@@ -10,17 +10,17 @@
         <div class="max-w-2xl rounded-lg border p-5 shadow">
             <h2 class="text-2xl">
                 Upload
-                <span class="text-red-500">CSV</span>
+                <span class="text-red-500">XLSX</span>
                 File
             </h2>
             <form action="{{ route("export.internationalSchool.reportCard.cambridge.generate") }}" method="post" enctype="multipart/form-data" class="mt-5 space-y-5">
                 @csrf
                 <div>
                     <div class="flex">
-                        <input type="file" name="csv" id="file-input" class="peer block w-full rounded-l-lg border-y border-l border-gray-200 text-sm shadow-sm file:me-4 file:border-0 file:bg-gray-50 file:px-4 file:py-3 focus:border-gray-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50" />
-                        <a href="{{ route("export.internationalSchool.download", "cam_example.csv") }}" class="flex w-52 items-center justify-center gap-3 rounded-r-lg border-y border-r border-gray-200 bg-gray-50 py-2 text-sm hover:bg-gray-100 peer-focus:border-gray-500">
+                        <input type="file" name="xlsx" id="file-input" class="peer block w-full rounded-l-lg border-y border-l border-gray-200 text-sm shadow-sm file:me-4 file:border-0 file:bg-gray-50 file:px-4 file:py-3 focus:border-gray-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50" />
+                        <a href="{{ route("export.internationalSchool.download", "cam_example_new.xlsx") }}" class="flex w-52 items-center justify-center gap-3 rounded-r-lg border-y border-r border-gray-200 bg-gray-50 py-2 text-sm hover:bg-gray-100 peer-focus:border-gray-500">
                             <i class="fi fi-rr-file-download"></i>
-                            <span>Example CSV</span>
+                            <span>Example File</span>
                         </a>
                     </div>
                     @error("csv")

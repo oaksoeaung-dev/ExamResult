@@ -1,14 +1,8 @@
 <x-app-layout>
     <div class="space-y-5">
-        <div
-            class="mx-auto max-w-sm overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-lg md:mx-0 lg:mx-0"
-        >
+        <div class="mx-auto max-w-sm overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-lg md:mx-0 lg:mx-0">
             <a href="#">
-                <img
-                    class="h-56 w-full rounded-t-lg object-cover"
-                    src="{{ asset("images/background/" . rand(1, 8) . ".png") }}"
-                    alt=""
-                />
+                <img class="h-56 w-full rounded-t-lg object-cover" src="{{ asset("images/background/" . rand(1, 8) . ".png") }}" alt="" />
             </a>
             <div class="space-y-4 bg-zinc-50 p-5">
                 <div>

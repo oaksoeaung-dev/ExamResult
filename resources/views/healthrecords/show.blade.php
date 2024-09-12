@@ -12,19 +12,13 @@
             {{-- Start Personal Information --}}
             <div class="w-full rounded-lg bg-gray-50 p-5 md:col-span-3 md:col-start-1 md:row-span-4 md:row-start-1">
                 <div class="grid place-items-center gap-4">
-                    <img
-                        src="{{ ! empty($record->image) ? asset("storage/studentphotos/" . $record->image) : asset("images/profiles/" . $record->gender . ".png") }}"
-                        class="h-36 w-36 overflow-hidden object-cover"
-                        alt="student image"
-                    />
+                    <img src="{{ ! empty($record->image) ? asset("storage/studentphotos/" . $record->image) : asset("images/profiles/" . $record->gender . ".png") }}" class="h-36 w-36 overflow-hidden object-cover" alt="student image" />
 
                     <h1 class="text-center text-2xl font-bold">{{ $record->name }}</h1>
 
                     <div class="grid w-full gap-5 md:grid-cols-2">
                         <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
-                            <div
-                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-violet-100 text-violet-500"
-                            >
+                            <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-violet-100 text-violet-500">
                                 <i class="fi fi-rs-venus-mars"></i>
                             </div>
                             <div>
@@ -33,9 +27,7 @@
                             </div>
                         </div>
                         <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
-                            <div
-                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-teal-100 text-teal-500"
-                            >
+                            <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-teal-100 text-teal-500">
                                 <i class="fi fi-rs-cake-wedding"></i>
                             </div>
                             <div>
@@ -46,9 +38,7 @@
                             </div>
                         </div>
                         <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
-                            <div
-                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-rose-100 text-rose-500"
-                            >
+                            <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-rose-100 text-rose-500">
                                 <i class="fi fi-rs-envelopes"></i>
                             </div>
                             <div>
@@ -57,9 +47,7 @@
                             </div>
                         </div>
                         <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
-                            <div
-                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
-                            >
+                            <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
                                 <i class="fi fi-rs-mobile-button"></i>
                             </div>
                             <div>
@@ -68,9 +56,7 @@
                             </div>
                         </div>
                         <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
-                            <div
-                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-lime-100 text-lime-500"
-                            >
+                            <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-lime-100 text-lime-500">
                                 <i class="fi fi-rs-route"></i>
                             </div>
                             <div>
@@ -79,9 +65,7 @@
                             </div>
                         </div>
                         <div class="flex gap-4 rounded-lg bg-white px-4 py-3">
-                            <div
-                                class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-sky-100 text-cyan-500"
-                            >
+                            <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-sky-100 text-cyan-500">
                                 <i class="fi fi-rs-users"></i>
                             </div>
                             <div>
@@ -135,11 +119,7 @@
             <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-1 md:row-span-3 md:row-start-5">
                 <div class="grid gap-4">
                     <div class="flex-none">
-                        <img
-                            src="{{ asset("images/icons/humanoid.png") }}"
-                            alt="Body & Nutritional status"
-                            class="w-16"
-                        />
+                        <img src="{{ asset("images/icons/humanoid.png") }}" alt="Body & Nutritional status" class="w-16" />
                     </div>
 
                     <h1 class="text-lg font-bold">Body & Nutritional status</h1>
@@ -405,11 +385,7 @@
 
                     <div class="space-y-3">
                         <h1 class="text-sm font-bold">Sign</h1>
-                        <img
-                            src="{{ asset("storage/signs/" . $record->doctorsign->sign) . ".png" }}"
-                            alt="signature"
-                            class="w-14 object-contain"
-                        />
+                        <img src="{{ asset("storage/signs/" . $record->doctorsign->sign) . ".png" }}" alt="signature" class="w-14 object-contain" />
                     </div>
                 </div>
             </div>

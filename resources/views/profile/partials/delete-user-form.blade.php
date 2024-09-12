@@ -27,13 +27,7 @@
             </p>
             <div class="mt-6">
                 <x-input-label for="password" :value="__('Password')" />
-                <x-text-input
-                    id="password"
-                    type="password"
-                    name="password"
-                    :messages="$errors->updatePassword->get('password')"
-                    icon="fi fi-rr-lock"
-                />
+                <x-text-input id="password" type="password" name="password" :messages="$errors->updatePassword->get('password')" icon="fi fi-rr-lock" />
             </div>
 
             <div class="mt-6 flex justify-end">

@@ -22,10 +22,7 @@
                 </thead>
                 <tbody>
                     @foreach ($teachers as $teacher)
-                        <tr
-                            class="cursor-pointer border-b bg-white transition-all duration-300 hover:bg-zinc-50"
-                            onclick="window.location.href='{{ route("teachers.show", $teacher->id) }}';"
-                        >
+                        <tr class="cursor-pointer border-b bg-white transition-all duration-300 hover:bg-zinc-50" onclick="window.location.href='{{ route("teachers.show", $teacher->id) }}';">
                             <th class="whitespace-nowrap px-6 py-4 font-normal text-zinc-700">
                                 {{ $teacher->name }}
                             </th>

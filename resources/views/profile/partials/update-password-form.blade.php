@@ -15,48 +15,24 @@
 
         <div class="mt-4">
             <x-input-label for="update_password_current_password" :value="__('Current Password')" />
-            <x-text-input
-                id="update_password_current_password"
-                type="password"
-                name="current_password"
-                :messages="$errors->updatePassword->get('current_password')"
-                icon="fi fi-rr-lock"
-            />
+            <x-text-input id="update_password_current_password" type="password" name="current_password" :messages="$errors->updatePassword->get('current_password')" icon="fi fi-rr-lock" />
         </div>
 
         <div class="mt-4">
             <x-input-label for="update_password_password" :value="__('New Password')" />
-            <x-text-input
-                id="update_password_password"
-                type="password"
-                name="password"
-                :messages="$errors->updatePassword->get('password')"
-                icon="fi fi-br-lock"
-            />
+            <x-text-input id="update_password_password" type="password" name="password" :messages="$errors->updatePassword->get('password')" icon="fi fi-br-lock" />
         </div>
 
         <div class="mt-4">
             <x-input-label for="update_password_password_confirmation" :value="__('Confirm Password')" />
-            <x-text-input
-                id="update_password_password_confirmation"
-                type="password"
-                name="password_confirmation"
-                :messages="$errors->updatePassword->get('password_confirmation')"
-                icon="fi fi-sr-lock"
-            />
+            <x-text-input id="update_password_password_confirmation" type="password" name="password_confirmation" :messages="$errors->updatePassword->get('password_confirmation')" icon="fi fi-sr-lock" />
         </div>
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __("Save") }}</x-primary-button>
 
             @if (session("status") === "password-updated")
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => (show = false), 2000)"
-                    class="text-sm text-zinc-600"
-                >
+                <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => (show = false), 2000)" class="text-sm text-zinc-600">
                     {{ __("Saved.") }}
                 </p>
             @endif

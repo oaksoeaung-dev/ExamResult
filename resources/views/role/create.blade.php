@@ -8,22 +8,12 @@
             @csrf
             <div>
                 <x-input-label for="name">Name</x-input-label>
-                <x-text-input
-                    id="name"
-                    type="name"
-                    name="name"
-                    :value="old('name')"
-                    :messages="$errors->get('name')"
-                    icon="fi fi-rr-admin-alt"
-                    placeholder="Enter role name"
-                />
+                <x-text-input id="name" type="name" name="name" :value="old('name')" :messages="$errors->get('name')" icon="fi fi-rr-admin-alt" placeholder="Enter role name" />
             </div>
 
             <div>
                 <p class="mb-2 block text-sm font-medium text-zinc-700">Permissions For Subject</p>
-                <ul
-                    class="w-full items-center divide-x divide-zinc-200 rounded-lg border border-zinc-200 bg-white text-sm font-medium text-zinc-900 shadow sm:flex"
-                >
+                <ul class="w-full items-center divide-x divide-zinc-200 rounded-lg border border-zinc-200 bg-white text-sm font-medium text-zinc-900 shadow sm:flex">
                     <li class="w-full ps-3">
                         <x-select-box name="subject_create">Create</x-select-box>
                     </li>
@@ -41,9 +31,7 @@
 
             <div>
                 <p class="mb-2 block text-sm font-medium text-zinc-700">Permissions For Teacher</p>
-                <ul
-                    class="w-full items-center divide-x divide-zinc-200 rounded-lg border border-zinc-200 bg-white text-sm font-medium text-zinc-900 shadow sm:flex"
-                >
+                <ul class="w-full items-center divide-x divide-zinc-200 rounded-lg border border-zinc-200 bg-white text-sm font-medium text-zinc-900 shadow sm:flex">
                     <li class="w-full ps-3">
                         <x-select-box name="teacher_create">Create</x-select-box>
                     </li>

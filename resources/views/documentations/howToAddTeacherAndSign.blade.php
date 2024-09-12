@@ -8,7 +8,8 @@
         </div>
         <ul class="list-disc space-y-3 ps-5">
             <li class="">
-                Create လုပ်ရန်အတွက် <a class="text-sky-500" href="{{ route("teachers.create") }}" target="_blank">ဒီနေရာကိုနှိပ်ပါ။</a>
+                Create လုပ်ရန်အတွက်
+                <a class="text-sky-500" href="{{ route("teachers.create") }}" target="_blank">ဒီနေရာကိုနှိပ်ပါ။</a>
             </li>
             <li class="">
                 <span class="badge-green">Name</span>

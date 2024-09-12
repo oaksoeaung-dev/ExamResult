@@ -19,29 +19,13 @@
 
         <div>
             <x-input-label for="name">Name</x-input-label>
-            <x-text-input
-                id="name"
-                type="text"
-                name="name"
-                :value="old('name',$user->name)"
-                :messages="$errors->get('name')"
-                icon="fi fi-rr-user"
-                placeholder="name@example.com"
-            />
+            <x-text-input id="name" type="text" name="name" :value="old('name',$user->name)" :messages="$errors->get('name')" icon="fi fi-rr-user" placeholder="name@example.com" />
         </div>
 
         <div>
             <div>
                 <x-input-label for="email">Email</x-input-label>
-                <x-text-input
-                    id="email"
-                    type="email"
-                    name="email"
-                    :value="old('email',$user->email)"
-                    :messages="$errors->get('email')"
-                    icon="fi fi-rr-at"
-                    placeholder="name@example.com"
-                />
+                <x-text-input id="email" type="email" name="email" :value="old('email',$user->email)" :messages="$errors->get('email')" icon="fi fi-rr-at" placeholder="name@example.com" />
             </div>
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
@@ -49,10 +33,7 @@
                     <p class="mt-2 text-sm text-zinc-800">
                         {{ __("Your email address is unverified.") }}
 
-                        <button
-                            form="send-verification"
-                            class="rounded-md text-sm text-zinc-600 underline hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                        >
+                        <button form="send-verification" class="rounded-md text-sm text-zinc-600 underline hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                             {{ __("Click here to re-send the verification email.") }}
                         </button>
                     </p>
@@ -70,13 +51,7 @@
             <x-primary-button>{{ __("Save") }}</x-primary-button>
 
             @if (session("status") === "profile-updated")
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => (show = false), 2000)"
-                    class="text-sm text-zinc-600"
-                >
+                <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => (show = false), 2000)" class="text-sm text-zinc-600">
                     {{ __("Saved.") }}
                 </p>
             @endif

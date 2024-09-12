@@ -13,42 +13,19 @@
             <div class="h-fit overflow-hidden rounded-lg bg-white pb-2 shadow-lg">
                 <h4 class="bg-teal-400 py-2 text-center text-xl font-semibold text-white">Information</h4>
                 <div class="px-5 py-2">
-                    <input
-                        type="text"
-                        class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                        value="{{ $student->name }}"
-                        disabled
-                    />
+                    <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" value="{{ $student->name }}" disabled />
                 </div>
                 <div class="px-5 py-2">
-                    <input
-                        type="text"
-                        class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                        value="{{ $class->name }}"
-                        disabled
-                    />
+                    <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" value="{{ $class->name }}" disabled />
                 </div>
                 <div class="px-5 py-2">
-                    <input
-                        type="text"
-                        class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                        value="{{ Carbon::parse($class->startdate)->format("Y") . " - " . Carbon::parse($class->enddate)->format("Y") }}"
-                        disabled
-                    />
+                    <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" value="{{ Carbon::parse($class->startdate)->format("Y") . " - " . Carbon::parse($class->enddate)->format("Y") }}" disabled />
                 </div>
                 <div class="px-5 py-2">
-                    <input
-                        type="text"
-                        class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                        placeholder="Term"
-                    />
+                    <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" placeholder="Term" />
                 </div>
                 <div class="px-5 py-2">
-                    <input
-                        type="text"
-                        class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                        placeholder="Campus"
-                    />
+                    <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-500 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" placeholder="Campus" />
                 </div>
             </div>
             @foreach ($class->subjects()->get() as $subject)
@@ -56,10 +33,7 @@
                     <h4 class="bg-teal-400 py-2 text-center text-xl font-semibold text-white">{{ $subject->name }}</h4>
                     <div class="grid grid-cols-2 gap-5 px-5 py-2">
                         <p class="w-full rounded-lg border border-zinc-300 p-2.5 text-sm text-zinc-700">Marks</p>
-                        <input
-                            type="text"
-                            class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                        />
+                        <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" />
                     </div>
                     @for ($i = 1; $i <=6; $i++)
                         @if ($subject["skill" . $i] != null)
@@ -67,10 +41,7 @@
                                 <p class="w-full rounded-lg border border-zinc-300 p-2.5 text-sm text-zinc-700">
                                     {{ $subject["skill" . $i] }}
                                 </p>
-                                <input
-                                    type="text"
-                                    class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                                />
+                                <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" />
                             </div>
                         @endif
                     @endfor
@@ -82,15 +53,8 @@
 
                 @for ($i = 1; $i <=12; $i++)
                     <div class="grid grid-cols-2 gap-5 px-5 py-2">
-                        <input
-                            type="text"
-                            class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                            value="{{ Carbon::create(null, $i, 1)->format("F") }}"
-                        />
-                        <input
-                            type="text"
-                            class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                        />
+                        <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" value="{{ Carbon::create(null, $i, 1)->format("F") }}" />
+                        <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" />
                     </div>
                 @endfor
             </div>
@@ -103,10 +67,7 @@
                             <p class="w-full rounded-lg border border-zinc-300 p-2.5 text-sm text-zinc-700">
                                 {{ $behaviour->name }}
                             </p>
-                            <input
-                                type="text"
-                                class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500"
-                            />
+                            <input type="text" class="block w-full rounded-lg border border-zinc-300 bg-white p-2.5 text-sm text-zinc-900 shadow-sm focus:border-zinc-500 focus:ring-zinc-500" />
                         </div>
                     @endforeach
                 </div>

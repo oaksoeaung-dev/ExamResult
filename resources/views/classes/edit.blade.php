@@ -13,15 +13,7 @@
             @method("PUT")
             <div class="w-1/3">
                 <x-input-label for="name">Name</x-input-label>
-                <x-text-input
-                    id="name"
-                    type="text"
-                    name="name"
-                    :value="old('name',$class->name)"
-                    :messages="$errors->get('name')"
-                    icon="fi fi-rr-chalkboard-user"
-                    placeholder="Enter class name"
-                />
+                <x-text-input id="name" type="text" name="name" :value="old('name',$class->name)" :messages="$errors->get('name')" icon="fi fi-rr-chalkboard-user" placeholder="Enter class name" />
             </div>
 
             <div date-rangepicker datepicker-format="dd-M-yyyy">
@@ -30,26 +22,14 @@
                         <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
                             <i class="fi fi-rr-calendar"></i>
                         </div>
-                        <input
-                            name="start"
-                            type="text"
-                            value="{{ old("start", Carbon::parse($class->startdate)->format("d-M-Y")) }}"
-                            class="block w-full rounded-lg border border-zinc-300 p-2.5 ps-10 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
-                            placeholder="Select date start"
-                        />
+                        <input name="start" type="text" value="{{ old("start", Carbon::parse($class->startdate)->format("d-M-Y")) }}" class="block w-full rounded-lg border border-zinc-300 p-2.5 ps-10 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500" placeholder="Select date start" />
                     </div>
                     <span class="mx-4 text-zinc-500">to</span>
                     <div class="relative">
                         <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
                             <i class="fi fi-rr-calendar"></i>
                         </div>
-                        <input
-                            name="end"
-                            type="text"
-                            value="{{ old("end", Carbon::parse($class->enddate)->format("d-M-Y")) }}"
-                            class="block w-full rounded-lg border border-zinc-300 p-2.5 ps-10 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
-                            placeholder="Select date end"
-                        />
+                        <input name="end" type="text" value="{{ old("end", Carbon::parse($class->enddate)->format("d-M-Y")) }}" class="block w-full rounded-lg border border-zinc-300 p-2.5 ps-10 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500" placeholder="Select date end" />
                     </div>
                 </div>
 

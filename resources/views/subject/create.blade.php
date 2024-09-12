@@ -8,15 +8,7 @@
             @csrf
             <div>
                 <x-input-label for="name">Name</x-input-label>
-                <x-text-input
-                    id="name"
-                    type="text"
-                    name="name"
-                    :value="old('name')"
-                    :messages="$errors->get('name')"
-                    icon="fi fi-rr-diary-bookmark-down"
-                    placeholder="Enter subject name"
-                />
+                <x-text-input id="name" type="text" name="name" :value="old('name')" :messages="$errors->get('name')" icon="fi fi-rr-diary-bookmark-down" placeholder="Enter subject name" />
             </div>
 
             <div class="">
@@ -24,14 +16,7 @@
                 <div class="space-y-3">
                     @for ($i = 1; $i <=6; $i++)
                         <div>
-                            <x-text-input
-                                id="skill{{ $i }}"
-                                type="text"
-                                name="skill{{ $i }}"
-                                :value="old('skill'.$i)"
-                                :messages="$errors->get('skill'.$i)"
-                                icon="fi fi-rr-star"
-                            />
+                            <x-text-input id="skill{{ $i }}" type="text" name="skill{{ $i }}" :value="old('skill'.$i)" :messages="$errors->get('skill'.$i)" icon="fi fi-rr-star" />
                         </div>
                     @endfor
                 </div>

@@ -87,17 +87,17 @@
                         </div>
                     </section>
                     <section class="space-y-1">
-                        @foreach ($student["Remark"] as $header => $remark )
+                        @foreach ($student["Remark"] as $header => $remark)
                             <h1 class="text-sm font-medium">{{ $header }}</h1>
                             <div class="text-sm">
-                                <p>{{ $remark}}</p>
+                                <p>{{ $remark }}</p>
                             </div>
                         @endforeach
                     </section>
-                    <section class="flex {{ count($student["Sign"]) == 1 ? "justify-end" : "justify-between"  }}">
-                        @foreach($student["Sign"] as $text => $sign)
+                    <section class="{{ count($student["Sign"]) == 1 ? "justify-end" : "justify-between" }} flex">
+                        @foreach ($student["Sign"] as $text => $sign)
                             <div class="flex flex-col items-center justify-center gap-1">
-                                <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="h-20 w-20 object-cover" alt="Signature" />
+                                <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-44 object-contain" alt="Signature" />
                                 <p class="text-xs font-bold">{{ $text }}</p>
                             </div>
                         @endforeach
@@ -192,7 +192,7 @@
                             </ol>
                         </div>
                     </section>
-                    <section>
+                    <section class="pt-28">
                         <img src="{{ asset("images/logos/brands.png") }}" class="h-full w-full object-cover" alt="brands" />
                     </section>
                 </div>

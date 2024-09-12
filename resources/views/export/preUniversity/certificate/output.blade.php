@@ -51,10 +51,7 @@
     </head>
     <body>
         @foreach ($students as $student)
-            <div
-                class="page1 mx-auto my-[20px] grid grid-rows-6 rounded-md border border-gray-300 bg-[length:100%_auto] bg-center bg-no-repeat p-[12px] shadow-md [min-height:29.7cm] [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none"
-                style="background-image: url({{ asset("images/reportcardBackground/unigraduation.jpg") }})"
-            >
+            <div class="page1 mx-auto my-[20px] grid grid-rows-6 rounded-md border border-gray-300 bg-[length:100%_auto] bg-center bg-no-repeat p-[12px] shadow-md [min-height:29.7cm] [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none" style="background-image: url({{ asset("images/reportcardBackground/unigraduation.jpg") }})">
                 <div class="relative row-start-3">
                     <div class="absolute right-1/2 top-[75%] translate-x-1/2">
                         <p class="text-2xl text-[#A27433]">{{ $student["Name"] }}</p>
@@ -67,9 +64,7 @@
                             successfully completed the
                             <span class="font-bold text-[#A27433]">Pre-IGCSE</span>
                         </p>
-                        <p class="font-bold text-[#A27433]">
-                            (Pre-International General Certificate of Secondary Education)
-                        </p>
+                        <p class="font-bold text-[#A27433]">(Pre-International General Certificate of Secondary Education)</p>
                         <p class="text-[#A27433]">
                             Program at KBTC Pre University in
                             <span class="text-[#A27433]">{{ $student["AcademicYear"] }}</span>
@@ -82,9 +77,7 @@
                             successfully completed the
                             <span class="font-bold text-[#A27433]">IGCSE</span>
                         </p>
-                        <p class="font-bold text-[#A27433]">
-                            (International General Certificate of Secondary Education)
-                        </p>
+                        <p class="font-bold text-[#A27433]">(International General Certificate of Secondary Education)</p>
                         <p>
                             Program at KBTC Pre University in
                             <span>{{ $student["AcademicYear"] }}</span>

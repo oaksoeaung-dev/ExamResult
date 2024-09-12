@@ -9,15 +9,7 @@
             @method("PUT")
             <div>
                 <x-input-label for="name">Name</x-input-label>
-                <x-text-input
-                    id="name"
-                    type="text"
-                    name="name"
-                    :value="old('name',$behaviour->name)"
-                    :messages="$errors->get('name')"
-                    icon="fi fi-rr-gym"
-                    placeholder="Enter behaviour name"
-                />
+                <x-text-input id="name" type="text" name="name" :value="old('name',$behaviour->name)" :messages="$errors->get('name')" icon="fi fi-rr-gym" placeholder="Enter behaviour name" />
             </div>
 
             <div class="mt-5 flex justify-end gap-10">

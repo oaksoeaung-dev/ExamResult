@@ -6,23 +6,23 @@
         {
             if(is_numeric($mark))
             {
-                if((int)$mark >= 81 && (int)$mark <= 100)
+                if((int)$mark >= 80 && (int)$mark <= 100)
                 {
                     return "A";
                 }
-                elseif((int)$mark >= 61 && (int)$mark < 81)
+                elseif((int)$mark >= 60 && (int)$mark < 80)
                 {
                     return "B";
                 }
-                elseif ((int)$mark >= 41 && (int)$mark < 61)
+                elseif ((int)$mark >= 40 && (int)$mark < 60)
                 {
                     return "C";
                 }
-                elseif ((int)$mark >= 21 && (int)$mark < 41)
+                elseif ((int)$mark >= 20 && (int)$mark < 40)
                 {
                     return "D";
                 }
-                elseif ((int)$mark >= 0 && (int)$mark < 21)
+                elseif ((int)$mark >= 0 && (int)$mark < 20)
                 {
                     return "E";
                 }

@@ -1,5 +1,14 @@
 {
     "printWidth": 9999,
     "proseWrap": "never",
-    "plugins": ["prettier-plugin-blade", "prettier-plugin-tailwindcss"]
+    "plugins": ["prettier-plugin-blade", "prettier-plugin-tailwindcss"],
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "files": "*.blade.php",
+            "options": {
+                "parser": "blade"
+            }
+        }
+    ]
 }

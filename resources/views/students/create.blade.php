@@ -10,15 +10,10 @@
                 <div class="max-w-sm items-center overflow-hidden rounded-lg bg-white shadow-md">
                     <div class="">
                         <input id="upload" type="file" name="studentphoto" class="hidden" />
-                        <div
-                            id="image-preview"
-                            class="mx-auto max-w-sm cursor-pointer items-center rounded-lg bg-zinc-50 p-6 text-center"
-                        >
+                        <div id="image-preview" class="mx-auto max-w-sm cursor-pointer items-center rounded-lg bg-zinc-50 p-6 text-center">
                             <label for="upload" class="cursor-pointer">
                                 <i class="fi fi-sr-inbox-out mb-2 text-4xl"></i>
-                                <h5 class="mb-2 text-xl font-bold tracking-tight text-zinc-700">
-                                    Upload student photo
-                                </h5>
+                                <h5 class="mb-2 text-xl font-bold tracking-tight text-zinc-700">Upload student photo</h5>
                                 <p class="text-sm font-normal text-zinc-400 md:px-6">
                                     Choose photo size should be less than
                                     <b class="text-zinc-600">2MB</b>
@@ -41,67 +36,27 @@
             <div class="grid grid-cols-2 gap-5">
                 <div class="">
                     <x-input-label for="stdId">Student ID</x-input-label>
-                    <x-text-input
-                        id="stdId"
-                        type="text"
-                        name="stdId"
-                        :value="old('stdId')"
-                        :messages="$errors->get('stdId')"
-                        icon="fi fi-rr-id-badge"
-                        placeholder="Enter student Id"
-                    />
+                    <x-text-input id="stdId" type="text" name="stdId" :value="old('stdId')" :messages="$errors->get('stdId')" icon="fi fi-rr-id-badge" placeholder="Enter student Id" />
                 </div>
 
                 <div class="">
                     <x-input-label for="name">Name</x-input-label>
-                    <x-text-input
-                        id="name"
-                        type="text"
-                        name="name"
-                        :value="old('name')"
-                        :messages="$errors->get('name')"
-                        icon="fi fi-rr-student"
-                        placeholder="Enter student name"
-                    />
+                    <x-text-input id="name" type="text" name="name" :value="old('name')" :messages="$errors->get('name')" icon="fi fi-rr-student" placeholder="Enter student name" />
                 </div>
 
                 <div class="">
                     <x-input-label for="email">Email</x-input-label>
-                    <x-text-input
-                        id="email"
-                        type="email"
-                        name="email"
-                        :value="old('email')"
-                        :messages="$errors->get('email')"
-                        icon="fi fi-rr-envelope"
-                        placeholder="Enter student email address"
-                    />
+                    <x-text-input id="email" type="email" name="email" :value="old('email')" :messages="$errors->get('email')" icon="fi fi-rr-envelope" placeholder="Enter student email address" />
                 </div>
 
                 <div class="">
                     <x-input-label for="phone">Phone</x-input-label>
-                    <x-text-input
-                        id="phone"
-                        type="phone"
-                        name="phone"
-                        :value="old('phone')"
-                        :messages="$errors->get('phone')"
-                        icon="fi fi-rr-mobile-notch"
-                        placeholder="Enter student phone number"
-                    />
+                    <x-text-input id="phone" type="phone" name="phone" :value="old('phone')" :messages="$errors->get('phone')" icon="fi fi-rr-mobile-notch" placeholder="Enter student phone number" />
                 </div>
 
                 <div class="">
                     <x-input-label for="address">Address</x-input-label>
-                    <x-text-input
-                        id="address"
-                        type="text"
-                        name="address"
-                        :value="old('address')"
-                        :messages="$errors->get('address')"
-                        icon="fi fi-rr-map-marker-home"
-                        placeholder="Enter student address"
-                    />
+                    <x-text-input id="address" type="text" name="address" :value="old('address')" :messages="$errors->get('address')" icon="fi fi-rr-map-marker-home" placeholder="Enter student address" />
                 </div>
 
                 <div>
@@ -110,52 +65,24 @@
                         <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
                             <i class="fi fi-rr-calendar"></i>
                         </div>
-                        <input
-                            datepicker
-                            datepicker-format="dd-M-yyyy"
-                            name="dob"
-                            type="text"
-                            value="{{ old("dob") }}"
-                            class="block w-full rounded-lg border border-zinc-300 p-2.5 ps-10 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
-                            placeholder="Select date of birth"
-                        />
+                        <input datepicker datepicker-format="dd-M-yyyy" name="dob" type="text" value="{{ old("dob") }}" class="block w-full rounded-lg border border-zinc-300 p-2.5 ps-10 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500" placeholder="Select date of birth" />
                     </div>
                 </div>
 
                 <div class="">
                     <x-input-label for="guardian_name">Guardian Name</x-input-label>
-                    <x-text-input
-                        id="guardian_name"
-                        type="text"
-                        name="guardian_name"
-                        :value="old('guardian_name')"
-                        :messages="$errors->get('guardian_name')"
-                        icon="fi fi-rr-users"
-                        placeholder="Enter guardian name"
-                    />
+                    <x-text-input id="guardian_name" type="text" name="guardian_name" :value="old('guardian_name')" :messages="$errors->get('guardian_name')" icon="fi fi-rr-users" placeholder="Enter guardian name" />
                 </div>
 
                 <div>
                     <p class="mb-3 text-sm font-medium">Gender</p>
                     <div class="flex items-center gap-5">
                         <div class="flex items-center gap-2">
-                            <input
-                                id="male"
-                                type="radio"
-                                value="male"
-                                name="gender"
-                                class="h-4 w-4 border-zinc-300 bg-zinc-100 text-blue-600 focus:ring-blue-500"
-                            />
+                            <input id="male" type="radio" value="male" name="gender" class="h-4 w-4 border-zinc-300 bg-zinc-100 text-blue-600 focus:ring-blue-500" />
                             <label for="male" class="text-sm font-medium text-zinc-900">Male</label>
                         </div>
                         <div class="flex items-center gap-2">
-                            <input
-                                id="female"
-                                type="radio"
-                                value="female"
-                                name="gender"
-                                class="h-4 w-4 border-zinc-300 bg-zinc-100 text-blue-600 focus:ring-blue-500"
-                            />
+                            <input id="female" type="radio" value="female" name="gender" class="h-4 w-4 border-zinc-300 bg-zinc-100 text-blue-600 focus:ring-blue-500" />
                             <label for="female" class="text-sm font-medium text-zinc-900">Female</label>
                         </div>
                     </div>

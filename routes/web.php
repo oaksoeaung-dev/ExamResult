@@ -43,6 +43,7 @@ Route::middleware('auth')->group(function () {
             Route::view('/addTeacherAndSign', 'documentations.howToAddTeacherAndSign')->name('addTeacherAndSign');
             Route::view('/uploadTranscript', 'documentations.uploadTranscript')->name('uploadTranscript');
             Route::view('/howToCreateGovernmentReportCard', 'documentations.howToCreateGovernmentReportCard')->name('howToCreateGovernmentReportCard');
+            Route::view('/howToCreateCambridgeReportCard', 'documentations.howToCreateCambridgeReportCard')->name('howToCreateCambridgeReportCard');
         });
 
         // International School
@@ -83,9 +84,9 @@ Route::middleware('auth')->group(function () {
 
             Route::prefix("certificate")->name(".certificate")->group(function () {
                 Route::get('/uploadFile', [PreUniversityExportController::class, 'certificate'])->name('.uploadFile');
-                Route::post('/generate', [PreUniversityExportController::class, 'certificateExport'])->name('.generate'); 
+                Route::post('/generate', [PreUniversityExportController::class, 'certificateExport'])->name('.generate');
             });
-                       
+
         });
 
 

@@ -73,28 +73,75 @@
                 </table>
             </div>
             <div class="">
-                <p class="text-lg font-semibold">Download example CSV<a href="{{ route("export.internationalSchool.download", "gov_example.csv") }}" class="text-sky-500"> here.</a></p>
+                <p class="text-lg font-semibold">
+                    Download example CSV
+                    <a href="{{ route("export.internationalSchool.download", "gov_example.csv") }}" class="text-sky-500">here.</a>
+                </p>
             </div>
-            <hr/>
+            <hr />
         </div>
         <div class="space-y-5">
             <h2 class="text-2xl">Data Entry in CSV File</h2>
 
-            <p><span class="badge-sky">Info.</span>ပါသည့် column header များကို <span class="font-semibold">ဖျက်လို့မရ ပြင်လို့မရ</span> ပါ။</p>
+            <p>
+                <span class="badge-sky">Info.</span>
+                ပါသည့် column header များကို
+                <span class="font-semibold">ဖျက်လို့မရ ပြင်လို့မရ</span>
+                ပါ။
+            </p>
 
-            <p><span class="badge-sky">Info.Division</span>တွင် <span class="badge-rose">lower</span><span class="badge-rose">upper</span><span class="badge-rose">secondary</span> <span class="font-semibold">သုံး</span> မျိုးသာထည့်လို့ရပါသည်။ Grading format <span class="font-semibold">A,S,E</span> အတွက် <span class="badge-rose">lower</span> <span class="font-semibold">A,B,C,D</span> အတွက် <span class="badge-rose">upper</span><span class="badge-rose">secondary</span> ဖြစ်ပါသည်။</p>
+            <p>
+                <span class="badge-sky">Info.Division</span>
+                တွင်
+                <span class="badge-rose">lower</span>
+                <span class="badge-rose">upper</span>
+                <span class="badge-rose">secondary</span>
+                <span class="font-semibold">သုံး</span>
+                မျိုးသာထည့်လို့ရပါသည်။ Grading format
+                <span class="font-semibold">A,S,E</span>
+                အတွက်
+                <span class="badge-rose">lower</span>
+                <span class="font-semibold">A,B,C,D</span>
+                အတွက်
+                <span class="badge-rose">upper</span>
+                <span class="badge-rose">secondary</span>
+                ဖြစ်ပါသည်။
+            </p>
 
-            <p><span class="badge-sky">Info.Subjects</span>column တွင် ကျောင်းသားများဖြေဆိုသည့် ဘာသာရပ်များကို column များခံပြီးထည့်ပေးရမည်။</p>
+            <p>
+                <span class="badge-sky">Info.Subjects</span>
+                column တွင် ကျောင်းသားများဖြေဆိုသည့် ဘာသာရပ်များကို column များခံပြီးထည့်ပေးရမည်။
+            </p>
 
-            <p><span class="badge-sky">Month.</span>နောက်က လနာမည် များကိုပြင်လို့ရပါသည်။</p>
+            <p>
+                <span class="badge-sky">Month.</span>
+                နောက်က လနာမည် များကိုပြင်လို့ရပါသည်။
+            </p>
 
-            <p><span class="badge-sky">Month.</span>column တွင်အမှတ်များက <span class="badge-sky">Info.Subjects</span> တွင်ထည့်ထားတဲ့ ဘာသာရပ်များအတိုင်းအမှတ်များကို <span class="font-semibold">Myanmar=A,English=A</span> စသည်ဖြင့် comma များခံပြီးထည့်ပေးရမည်။ <span class="badge-sky">Info.Subjects</span> တွင် သုံးဘာသာရှိပါက <span class="badge-sky">Month.</span>column တွင်လည်း သုံးဘာသာရှိရမည်။</p>
+            <p>
+                <span class="badge-sky">Month.</span>
+                column တွင်အမှတ်များက
+                <span class="badge-sky">Info.Subjects</span>
+                တွင်ထည့်ထားတဲ့ ဘာသာရပ်များအတိုင်းအမှတ်များကို
+                <span class="font-semibold">Myanmar=A,English=A</span>
+                စသည်ဖြင့် comma များခံပြီးထည့်ပေးရမည်။
+                <span class="badge-sky">Info.Subjects</span>
+                တွင် သုံးဘာသာရှိပါက
+                <span class="badge-sky">Month.</span>
+                column တွင်လည်း သုံးဘာသာရှိရမည်။
+            </p>
 
             <p>မဖြေသည့်လအတွက်ထည့်စရာမလိုပါ။ ကွက်လပ်ထားလို့ရပါသည်။</p>
 
-            <p><span class="badge-sky">Sign.</span>နောက်က စာများကို ပြင်လို့ရပါသည်။</p>
+            <p>
+                <span class="badge-sky">Sign.</span>
+                နောက်က စာများကို ပြင်လို့ရပါသည်။
+            </p>
 
-            <p><span class="font-semibold">Note :</span>Government က သတ်မှတ်ထားတဲ့လက July, October, December, February ဖြစ်ပါတယ်။ စာမေးပွဲ မဖြေသည့်လများရဲ့ column ကို ဖျက်လို့ရပါတယ် ဒါပေမယ့် မဖျက်ပါနဲ့။</p>
+            <p>
+                <span class="font-semibold">Note :</span>
+                Government က သတ်မှတ်ထားတဲ့လက July, October, December, February ဖြစ်ပါတယ်။ စာမေးပွဲ မဖြေသည့်လများရဲ့ column ကို ဖျက်လို့ရပါတယ် ဒါပေမယ့် မဖျက်ပါနဲ့။
+            </p>
         </div>
     </div>
 </x-app-layout>
