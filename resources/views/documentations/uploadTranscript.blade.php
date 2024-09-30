@@ -127,6 +127,7 @@
         <div class="space-y-5">
             <h2 class="text-2xl">Adding Data and Customizing the XLSX File</h2>
             <p class="font-extrabold text-red-500">Data Format in XLSX File ထဲက column များကို သတ်မှတ်ထားတဲ့ format အတိုင်းထည့်ပေးရပါမည်။</p>
+            <p class="font-extrabold text-red-500">အနီ နဲ့ ရေးထားသောစာလုံးများကိုဖျက်လို့မရပါ။ ပြင်လို့မရပါ။</p>
             <p>မပါတဲ့ subject column များကိုဖျက်လို့ရပါသည်။</p>
             <p>
                 Subject အမှတ်များကိုထည့်ရတွင် number ပဲထည့်ပေးပါ။ absent ဖြစ်တဲ့ subject များအတွက်
