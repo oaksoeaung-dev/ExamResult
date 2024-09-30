@@ -1,29 +1,52 @@
 <?php
 
-namespace App\Helpers;
+    namespace App\Helpers;
 
-class AcademicTranscriptGradeFormatIS
-{
-    public static function format($mark)
+    class AcademicTranscriptGradeFormatIS
     {
-        switch ($mark)
+        public static function format($mark)
         {
-            case ($mark >= 91 && $mark <= 100) || $mark == "A*" :
-                return "A*";
-            case ($mark >= 81 && $mark < 91) || $mark == "A" :
-                return "A";
-            case ($mark >= 61 && $mark < 81) || $mark == "B" :
-                return "B";
-            case ($mark >= 41 && $mark < 61) || $mark == "C" :
-                return "C";
-            case ($mark >= 21 && $mark < 41) || $mark == "D" :
-                return "D";
-            case ($mark >= 0 && $mark < 21) || $mark == "E" :
-                return "E";
-            case $mark == "-" || $mark == "F" :
-                return "F";
-            default :
-                return "Error";
+            if (is_numeric($mark)) {
+                if(in_array($mark,range(91,100)))
+                {
+                    return "A*";
+                }
+                elseif(in_array($mark,range(81,90)))
+                {
+                    return "A";
+                }
+                elseif(in_array($mark,range(61,80)))
+                {
+                    return "B";
+                }
+                elseif(in_array($mark,range(41,60)))
+                {
+                    return "C";
+                }
+                elseif(in_array($mark,range(21,40)))
+                {
+                    return "D";
+                }
+                elseif(in_array($mark,range(0,20)))
+                {
+                    return "E";
+                }
+                else{
+                    return "ERROR";
+                }
+            } else {
+                $grades = ["A*", "A", "B", "C", "D", "E", "F"];
+
+                if(in_array($mark,$grades))
+                {
+                    return $mark;
+                }
+                elseif($mark == "-"){
+                    return "F";
+                }
+                else{
+                    return "ERROR";
+                }
+            }
         }
     }
-}

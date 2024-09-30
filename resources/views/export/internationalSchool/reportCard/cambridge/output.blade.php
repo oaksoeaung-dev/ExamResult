@@ -276,30 +276,23 @@
                         </div>
                     </section>
                 @endif
-                    @php
-                        $review = array_keys($student["Review"])[0];
-                        $reviewData = $student["Review"][array_keys($student["Review"])[0]];
-                        $signs = [];
-                        for($i = 1; $i < count($student["Review"]);$i++)
-                        {
-                            $signs[array_keys($student["Review"])[$i]] = $student["Review"][array_keys($student["Review"])[$i]];
-                        }
-                    @endphp
-                    <section class="mt-1 text-xs">
-                        <h5 class="font-semibold">{{ $review }}</h5>
+                <section class="mt-1 text-xs">
+                    @foreach ($student["Review"] as $header => $remark)
+                        <h5 class="font-semibold">{{ $header }}</h5>
                         <div class="mt-1">
-                            {{ $reviewData }}
+                            {{ $remark }}
                         </div>
-                    </section>
+                    @endforeach
+                </section>
 
-                    <section class="{{ count($signs) == 1 ? "justify-end" : "justify-between" }} flex">
-                        @foreach ($signs as $text => $sign)
-                            <div class="flex flex-col items-center justify-center gap-1">
-                                <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-32 object-contain" alt="Signature" />
-                                <p class="w-32 text-wrap text-center text-xs font-bold">{{ $text }}</p>
-                            </div>
-                        @endforeach
-                    </section>
+                <section class="{{ count($student["Signs"]) == 1 ? "justify-end" : "justify-between" }} flex">
+                    @foreach ($student["Signs"] as $text => $sign)
+                        <div class="flex flex-col items-center justify-center gap-1">
+                            <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-32 object-contain" alt="Signature" />
+                            <p class="w-32 text-wrap text-center text-xs font-bold">{{ $text }}</p>
+                        </div>
+                    @endforeach
+                </section>
             </div>
         @endforeach
     </body>
