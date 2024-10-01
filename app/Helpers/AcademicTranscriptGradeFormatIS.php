@@ -11,23 +11,23 @@
                 {
                     return "A*";
                 }
-                elseif(in_array($mark,range(81,90)))
+                elseif(in_array($mark,range(80,90)))
                 {
                     return "A";
                 }
-                elseif(in_array($mark,range(61,80)))
+                elseif(in_array($mark,range(60,79)))
                 {
                     return "B";
                 }
-                elseif(in_array($mark,range(41,60)))
+                elseif(in_array($mark,range(40,59)))
                 {
                     return "C";
                 }
-                elseif(in_array($mark,range(21,40)))
+                elseif(in_array($mark,range(20,39)))
                 {
                     return "D";
                 }
-                elseif(in_array($mark,range(0,20)))
+                elseif(in_array($mark,range(0,19)))
                 {
                     return "E";
                 }

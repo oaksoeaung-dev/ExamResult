@@ -135,33 +135,33 @@
                         </tr>
                         <tr>
                             <td class="border px-6 py-2">Distinction (A)</td>
-                            <td class="border px-6 py-2">81 - 90</td>
+                            <td class="border px-6 py-2">80 - 90</td>
                             <td class="border px-6 py-2">Candidate demonstrated outstanding performance satisfying all
                                 learning outcomes and significantly exceeding a number of them
                             </td>
                         </tr>
                         <tr>
                             <td class="border px-6 py-2">Merit (B)</td>
-                            <td class="border px-6 py-2">61 - 80</td>
+                            <td class="border px-6 py-2">60 - 79</td>
                             <td class="border px-6 py-2">Candidate demonstrated strong performance satisfying all
                                 learning outcomes and exceeding a number of them
                             </td>
                         </tr>
                         <tr>
                             <td class="border px-6 py-2">Pass (C)</td>
-                            <td class="border px-6 py-2">41 - 60</td>
+                            <td class="border px-6 py-2">40 - 59</td>
                             <td class="border px-6 py-2">Candidate demonstrated competent performance satisfying all
                                 learning outcomes
                             </td>
                         </tr>
                         <tr>
                             <td class="border px-6 py-2">Fail (D)</td>
-                            <td class="border px-6 py-2">21 - 40</td>
+                            <td class="border px-6 py-2">20 - 39</td>
                             <td class="border px-6 py-2">Candidate did not satisfy all of the learning outcomes</td>
                         </tr>
                         <tr>
                             <td class="border px-6 py-2">Incomplete (E)</td>
-                            <td class="border px-6 py-2">0 - 20</td>
+                            <td class="border px-6 py-2">0 - 19</td>
                             <td class="border px-6 py-2">Candidate only has meagre and insufficient knowledge on this
                                 subject
                             </td>
