@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UploadCSVPreUniRequest extends FormRequest
+class UploadXLSXPreUniRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -14,7 +14,7 @@ class UploadCSVPreUniRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "csv" => "file|required|mimes:csv,txt",
+            "xlsx" => "file|required|mimes:xlsx",
         ];
     }
 }

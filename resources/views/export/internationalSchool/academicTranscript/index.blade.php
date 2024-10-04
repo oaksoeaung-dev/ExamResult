@@ -8,7 +8,7 @@
             <h2 class="text-3xl">Academic Transcript</h2>
         </div>
         <div class="grid grid-cols-2 gap-5">
-            <div class="max-w-full h-fit rounded-lg border p-5 shadow">
+            <div class="h-fit max-w-full rounded-lg border p-5 shadow">
                 <h2 class="text-2xl">
                     Upload
                     <span class="text-red-500">XLSX</span>
@@ -25,7 +25,7 @@
                             </a>
                         </div>
                         @error("csv")
-                        <p class="mt-1 text-red-500">{{ $message }}</p>
+                            <p class="mt-1 text-red-500">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="flex justify-end gap-3">
@@ -35,13 +35,15 @@
                 </form>
             </div>
 
-            @if($errors->any())
-                <div class="max-w-full rounded-lg border p-5 shadow-lg shadow-rose-100 bg-rose-100 border-rose-100 text-gray-500">
-                    <h2 class="text-2xl flex items-center gap-2"><i class="fi fi-rr-not-found text-gray-600"></i><span
-                            class="text-gray-600">Errors Found</span></h2>
-                    <ul class="list-disc p-5 space-y-1">
-                        @foreach($errors->all() as $error)
-                            <li class="text-gray-600">{{$error}}</li>
+            @if ($errors->any())
+                <div class="max-w-full rounded-lg border border-rose-100 bg-rose-100 p-5 text-gray-500 shadow-lg shadow-rose-100">
+                    <h2 class="flex items-center gap-2 text-2xl">
+                        <i class="fi fi-rr-not-found text-gray-600"></i>
+                        <span class="text-gray-600">Errors Found</span>
+                    </h2>
+                    <ul class="list-disc space-y-1 p-5">
+                        @foreach ($errors->all() as $error)
+                            <li class="text-gray-600">{{ $error }}</li>
                         @endforeach
                     </ul>
                 </div>

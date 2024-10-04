@@ -17,10 +17,10 @@
                 @csrf
                 <div>
                     <div class="flex">
-                        <input type="file" name="csv" id="file-input" class="peer block w-full rounded-l-lg border-y border-l border-gray-200 text-sm shadow-sm file:me-4 file:border-0 file:bg-gray-50 file:px-4 file:py-3 focus:border-gray-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50" />
-                        <a href="{{ route("export.preUniversity.download", "preunigraduation.csv") }}" class="flex w-52 items-center justify-center gap-3 rounded-r-lg border-y border-r border-gray-200 bg-gray-50 py-2 text-sm hover:bg-gray-100 peer-focus:border-gray-500">
+                        <input type="file" name="xlsx" id="file-input" class="peer block w-full rounded-l-lg border-y border-l border-gray-200 text-sm shadow-sm file:me-4 file:border-0 file:bg-gray-50 file:px-4 file:py-3 focus:border-gray-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50" />
+                        <a href="{{ route("export.preUniversity.download", "pre_uni_graduation_example.xlsx") }}" class="flex w-52 items-center justify-center gap-3 rounded-r-lg border-y border-r border-gray-200 bg-gray-50 py-2 text-sm hover:bg-gray-100 peer-focus:border-gray-500">
                             <i class="fi fi-rr-file-download"></i>
-                            <span>Example CSV</span>
+                            <span>Example XLSX</span>
                         </a>
                     </div>
                     @error("csv")

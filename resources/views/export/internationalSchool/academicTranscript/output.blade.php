@@ -16,10 +16,12 @@
 </head>
 <body>
 @foreach ($students as $student)
-    <div class="mx-auto my-[20px] min-h-[29.7cm] rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none grid grid-rows-10 grid-cols-3" style="background: url('{{ asset("images/graduationBackground/IS_graduation_certificate.png") }}'); background-size: 100% auto">
-        <h1 class="col-span-3 row-start-5 mt-auto mb-3 text-center text-[#9e7330] font-medium">{{ $student["Information"]["Name"] }}</h1>
-        <h2 class="col-span-3 row-start-7 text-2xl -mt-1 text-center text-[#9e7330] font-medium">{{ $student["Information"]["Grade"] }}</h2>
-        <h3 class="row-start-8 ml-auto mr-6 mt-16 text-[#9e7330] font-medium">{{ $student["Information"]["Issuance Date"] }}</h3>
+    <div
+        class="mx-auto my-[20px] grid min-h-[29.7cm] grid-cols-3 grid-rows-10 rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none"
+        style="background: url('{{ asset("images/graduationBackground/is_certificate.png") }}'); background-size: 100% auto">
+        <h1 class="col-span-3 row-start-5 mb-3 mt-auto text-center font-medium text-[#9e7330]">{{ $student["Information"]["Name"] }}</h1>
+        <h2 class="col-span-3 row-start-7 -mt-1 text-center text-2xl font-medium text-[#9e7330]">{{ $student["Information"]["Grade"] }}</h2>
+        <h3 class="row-start-8 ml-auto mr-6 mt-16 font-medium text-[#9e7330]">{{ $student["Information"]["Issuance Date"] }}</h3>
     </div>
     <div
         class="mx-auto my-[20px] min-h-[29.7cm] rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none">
@@ -50,24 +52,24 @@
                 <div>
                     <table class="w-full border-collapse border text-xs">
                         <thead class="bg-[#00223d] text-white">
-                            <tr>
-                                <th class="border px-6 py-1 text-white">Main Subjects</th>
-                                <th class="border px-6 py-1 text-white">Total Guided Learning Hours</th>
-                                <th class="border px-6 py-1 text-white">Grade</th>
-                            </tr>
+                        <tr>
+                            <th class="border px-6 py-1 text-white">Main Subjects</th>
+                            <th class="border px-6 py-1 text-white">Total Guided Learning Hours</th>
+                            <th class="border px-6 py-1 text-white">Grade</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            @foreach ($student["Subjects"] as $subjectName => $mark)
-                                <tr>
-                                    <td class="border px-6 py-1">{{ $subjectName }}</td>
-                                    <td class="border px-6 py-1">
-                                        {{ $learningHours->where("grade", "=", $student["Information"]["Grade"])->where("program", "=", $student["Information"]["Program"])->where("campus", "=", $student["Information"]["Campus"])->where("subjectcategory", "=", "mainsubjects")->where("subjectname", "=", $subjectName)->first()->hour }}
-                                    </td>
-                                    <td class="border px-6 py-1">
-                                        {{ AcademicTranscriptGradeFormatIS::format($mark["Mark"]) }}
-                                    </td>
-                                </tr>
-                            @endforeach
+                        @foreach ($student["Subjects"] as $subjectName => $mark)
+                            <tr>
+                                <td class="border px-6 py-1">{{ $subjectName }}</td>
+                                <td class="border px-6 py-1">
+                                    {{ $learningHours->where("grade", "=", $student["Information"]["Grade"])->where("program", "=", $student["Information"]["Program"])->where("campus", "=", $student["Information"]["Campus"])->where("subjectcategory", "=", "mainsubjects")->where("subjectname", "=", $subjectName)->first()->hour }}
+                                </td>
+                                <td class="border px-6 py-1">
+                                    {{ AcademicTranscriptGradeFormatIS::format($mark["Mark"]) }}
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -77,18 +79,18 @@
                 <div>
                     <table class="w-full border-collapse border text-xs">
                         <thead class="bg-[#00223d] text-white">
-                            <tr>
-                                <th class="border px-6 py-1 text-white">Add-on Subjects</th>
-                                <th class="border px-6 py-1 text-white">Total Guided Learning Hours</th>
-                            </tr>
+                        <tr>
+                            <th class="border px-6 py-1 text-white">Add-on Subjects</th>
+                            <th class="border px-6 py-1 text-white">Total Guided Learning Hours</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            @foreach ($learningHours->where("grade", "=", $student["Information"]["Grade"])->where("program", "=", $student["Information"]["Program"])->where("campus", "=", $student["Information"]["Campus"])->where("subjectcategory", "=", "addonsubjects") as $subject)
-                                <tr>
-                                    <td class="border px-6 py-1">{{ $subject->subjectname }}</td>
-                                    <td class="border px-6 py-1">{{ $subject->hour }}</td>
-                                </tr>
-                            @endforeach
+                        @foreach ($learningHours->where("grade", "=", $student["Information"]["Grade"])->where("program", "=", $student["Information"]["Program"])->where("campus", "=", $student["Information"]["Campus"])->where("subjectcategory", "=", "addonsubjects") as $subject)
+                            <tr>
+                                <td class="border px-6 py-1">{{ $subject->subjectname }}</td>
+                                <td class="border px-6 py-1">{{ $subject->hour }}</td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -105,7 +107,8 @@
             <section class="{{ count($student["Signs"]) == 1 ? "justify-end" : "justify-between" }} flex">
                 @foreach ($student["Signs"] as $text => $sign)
                     <div class="flex flex-col items-center justify-center gap-1">
-                        <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-44 object-contain" alt="Signature" />
+                        <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-44 object-contain"
+                             alt="Signature"/>
                         <p class="w-32 text-wrap text-center text-xs font-bold">{{ $text }}</p>
                     </div>
                 @endforeach

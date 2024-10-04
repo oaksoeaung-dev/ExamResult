@@ -6,16 +6,9 @@
     use App\Http\Requests\UploadXLSXISRequest;
     use App\Models\Learninghour;
     use Carbon\Carbon;
-    use Illuminate\Http\Request;
-    use Illuminate\Support\Arr;
-    use Illuminate\Support\Facades\File;
-    use Illuminate\Support\Facades\Storage;
     use Illuminate\Support\Str;
     use League\Csv\Reader;
-    use League\Csv\Statement;
     use PhpOffice\PhpSpreadsheet\IOFactory;
-    use PhpOffice\PhpSpreadsheet\Spreadsheet;
-    use PhpOffice\PhpSpreadsheet\Style\Alignment;
     use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
     use PhpOffice\PhpSpreadsheet\Shared\Date;
 
