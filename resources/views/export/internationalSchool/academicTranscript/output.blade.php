@@ -119,7 +119,7 @@
                     <section class="{{ count($student["Signs"]) == 1 ? "justify-end" : "justify-between" }} flex">
                         @foreach ($student["Signs"] as $text => $sign)
                             <div class="flex flex-col items-center justify-center gap-1">
-                                <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-44 object-contain" alt="Signature" />
+                                <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-36 object-contain" alt="Signature" />
                                 <p class="w-32 text-wrap text-center text-xs font-bold">{{ $text }}</p>
                             </div>
                         @endforeach
