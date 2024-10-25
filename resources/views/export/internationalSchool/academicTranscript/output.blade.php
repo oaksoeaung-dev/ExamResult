@@ -120,7 +120,16 @@
                         @foreach ($student["Signs"] as $text => $sign)
                             <div class="flex flex-col items-center justify-center gap-1">
                                 <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-36 object-contain" alt="Signature" />
-                                <p class="w-32 text-wrap text-center text-xs font-bold">{{ $text }}</p>
+                                @if(Str::contains($text,"/"))
+                                    @php
+                                        $newTextArray = explode("/",$text);
+                                    @endphp
+                                    @foreach($newTextArray as $newText)
+                                        <p class="w-32 text-wrap text-center text-xs font-bold">{{ $newText }}</p>
+                                    @endforeach
+                                @else
+                                    <p class="w-32 text-wrap text-center text-xs font-bold">{{ $text }}</p>
+                                @endif
                             </div>
                         @endforeach
                     </section>
