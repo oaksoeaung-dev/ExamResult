@@ -105,13 +105,13 @@
                         <tbody>
                             @foreach ($student["Subject"] as $name => $mark)
                                 <tr>
-                                    <td class="whitespace-nowrap border px-6 py-2 text-xs">
+                                    <td class="whitespace-nowrap border p-2 text-xs">
                                         {{ $name }}
                                     </td>
                                     <td class="whitespace-nowrap border py-2 text-center text-xs">
                                         {{ $program == "igcse" ? (empty($mark) ? "" : $mark . "%") : $mark }}
                                     </td>
-                                    <td class="whitespace-nowrap border py-2 text-center text-xs">
+                                    <td class="border py-2 text-center text-xs">
                                         {{ ReportCardGradeFormatPreUni::format($mark, $program) }}
                                     </td>
                                 </tr>
