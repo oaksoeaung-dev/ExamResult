@@ -6,7 +6,7 @@
     {
         public static function format($mark,$program)
         {
-            if($program == "igcse")
+            if($program == "igcse" || $program == "startup")
             {
                 if(is_numeric($mark))
                 {

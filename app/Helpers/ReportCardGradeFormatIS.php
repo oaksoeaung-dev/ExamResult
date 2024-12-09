@@ -6,11 +6,15 @@
         {
             if(is_numeric($mark))
             {
-                if((int)$mark >= 80 && (int)$mark <= 100)
+                if((int)$mark >= 91 && (int)$mark <= 100)
+                {
+                    return "A*";
+                }
+                elseif((int)$mark >= 80 && (int)$mark < 91)
                 {
                     return "A";
                 }
-                elseif((int)$mark >= 60 && (int)$mark < 80)
+                elseif ((int)$mark >= 60 && (int)$mark < 80)
                 {
                     return "B";
                 }
@@ -29,7 +33,14 @@
             }
             else
             {
-                return $mark;
+                if($mark == "-")
+                {
+                    return "F";
+                }
+                else
+                {
+                    return $mark;
+                }
             }
         }
     }
