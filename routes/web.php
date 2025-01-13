@@ -14,6 +14,7 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\RedirectToNotFound;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 Route::get('/', function () {
     return redirect()->route('dashboard');
@@ -25,6 +26,9 @@ Route::get('/dashboard', function () {
 
 //Start Public Route
 Route::get('/healthrecords/student/{studentId}', [HealthrecordController::class, 'qrShow'])->name('healthrecords.student.qrShow');
+Route::get("/rsg", function () {
+    return Str::random(30);
+});
 //End Public Route
 
 Route::middleware('auth')->group(function () {
