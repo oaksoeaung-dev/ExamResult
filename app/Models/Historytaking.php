@@ -2,26 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Historytaking extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         "student_id",
-        "past_medical_history",
-        "family_history",
-        "past_surgical_history",
-        "current_medication",
-        "history_of_present_illness",
+        "medical_conditions_currently_being_experienced",
+        "health_issues_in_the_past",
+        "allergies",
+        "previous_vaccination",
+        "current_medications",
     ];
-
     public function student() : BelongsTo
     {
         return $this->belongsTo(Student::class);
     }
-
 }

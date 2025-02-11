@@ -2,17 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Heart extends Model
+class Vision extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        'student_id',
-        'data',
+        "student_id",
+        "pupil",
+        "right_visual_fields",
+        "color_vision",
+        "left_visual_fields",
     ];
 
     public function student() : BelongsTo

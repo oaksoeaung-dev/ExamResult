@@ -2,19 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Lungs extends Model
+class Generalappearance extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        'student_id',
-        'data',
+        "student_id",
+        "skin",
+        "height",
+        "pulse_rate",
+        "temperatur",
+        "weight",
+        "blood_pressure",
+        "bmi",
+        "spo2",
     ];
-
     public function student() : BelongsTo
     {
         return $this->belongsTo(Student::class);

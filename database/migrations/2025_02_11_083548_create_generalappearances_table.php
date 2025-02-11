@@ -11,16 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bodystatuses', function (Blueprint $table) {
+        Schema::create('generalappearances', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('student_id')->unique();
             $table->foreign('student_id')->references('id')->on('students')->cascadeOnDelete()->cascadeOnUpdate();
 
-            $table->string('height',8);
-            $table->string('weight',8);
-            $table->string('bmi');
-            $table->text('remark')->nullable();
+            $table->string("skin");
+            $table->string("height");
+            $table->string("pulse_rate");
+            $table->string("temperatur");
+            $table->string("weight");
+            $table->string("blood_pressure");
+            $table->string("bmi");
+            $table->string("spo2");
+
             $table->timestamps();
         });
     }
@@ -30,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bodystatuses');
+        Schema::dropIfExists('generalappearances');
     }
 };

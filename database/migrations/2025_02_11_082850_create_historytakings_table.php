@@ -11,14 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('necks', function (Blueprint $table) {
+        Schema::create('historytakings', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('student_id')->unique();
             $table->foreign('student_id')->references('id')->on('students')->cascadeOnDelete()->cascadeOnUpdate();
+            
+            $table->string("medical_conditions_currently_being_experienced");
+            $table->string("health_issues_in_the_past");
+            $table->string("allergies");
+            $table->string("previous_vaccination");
+            $table->string("current_medications");
 
-            $table->string("thyroid");
-            $table->string("lymph_node");
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('necks');
+        Schema::dropIfExists('historytakings');
     }
 };
