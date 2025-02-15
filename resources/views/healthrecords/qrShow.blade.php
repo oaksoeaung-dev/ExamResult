@@ -19,10 +19,10 @@
         @vite(["resources/css/app.css", "resources/js/app.js"])
     </head>
     <body class="antialiased">
-        <div class="container mx-auto py-10 text-zinc-700">
-            <div class="grid gap-3 md:grid-cols-6 md:grid-rows-12">
+        <div class="rounded-lg bg-blue-50 p-10 shadow-xl">
+            <div class="mx-auto max-w-4xl space-y-10">
                 {{-- Start Personal Information --}}
-                <div class="w-full rounded-lg bg-gray-50 p-5 md:col-span-3 md:col-start-1 md:row-span-4 md:row-start-1">
+                <div class="w-full rounded-xl bg-gray-50 p-5">
                     <div class="grid place-items-center gap-4">
                         <img src="{{ ! empty($record->image) ? asset("storage/studentphotos/" . $record->image) : asset("images/profiles/" . $record->gender . ".png") }}" class="h-36 w-36 overflow-hidden object-cover" alt="student image" />
 
@@ -91,317 +91,226 @@
                 {{-- End Personal Information --}}
 
                 {{-- Start History Taking --}}
-                <div class="w-full rounded-lg bg-gray-50 p-5 md:col-span-3 md:col-start-4 md:row-span-4 md:row-start-1">
-                    <div class="grid gap-4">
-                        <div>
-                            <img src="{{ asset("images/icons/contract.png") }}" alt="history-taking" class="w-24" />
+                <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
+                    <img src="{{ asset("images/icons/contract.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
+                    <h1 class="text-lg font-bold">History Taking</h1>
+
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Medical Conditions Currently Being Experienced</h1>
+                            <ul class="mt-1 list-inside list-disc space-y-1 text-xs">
+                                @foreach (explode(",",$record->historytaking->medical_conditions_currently_being_experienced) as $history)
+                                    <li>{{ $history }}</li>
+                                @endforeach
+                            </ul>
                         </div>
 
-                        <h1 class="text-lg font-bold">History Taking</h1>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Past Medical Hisory</h1>
-                            <p class="text-xs">{{ $record->historytaking->past_medical_history }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Health Issues In The Past</h1>
+                            <ul class="mt-1 list-inside list-disc space-y-1 text-xs">
+                                @foreach (explode(",",$record->historytaking->health_issues_in_the_past) as $history)
+                                    <li>{{ $history }}</li>
+                                @endforeach
+                            </ul>
                         </div>
 
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Family Hisory</h1>
-                            <p class="text-xs">{{ $record->historytaking->family_history }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Allergies</h1>
+                            <ul class="mt-1 list-inside list-disc space-y-1 text-xs">
+                                @foreach (explode(",",$record->historytaking->allergies) as $history)
+                                    <li>{{ $history }}</li>
+                                @endforeach
+                            </ul>
                         </div>
 
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Past Surgical Hisory</h1>
-                            <p class="text-xs">{{ $record->historytaking->past_surgical_history }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Previous Vaccination</h1>
+                            <ul class="mt-1 list-inside list-disc space-y-1 text-xs">
+                                @foreach (explode(",",$record->historytaking->previous_vaccination) as $history)
+                                    <li>{{ $history }}</li>
+                                @endforeach
+                            </ul>
                         </div>
 
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Current Medication</h1>
-                            <p class="text-xs">{{ $record->historytaking->current_medication }}</p>
-                        </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">History of present illness</h1>
-                            <p class="text-xs">{{ $record->historytaking->history_of_present_illness }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Current Medications / Medications Taken Routinely</h1>
+                            <ul class="mt-1 list-inside list-disc space-y-1 text-xs">
+                                @foreach (explode(",",$record->historytaking->current_medications) as $history)
+                                    <li>{{ $history }}</li>
+                                @endforeach
+                            </ul>
                         </div>
                     </div>
                 </div>
                 {{-- End History Taking --}}
 
-                {{-- Start Body & Nutritional status --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-1 md:row-span-3 md:row-start-5">
-                    <div class="grid gap-4">
-                        <div class="flex-none">
-                            <img src="{{ asset("images/icons/humanoid.png") }}" alt="Body & Nutritional status" class="w-16" />
+                {{-- Start General Apperance --}}
+                <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
+                    <img src="{{ asset("images/icons/emoji.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
+                    <h1 class="text-lg font-bold">General Appearance</h1>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Skin</h1>
+                            <p class="mt-1 text-xs">{{ $record->generalAppearance->skin }}</p>
                         </div>
-
-                        <h1 class="text-lg font-bold">Body & Nutritional status</h1>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Weight</h1>
-                            <p class="text-xs">{{ $record->bodystatus->weight }}</p>
-                        </div>
-
-                        <div class="space-y-1">
+                        <div class="rounded-lg bg-white p-5">
                             <h1 class="text-sm font-bold">Height</h1>
-                            <p class="text-xs">{{ $record->bodystatus->height }}</p>
+                            <p class="mt-1 text-xs">{{ $record->generalAppearance->height }}</p>
                         </div>
-
-                        <div class="space-y-1">
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Pulse Rate</h1>
+                            <p class="mt-1 text-xs">{{ $record->generalAppearance->pulse_rate }}</p>
+                        </div>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Temperature</h1>
+                            <p class="mt-1 text-xs">{{ $record->generalAppearance->temperature }}</p>
+                        </div>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Weight</h1>
+                            <p class="mt-1 text-xs">{{ $record->generalAppearance->weight }}</p>
+                        </div>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Blood Pressure</h1>
+                            <p class="mt-1 text-xs">{{ $record->generalAppearance->blood_pressure }}</p>
+                        </div>
+                        <div class="rounded-lg bg-white p-5">
                             <h1 class="text-sm font-bold">BMI</h1>
-                            <p class="text-xs">{{ $record->bodystatus->bmi }}</p>
+                            <p class="mt-1 text-xs">{{ $record->generalAppearance->bmi }}</p>
                         </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Remark</h1>
-                            <p class="text-xs">{{ $record->bodystatus->remark }}</p>
-                        </div>
-                    </div>
-                </div>
-                {{-- End Body & Nutritional status --}}
-
-                {{-- Start Heart --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-1 md:row-start-5">
-                    <div class="flex gap-4">
-                        <div class="flex-none">
-                            <img src="{{ asset("images/icons/heart.png") }}" alt="Heart" class="w-16" />
-                        </div>
-
-                        <div class="">
-                            <h1 class="text-lg font-bold">Heart</h1>
-                            <p class="text-xs">{{ $record->heart->data }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">SPO2</h1>
+                            <p class="mt-1 text-xs">{{ $record->generalAppearance->spo2 }}</p>
                         </div>
                     </div>
                 </div>
-                {{-- End Heart --}}
+                {{-- End General Apperance --}}
 
-                {{-- Start Lungs --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-1 md:row-start-6">
-                    <div class="flex gap-4">
-                        <div class="flex-none">
-                            <img src="{{ asset("images/icons/lungs.png") }}" alt="Lungs" class="w-16" />
+                {{-- Start Vision --}}
+                <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
+                    <img src="{{ asset("images/icons/eye.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
+                    <h1 class="text-lg font-bold">Vision</h1>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Pupil</h1>
+                            <p class="mt-1 text-xs">{{ $record->vision->pupil }}</p>
                         </div>
-
-                        <div class="">
-                            <h1 class="text-lg font-bold">Lungs</h1>
-                            <p class="text-xs">{{ $record->lungs->data }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Right Visual Fields</h1>
+                            <p class="mt-1 text-xs">{{ $record->vision->right_visual_fields }}</p>
                         </div>
-                    </div>
-                </div>
-                {{-- End Lungs --}}
-
-                {{-- Start Abdomen --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-1 md:row-start-7">
-                    <div class="flex gap-4">
-                        <div class="flex-none">
-                            <img src="{{ asset("images/icons/stomach.png") }}" alt="Abdomen" class="w-16" />
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Color Vision</h1>
+                            <p class="mt-1 text-xs">{{ $record->vision->color_vision }}</p>
                         </div>
-
-                        <div class="">
-                            <h1 class="text-lg font-bold">Abdomen</h1>
-                            <p class="text-xs">{{ $record->abdomen->data }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Left Visual Fields</h1>
+                            <p class="mt-1 text-xs">{{ $record->vision->left_visual_fields }}</p>
                         </div>
                     </div>
                 </div>
-                {{-- End Abdomen --}}
+                {{-- End Vision --}}
 
-                {{-- Start Mouth --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-5 md:row-span-3 md:row-start-5">
-                    <div class="grid gap-4">
-                        <div class="flex-none">
-                            <img src="{{ asset("images/icons/mouth.png") }}" alt="Mouth" class="w-16" />
+                {{-- Start Hearing --}}
+                <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
+                    <img src="{{ asset("images/icons/ear.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
+                    <h1 class="text-lg font-bold">Hearing</h1>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Right</h1>
+                            <p class="mt-1 text-xs">{{ $record->hearing->right }}</p>
                         </div>
-
-                        <h1 class="text-lg font-bold">Mouth</h1>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Fissures</h1>
-                            <p class="text-xs">{{ $record->mouth->fissures }}</p>
-                        </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Tongue</h1>
-                            <p class="text-xs">{{ $record->mouth->tongue }}</p>
-                        </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Teeth & Gum</h1>
-                            <p class="text-xs">{{ $record->mouth->teeth_and_gum }}</p>
-                        </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Remark</h1>
-                            <p class="text-xs">{{ $record->mouth->remark }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Left</h1>
+                            <p class="mt-1 text-xs">{{ $record->hearing->left }}</p>
                         </div>
                     </div>
                 </div>
-                {{-- End Mouth --}}
+                {{-- End Hearing --}}
 
-                {{-- Start Eye --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-1 md:row-span-2 md:row-start-8">
-                    <div class="grid gap-4">
-                        <div class="">
-                            <img src="{{ asset("images/icons/eye.png") }}" alt="Eye" class="w-16" />
+                {{-- Start Physical & Mental Health Assessment --}}
+                <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
+                    <img src="{{ asset("images/icons/humanoid.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
+                    <h1 class="text-lg font-bold">Physical & Mental Health Assessment</h1>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Eyes And Pupils</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->eyes_and_pupils }}</p>
                         </div>
-
-                        <h1 class="text-lg font-bold">Eye</h1>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Anaemia</h1>
-                            <p class="text-xs">{{ $record->eye->anaemia }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Nose</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->nose }}</p>
                         </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Jaundice</h1>
-                            <p class="text-xs">{{ $record->eye->jaundice }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Throat</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->throat }}</p>
                         </div>
-                    </div>
-                </div>
-                {{-- End Eye --}}
-
-                {{-- Start Ear --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-2 md:row-start-8">
-                    <div class="grid gap-4">
-                        <div class="">
-                            <img src="{{ asset("images/icons/ear.png") }}" alt="Ear" class="w-16" />
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Teeth And Mouth</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->teeth_and_mouth }}</p>
                         </div>
-
-                        <h1 class="text-lg font-bold">Ear</h1>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Position</h1>
-                            <p class="text-xs">{{ $record->ear->position }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Lungs And Chests</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->lungs_and_chest }}</p>
                         </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Discharge</h1>
-                            <p class="text-xs">{{ $record->ear->discharge }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Cardiovascular System</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->cardiovascular_system }}</p>
                         </div>
-                    </div>
-                </div>
-                {{-- End Ear --}}
-
-                {{-- Start Neck --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-5 md:row-span-2 md:row-start-8">
-                    <div class="grid gap-4">
-                        <div class="">
-                            <img src="{{ asset("images/icons/neck.png") }}" alt="Neck" class="w-16" />
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Abdomen</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->abdomen }}</p>
                         </div>
-
-                        <h1 class="text-lg font-bold">Neck</h1>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Thyroid</h1>
-                            <p class="text-xs">{{ $record->neck->thyroid }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Extremities And Back</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->extremities_and_back }}</p>
                         </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Lymph node</h1>
-                            <p class="text-xs">{{ $record->neck->lymph_node }}</p>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Musculoskeletal</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->musculoskeletal }}</p>
+                        </div>
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Mental Health Status</h1>
+                            <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->mental_health_status }}</p>
                         </div>
                     </div>
                 </div>
-                {{-- End Neck --}}
+                {{-- End Physical & Mental Health Assessment --}}
 
-                {{-- Start Musuloskeletal --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-1 md:row-span-3 md:row-start-10">
-                    <div class="grid gap-4">
-                        <div class="">
-                            <img src="{{ asset("images/icons/muscular.png") }}" alt="Musuloskeletal" class="w-16" />
+                {{-- Start Examining Doctor's Information --}}
+                <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
+                    <img src="{{ asset("images/icons/doctor.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
+                    <h1 class="text-lg font-bold">Examining Doctor's Information</h1>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Comments By Examining Doctor</h1>
+                            <div class="mt-1 flex items-center gap-5 text-xs">
+                                <p>Fit in all area :</p>
+                                <span class="badge-sky">{{ $record->doctorinformation->fit_in_all_area }}</span>
+                            </div>
+                            <div class="mt-5 flex items-center gap-5 text-xs">
+                                <p>Futher assessment is required</p>
+                                <span class="badge-sky">{{ $record->doctorinformation->futher_assessment }}</span>
+                            </div>
+                            <div class="mt-5 flex items-center gap-5 text-xs">
+                                <p>Comment :</p>
+                                <span>{{ $record->doctorinformation->comment }}</span>
+                            </div>
                         </div>
 
-                        <h1 class="text-lg font-bold">Musculoskeletal</h1>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Back</h1>
-                            <p class="text-xs">{{ $record->musculoskeletal->back }}</p>
-                        </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Joints</h1>
-                            <p class="text-xs">{{ $record->musculoskeletal->joints }}</p>
-                        </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Deformity</h1>
-                            <p class="text-xs">{{ $record->musculoskeletal->deformity }}</p>
-                        </div>
-                    </div>
-                </div>
-                {{-- End Musuloskeletal --}}
-
-                {{-- Start Allergy --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-2 md:row-start-10">
-                    <div class="grid gap-4">
-                        <div class="">
-                            <img src="{{ asset("images/icons/allergies.png") }}" alt="Allergy" class="w-16" />
-                        </div>
-
-                        <h1 class="text-lg font-bold">Allergy</h1>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Drug</h1>
-                            <p class="text-xs">{{ $record->allergy->drug }}</p>
-                        </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Allergen</h1>
-                            <p class="text-xs">{{ $record->allergy->allergen }}</p>
+                        <div class="space-y-5 rounded-lg bg-white p-5">
+                            <h1 class="text-sm font-bold">Details of Examing Doctor</h1>
+                            <div class="mt-1 gap-5">
+                                <p class="text-sm font-bold">Name</p>
+                                <p class="text-xs">{{ $record->doctorinformation->name }}</p>
+                            </div>
+                            <div class="mt-1 gap-5 text-xs">
+                                <p class="text-sm font-bold">Sign</p>
+                                <img src="{{ asset('storage/signs/'.$record->doctorinformation->doctor_sign.'.png') }}" class="size-14 object-contain" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                {{-- End Allergy --}}
-
-                {{-- Start Immunization --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-3 md:row-span-1 md:row-start-12">
-                    <div class="flex gap-4">
-                        <div class="flex-none">
-                            <img src="{{ asset("images/icons/immune-system.png") }}" alt="Immunization" class="w-16" />
-                        </div>
-
-                        <div class="">
-                            <h1 class="text-lg font-bold">Immunization</h1>
-                            <p class="text-xs">{{ $record->immunization->data }}</p>
-                        </div>
-                    </div>
-                </div>
-                {{-- End Immunization --}}
-
-                {{-- Start Personal Hygiene --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-5 md:row-span-1 md:row-start-10">
-                    <div class="flex gap-4">
-                        <div class="flex-none">
-                            <img src="{{ asset("images/icons/protection.png") }}" alt="Personal Hygiene" class="w-16" />
-                        </div>
-
-                        <div class="">
-                            <h1 class="text-lg font-bold">Personal Hygiene</h1>
-                            <p class="text-xs">{{ $record->hygiene->data }}</p>
-                        </div>
-                    </div>
-                </div>
-                {{-- End Personal Hygiene --}}
-
-                {{-- Start Sign --}}
-                <div class="rounded-lg bg-gray-50 p-5 md:col-span-2 md:col-start-5 md:row-span-2 md:row-start-11">
-                    <div class="grid gap-4">
-                        <div class="">
-                            <img src="{{ asset("images/icons/doctor.png") }}" alt="Doctor" class="w-14" />
-                        </div>
-
-                        <div class="space-y-1">
-                            <h1 class="text-sm font-bold">Name</h1>
-                            <p class="text-sm">
-                                {{ $record->doctorsign->sign == "doctor1" ? "Dr. Aung Pyae Phyo" : "Dr. Khun Nyo Thway" }}
-                            </p>
-                        </div>
-
-                        <div class="space-y-3">
-                            <h1 class="text-sm font-bold">Sign</h1>
-                            <img src="{{ asset("storage/signs/" . $record->doctorsign->sign) . ".png" }}" alt="signature" class="w-14 object-contain" />
-                        </div>
-                    </div>
-                </div>
-                {{-- End Sign --}}
+                {{-- End Examining Doctor's Information --}}
             </div>
         </div>
     </body>

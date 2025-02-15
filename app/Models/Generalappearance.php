@@ -12,7 +12,7 @@ class Generalappearance extends Model
         "skin",
         "height",
         "pulse_rate",
-        "temperatur",
+        "temperature",
         "weight",
         "blood_pressure",
         "bmi",

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("skin");
             $table->string("height");
             $table->string("pulse_rate");
-            $table->string("temperatur");
+            $table->string("temperature");
             $table->string("weight");
             $table->string("blood_pressure");
             $table->string("bmi");

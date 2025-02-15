@@ -2,29 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Abdomen;
-use App\Models\Allergy;
-use App\Models\Bodystatus;
-use App\Models\Doctorsign;
-use App\Models\Ear;
-use App\Models\Eye;
+use App\Models\Doctorinformation;
+use App\Models\Generalappearance;
 use App\Models\Healthrecord;
 use App\Http\Requests\StoreHealthrecordRequest;
 use App\Http\Requests\UpdateHealthrecordRequest;
-use App\Models\Healthrecordqrcode;
-use App\Models\Heart;
+use App\Models\Hearing;
 use App\Models\Historytaking;
-use App\Models\Hygiene;
-use App\Models\Immunization;
-use App\Models\Lungs;
-use App\Models\Mouth;
-use App\Models\Musculoskeletal;
-use App\Models\Neck;
+use App\Models\Physicalmentalhealthassessment;
 use App\Models\Student;
 use App\Models\Teacher;
+use App\Models\Vision;
 use Illuminate\Database\QueryException;
-use Illuminate\Http\Request;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class HealthrecordController extends Controller
 {
@@ -37,226 +26,188 @@ class HealthrecordController extends Controller
 
     public function create()
     {
-        // $doctorsigns = Teacher::where('email','like','%doctor%')->get();
-        // return view('healthrecords.create',compact('doctorsigns'));
+        $doctorsigns = Teacher::where('email','like','%doctor%')->get();
+        return view('healthrecords.create',compact('doctorsigns'));
     }
 
     public function store(StoreHealthrecordRequest $request)
     {
         $student = Student::whereRaw('BINARY stdId = ?', ["$request->stdid"])->first();
-        // try
-        // {
-        //     if(!empty($student))
-        //     {
-        //         $historytaking = new Historytaking();
-        //         $historytaking->past_medical_history = $request->past_medical_history;
-        //         $historytaking->family_history = $request->family_history;
-        //         $historytaking->past_surgical_history = $request->past_surgical_history;
-        //         $historytaking->current_medication = $request->current_medication;
-        //         $historytaking->history_of_present_illness = $request->history_of_present_illness;
-        //         $historytaking->student()->associate($student);
-        //         $historytaking->save();
+        $doctorsign = Teacher::where('email','like','%'.$request->sign.'%')->first();
+        try
+        {
+            if(!empty($student))
+            {
+                $historytaking = new Historytaking();
+                $historytaking->medical_conditions_currently_being_experienced = $request->medical_conditions_currently_being_experienced;
+                $historytaking->health_issues_in_the_past = $request->health_issues_in_the_past;
+                $historytaking->allergies = $request->allergies;
+                $historytaking->previous_vaccination = $request->previous_vaccination;
+                $historytaking->current_medications = $request->current_medications;
+                $historytaking->student()->associate($student);
+                $historytaking->save();
 
-        //         $bodystatus = new Bodystatus();
-        //         $bodystatus->height = $request->height;
-        //         $bodystatus->weight = $request->weight;
-        //         $bodystatus->bmi = $request->bmi;
-        //         $bodystatus->remark = $request->body_remark;
-        //         $bodystatus->student()->associate($student);
-        //         $bodystatus->save();
+                $generalAppearance = new Generalappearance();
+                $generalAppearance->skin = $request->skin;
+                $generalAppearance->height = $request->height;
+                $generalAppearance->pulse_rate = $request->pulse_rate;
+                $generalAppearance->temperature = $request->temperature;
+                $generalAppearance->weight = $request->weight;
+                $generalAppearance->blood_pressure = $request->blood_pressure;
+                $generalAppearance->bmi = $request->bmi;
+                $generalAppearance->spo2 = $request->spo2;
+                $generalAppearance->student()->associate($student);
+                $generalAppearance->save();
 
-        //         $heart = new Heart();
-        //         $heart->data = $request->heart;
-        //         $heart->student()->associate($student);
-        //         $heart->save();
+                $vision = new Vision();
+                $vision->pupil = $request->pupil;
+                $vision->right_visual_fields = $request->right_visual_fields;
+                $vision->color_vision = $request->color_vision;
+                $vision->left_visual_fields = $request->left_visual_fields;
+                $vision->student()->associate($student);
+                $vision->save();
 
-        //         $lungs = new Lungs();
-        //         $lungs->data = $request->lungs;
-        //         $lungs->student()->associate($student);
-        //         $lungs->save();
+                $hearing = new Hearing();
+                $hearing->right = $request->right;
+                $hearing->left = $request->left;
+                $hearing->student()->associate($student);
+                $hearing->save();
 
-        //         $abdomen = new Abdomen();
-        //         $abdomen->data = $request->abdomen;
-        //         $abdomen->student()->associate($student);
-        //         $abdomen->save();
+                $physical = new Physicalmentalhealthassessment();
+                $physical->eyes_and_pupils = $request->eyes_and_pupils;
+                $physical->nose = $request->nose;
+                $physical->throat = $request->throat;
+                $physical->teeth_and_mouth = $request->teeth_and_mouth;
+                $physical->lungs_and_chest = $request->lungs_and_chest;
+                $physical->cardiovascular_system = $request->cardiovascular_system;
+                $physical->abdomen = $request->abdomen;
+                $physical->extremities_and_back = $request->extremities_and_back;
+                $physical->musculoskeletal = $request->musculoskeletal;
+                $physical->mental_health_status = $request->mental_health_status;
+                $physical->student()->associate($student);
+                $physical->save();
 
-        //         $mouth = new Mouth();
-        //         $mouth->fissures = $request->fissures;
-        //         $mouth->tongue = $request->tongue;
-        //         $mouth->teeth_and_gum = $request->teeth_and_gum;
-        //         $mouth->remark = $request->mouth_remark;
-        //         $mouth->student()->associate($student);
-        //         $mouth->save();
+                $doctorInformation = new Doctorinformation();
+                $doctorInformation->fit_in_all_area = $request->fitArea;
+                $doctorInformation->futher_assessment = $request->futherAssessment;
+                $doctorInformation->comment = $request->comment;
+                $doctorInformation->name = $doctorsign->name;
+                $doctorInformation->doctor_sign = $request->sign;
+                $doctorInformation->student()->associate($student);
+                $doctorInformation->save();
 
-        //         $eye = new Eye();
-        //         $eye->anaemia = $request->anaemia;
-        //         $eye->jaundice = $request->jaundice;
-        //         $eye->student()->associate($student);
-        //         $eye->save();
-
-        //         $ear = new Ear();
-        //         $ear->position = $request->position;
-        //         $ear->discharge = $request->discharge;
-        //         $ear->student()->associate($student);
-        //         $ear->save();
-
-        //         $neck = new Neck();
-        //         $neck->thyroid = $request->thyroid;
-        //         $neck->lymph_node = $request->lymph_node;
-        //         $neck->student()->associate($student);
-        //         $neck->save();
-
-        //         $musculoskeletal = new Musculoskeletal();
-        //         $musculoskeletal->back = $request->back;
-        //         $musculoskeletal->joints = $request->joints;
-        //         $musculoskeletal->deformity = $request->deformity;
-        //         $musculoskeletal->student()->associate($student);
-        //         $musculoskeletal->save();
-
-        //         $allergy = new Allergy();
-        //         $allergy->drug = $request->drug;
-        //         $allergy->allergen = $request->allergen;
-        //         $allergy->student()->associate($student);
-        //         $allergy->save();
-
-        //         $immunization = new Immunization();
-        //         $immunization->data = $request->immunization;
-        //         $immunization->student()->associate($student);
-        //         $immunization->save();
-
-        //         $hygiene = new Hygiene();
-        //         $hygiene->data = $request->hygiene;
-        //         $hygiene->student()->associate($student);
-        //         $hygiene->save();
-
-        //         $sign = new Doctorsign();
-        //         $sign->sign = $request->sign;
-        //         $sign->student()->associate($student);
-        //         $sign->save();
-
-        //         return redirect()->route('healthrecords.show',$student->id);
-        //     }
-        //     else
-        //     {
-        //         return back()->withInput()->withErrors(['student' => 'Student not found.']);
-        //     }
-        // }catch (QueryException $e)
-        // {
-        //     abort('404');
-        // }
+                return redirect()->route('healthrecords.show',$student->id);
+            }
+            else
+            {
+                return back()->withInput()->withErrors(['student' => 'Student not found.']);
+            }
+        }catch (QueryException $e)
+        {
+            dd($e->getMessage());
+            abort('404');
+        }
     }
 
     public function show(Student $healthrecord)
     {
         $record = $healthrecord;
+        $record = $healthrecord->load(['historytaking','generalAppearance','hearing', 'physicalmentalhealthassessment','vision','doctorinformation']);
+        foreach ($record->getRelations() as $relation)
+        {
+            if($relation == null)
+            {
+                return redirect()->route('healthrecords.create');
+            }
+        }
         return view('healthrecords.show',compact('record'));
-
-        // $record = $healthrecord->load(['historytaking','bodystatus','heart','lungs','abdomen','mouth','eye','ear','neck','musculoskeletal','allergy','immunization','hygiene','doctorsign']);
-        // foreach ($record->getRelations() as $relation)
-        // {
-        //     if($relation == null)
-        //     {
-        //         return redirect()->route('healthrecords.create');
-        //     }
-        // }
-        // return view('healthrecords.show',compact('record'));
     }
 
     public function qrShow($studentId)
     {
-        // if(isset(request()->query()["stdKey"]))
-        // {
-        //     $record = Student::whereRaw('BINARY stdId = ?', ["$studentId"])->whereRaw('BINARY stdKey = ?', [request()->query()["stdKey"]])->with(['historytaking','bodystatus','heart','lungs','abdomen','mouth','eye','ear','neck','musculoskeletal','allergy','immunization','hygiene','doctorsign'])->first();
+        if(isset(request()->query()["stdKey"]))
+        {
+            $record = Student::whereRaw('BINARY stdId = ?', ["$studentId"])->whereRaw('BINARY stdKey = ?', [request()->query()["stdKey"]])->with(['historytaking','generalAppearance','hearing', 'physicalmentalhealthassessment','vision','doctorinformation'])->first();
 
-        //     if($record != null)
-        //     {
-        //         return view('healthrecords.qrShow',compact('record'));
-        //     }
-        //     else{
-        //         abort('404');
-        //     }
-        // }
-        // else{
-        //     abort('404');
-        // }
+            if($record != null)
+            {
+                return view('healthrecords.qrShow',compact('record'));
+            }
+            else{
+                abort('404');
+            }
+        }
+        else{
+            abort('404');
+        }
     }
 
     public function edit(Student $healthrecord)
     {
-        // $doctorsigns = Teacher::where('email','like','%doctor%')->get();
-        // $record = $healthrecord->load(['historytaking','bodystatus','heart','lungs','abdomen','mouth','eye','ear','neck','musculoskeletal','allergy','immunization','hygiene','doctorsign']);
-        // return view('healthrecords.edit',compact('record','doctorsigns'));
+        $doctorsigns = Teacher::where('email','like','%doctor%')->get();
+        $record = $healthrecord->load(['historytaking','generalAppearance','hearing', 'physicalmentalhealthassessment','vision','doctorinformation']);
+        return view('healthrecords.edit',compact('record','doctorsigns'));
     }
 
     public function update(UpdateHealthrecordRequest $request, Student $healthrecord)
     {
-        // $healthrecord->historytaking->past_medical_history = $request->past_medical_history;
-        // $healthrecord->historytaking->family_history = $request->family_history;
-        // $healthrecord->historytaking->past_surgical_history = $request->past_surgical_history;
-        // $healthrecord->historytaking->current_medication = $request->current_medication;
-        // $healthrecord->historytaking->history_of_present_illness = $request->history_of_present_illness;
-        // $healthrecord->historytaking->save();
+        $doctorsign = Teacher::where('email','like','%'.$request->sign.'%')->first();
 
-        // $healthrecord->bodystatus->height = $request->height;
-        // $healthrecord->bodystatus->weight = $request->weight;
-        // $healthrecord->bodystatus->bmi = $request->bmi;
-        // $healthrecord->bodystatus->remark = $request->body_remark;
-        // $healthrecord->bodystatus->save();
+        $healthrecord->historytaking->medical_conditions_currently_being_experienced = $request->medical_conditions_currently_being_experienced;
+        $healthrecord->historytaking->health_issues_in_the_past = $request->health_issues_in_the_past;
+        $healthrecord->historytaking->allergies = $request->allergies;
+        $healthrecord->historytaking->previous_vaccination = $request->previous_vaccination;
+        $healthrecord->historytaking->current_medications = $request->current_medications;
+        $healthrecord->historytaking->save();
 
-        // $healthrecord->heart->data = $request->heart;
-        // $healthrecord->heart->save();
+        $healthrecord->generalAppearance->skin = $request->skin;
+        $healthrecord->generalAppearance->height = $request->height;
+        $healthrecord->generalAppearance->pulse_rate = $request->pulse_rate;
+        $healthrecord->generalAppearance->temperature = $request->temperature;
+        $healthrecord->generalAppearance->weight = $request->weight;
+        $healthrecord->generalAppearance->blood_pressure = $request->blood_pressure;
+        $healthrecord->generalAppearance->bmi = $request->bmi;
+        $healthrecord->generalAppearance->spo2 = $request->spo2;
+        $healthrecord->generalAppearance->save();
 
-        // $healthrecord->lungs->data = $request->lungs;
-        // $healthrecord->lungs->save();
+        $healthrecord->vision->pupil = $request->pupil;
+        $healthrecord->vision->right_visual_fields = $request->right_visual_fields;
+        $healthrecord->vision->color_vision = $request->color_vision;
+        $healthrecord->vision->left_visual_fields = $request->left_visual_fields;
+        $healthrecord->vision->save();
 
-        // $healthrecord->abdomen->data = $request->abdomen;
-        // $healthrecord->abdomen->save();
+        $healthrecord->hearing->right = $request->right;
+        $healthrecord->hearing->left = $request->left;
+        $healthrecord->hearing->save();
 
-        // $healthrecord->mouth->fissures = $request->fissures;
-        // $healthrecord->mouth->tongue = $request->tongue;
-        // $healthrecord->mouth->teeth_and_gum = $request->teeth_and_gum;
-        // $healthrecord->mouth->remark = $request->mouth_remark;
-        // $healthrecord->mouth->save();
+        $healthrecord->physicalmentalhealthassessment->eyes_and_pupils = $request->eyes_and_pupils;
+        $healthrecord->physicalmentalhealthassessment->nose = $request->nose;
+        $healthrecord->physicalmentalhealthassessment->throat = $request->throat;
+        $healthrecord->physicalmentalhealthassessment->teeth_and_mouth = $request->teeth_and_mouth;
+        $healthrecord->physicalmentalhealthassessment->lungs_and_chest = $request->lungs_and_chest;
+        $healthrecord->physicalmentalhealthassessment->cardiovascular_system = $request->cardiovascular_system;
+        $healthrecord->physicalmentalhealthassessment->abdomen = $request->abdomen;
+        $healthrecord->physicalmentalhealthassessment->extremities_and_back = $request->extremities_and_back;
+        $healthrecord->physicalmentalhealthassessment->musculoskeletal = $request->musculoskeletal;
+        $healthrecord->physicalmentalhealthassessment->mental_health_status = $request->mental_health_status;
+        $healthrecord->physicalmentalhealthassessment->save();
 
-        // $healthrecord->eye->anaemia = $request->anaemia;
-        // $healthrecord->eye->jaundice = $request->jaundice;
-        // $healthrecord->eye->save();
+        $healthrecord->doctorinformation->fit_in_all_area = $request->fitArea;
+        $healthrecord->doctorinformation->futher_assessment = $request->futherAssessment;
+        $healthrecord->doctorinformation->comment = $request->comment;
+        $healthrecord->doctorinformation->name = $doctorsign->name;
+        $healthrecord->doctorinformation->doctor_sign = $request->sign;
+        $healthrecord->doctorinformation->save();
 
-        // $healthrecord->ear->position = $request->position;
-        // $healthrecord->ear->discharge = $request->discharge;
-        // $healthrecord->ear->save();
-
-        // $healthrecord->neck->thyroid = $request->thyroid;
-        // $healthrecord->neck->lymph_node = $request->lymph_node;
-        // $healthrecord->neck->save();
-
-        // $healthrecord->musculoskeletal->back = $request->back;
-        // $healthrecord->musculoskeletal->joints = $request->joints;
-        // $healthrecord->musculoskeletal->deformity = $request->deformity;
-        // $healthrecord->musculoskeletal->save();
-
-        // $healthrecord->allergy->drug = $request->drug;
-        // $healthrecord->allergy->allergen = $request->allergen;
-        // $healthrecord->allergy->save();
-
-        // $healthrecord->immunization->data = $request->immunization;
-        // $healthrecord->immunization->save();
-
-        // $healthrecord->hygiene->data = $request->hygiene;
-        // $healthrecord->hygiene->save();
-
-        // $healthrecord->doctorsign->sign = $request->sign;
-        // $healthrecord->doctorsign->save();
-
-        // return redirect()->route('healthrecords.show',$healthrecord->id);
+        return redirect()->route('healthrecords.show',$healthrecord->id);
     }
 
     public function viewQr(Student $healthrecord)
     {
-        // $name = $healthrecord->name;
-        // $stdId = $healthrecord->stdId;
-        // $stdKey = $healthrecord->stdKey;
-        // return view('healthrecords.viewqr',compact('name','stdId','stdKey'));
+        $name = $healthrecord->name;
+        $stdId = $healthrecord->stdId;
+        $stdKey = $healthrecord->stdKey;
+        return view('healthrecords.viewqr',compact('name','stdId','stdKey'));
     }
 
     public function destroy(Healthrecord $healthrecord)

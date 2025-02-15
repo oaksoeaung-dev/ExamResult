@@ -12,7 +12,7 @@ class Physicalmentalhealthassessment extends Model
         "eyes_and_pupils",
         "nose",
         "throat",
-        "teeth_and_Mouth",
+        "teeth_and_mouth",
         "lungs_and_chest",
         "cardiovascular_system",
         "abdomen",

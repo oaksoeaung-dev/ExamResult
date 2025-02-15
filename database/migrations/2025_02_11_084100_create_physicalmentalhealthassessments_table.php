@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("eyes_and_pupils");
             $table->string("nose");
             $table->string("throat");
-            $table->string("teeth_and_Mouth");
+            $table->string("teeth_and_mouth");
             $table->string("lungs_and_chest");
             $table->string("cardiovascular_system");
             $table->string("abdomen");
