@@ -19,7 +19,7 @@
         @vite(["resources/css/app.css", "resources/js/app.js"])
     </head>
     <body class="antialiased">
-        <div class="rounded-lg bg-blue-50 p-10 shadow-xl">
+        <div class="rounded-lg bg-blue-50 p-3 md:p-10 shadow-xl">
             <div class="mx-auto max-w-4xl space-y-10">
                 {{-- Start Personal Information --}}
                 <div class="w-full rounded-xl bg-gray-50 p-5">
@@ -95,7 +95,7 @@
                     <img src="{{ asset("images/icons/contract.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
                     <h1 class="text-lg font-bold">History Taking</h1>
 
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid md:grid-cols-2 gap-5">
                         <div class="rounded-lg bg-white p-5">
                             <h1 class="text-sm font-bold">Medical Conditions Currently Being Experienced</h1>
                             <ul class="mt-1 list-inside list-disc space-y-1 text-xs">
@@ -148,7 +148,7 @@
                 <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
                     <img src="{{ asset("images/icons/emoji.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
                     <h1 class="text-lg font-bold">General Appearance</h1>
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid md:grid-cols-2 gap-5">
                         <div class="rounded-lg bg-white p-5">
                             <h1 class="text-sm font-bold">Skin</h1>
                             <p class="mt-1 text-xs">{{ $record->generalAppearance->skin }}</p>
@@ -189,7 +189,7 @@
                 <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
                     <img src="{{ asset("images/icons/eye.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
                     <h1 class="text-lg font-bold">Vision</h1>
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid md:grid-cols-2 gap-5">
                         <div class="rounded-lg bg-white p-5">
                             <h1 class="text-sm font-bold">Pupil</h1>
                             <p class="mt-1 text-xs">{{ $record->vision->pupil }}</p>
@@ -214,7 +214,7 @@
                 <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
                     <img src="{{ asset("images/icons/ear.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
                     <h1 class="text-lg font-bold">Hearing</h1>
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid md:grid-cols-2 gap-5">
                         <div class="rounded-lg bg-white p-5">
                             <h1 class="text-sm font-bold">Right</h1>
                             <p class="mt-1 text-xs">{{ $record->hearing->right }}</p>
@@ -231,7 +231,7 @@
                 <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
                     <img src="{{ asset("images/icons/humanoid.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
                     <h1 class="text-lg font-bold">Physical & Mental Health Assessment</h1>
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid md:grid-cols-2 gap-5">
                         <div class="rounded-lg bg-white p-5">
                             <h1 class="text-sm font-bold">Eyes And Pupils</h1>
                             <p class="mt-1 text-xs">{{ $record->physicalmentalhealthassessment->eyes_and_pupils }}</p>
@@ -280,7 +280,7 @@
                 <div class="w-full space-y-5 rounded-xl bg-gray-50 p-5">
                     <img src="{{ asset("images/icons/doctor.png") }}" class="size-32 overflow-hidden object-cover" alt="student image" />
                     <h1 class="text-lg font-bold">Examining Doctor's Information</h1>
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid md:grid-cols-2 gap-5">
                         <div class="rounded-lg bg-white p-5">
                             <h1 class="text-sm font-bold">Comments By Examining Doctor</h1>
                             <div class="mt-1 flex items-center gap-5 text-xs">
