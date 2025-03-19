@@ -29,7 +29,7 @@
                     <p class="text-center text-xl text-[#9e7330]">
                         at
                         <span class="font-semibold text-[#9e7330]">KBTC International School</span>
-                        in 2023 - 2024 Academic Year.
+                        in {{ $student["Information"]["Academic Year"] }} Academic Year.
                     </p>
                 </div>
                 <div class="relative row-start-5">

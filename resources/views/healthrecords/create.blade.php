@@ -37,7 +37,7 @@
                         <x-text-input2 name="pulse_rate" :value="old('pulse_rate')">Pulse Rate</x-text-input2>
                         <x-text-input2 name="temperature" :value="old('temperature')">Temperature</x-text-input2>
                         <x-text-input2 name="weight" :value="old('weight')">Weight</x-text-input2>
-                        <x-text-input2 name="blood_pressure" :value="old('blood_pressure')">Height</x-text-input2>
+                        <x-text-input2 name="blood_pressure" :value="old('blood_pressure')">Blood Pressure</x-text-input2>
                         <x-text-input2 name="bmi" :value="old('bmi')">BMI</x-text-input2>
                         <x-text-input2 name="spo2" :value="old('spo2')">SPO2</x-text-input2>
                     </div>
