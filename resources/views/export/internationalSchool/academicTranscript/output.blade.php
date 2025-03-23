@@ -21,7 +21,7 @@
     </head>
     <body>
         @foreach ($students as $student)
-            <div class="mx-auto my-[20px] grid min-h-[29.7cm] grid-rows-6 rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none" style="background: url('{{ asset("images/graduationBackground/is_certificate.png") }}'); background-size: 100% auto">
+            <div class="mx-auto my-[20px] grid min-h-[29.7cm] grid-rows-6 rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none relative" style="background: url('{{ asset("images/graduationBackground/is_certificate.png") }}'); background-size: 100% auto">
                 <h1 class="row-start-3 mb-3 mt-auto text-center font-medium text-[#9e7330]">{{ $student["Information"]["Name"] }}</h1>
                 <div class="row-start-4 mt-auto space-y-3">
                     <p class="text-center text-xl text-[#9e7330]">successfully completed the course of Cambridge Curriculum for</p>
@@ -34,6 +34,21 @@
                 </div>
                 <div class="relative row-start-5">
                     <p class="absolute bottom-[28%] left-[18%] font-medium text-[#9e7330]">{{ $student["Information"]["Issuance Date"] }}</p>
+                    @foreach ($student["Signs"] as $text => $sign)
+                        <div class="flex flex-col items-center justify-center gap-1 absolute right-[16%] bottom-0">
+                            @if (Str::contains($text, "/"))
+                                @php
+                                    $newTextArray = explode("/", $text);
+                                @endphp
+    
+                                @foreach ($newTextArray as $newText)
+                                    <p class="w-32 text-wrap text-center text-xs font-bold text-[#9e7330]">{{ $newText }}</p>
+                                @endforeach
+                            @else
+                                <p class="w-32 text-wrap text-center text-xs font-bold text-[#9e7330]">{{ $text }}</p>
+                            @endif
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <div class="mx-auto my-[20px] min-h-[29.7cm] rounded-md border border-gray-300 p-[12px] text-gray-900 shadow-md [width:21cm] print:m-0 print:break-after-page print:rounded-none print:border-none print:shadow-none">
@@ -106,32 +121,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </section>
-                    <section class="mt-1 text-xs">
-                        @foreach ($student["Review"] as $header => $remark)
-                            <h5 class="font-semibold">{{ $header }}</h5>
-                            <div class="mt-1">
-                                {{ $remark }}
-                            </div>
-                        @endforeach
-                    </section>
-
-                    <section class="{{ count($student["Signs"]) == 1 ? "justify-end" : "justify-between" }} flex">
-                        @foreach ($student["Signs"] as $text => $sign)
-                            <div class="flex flex-col items-center justify-center gap-1">
-                                <img src="{{ asset("storage/signs/" . $sign . ".png") }}" class="size-36 object-contain" alt="Signature" />
-                                @if(Str::contains($text,"/"))
-                                    @php
-                                        $newTextArray = explode("/",$text);
-                                    @endphp
-                                    @foreach($newTextArray as $newText)
-                                        <p class="w-32 text-wrap text-center text-xs font-bold">{{ $newText }}</p>
-                                    @endforeach
-                                @else
-                                    <p class="w-32 text-wrap text-center text-xs font-bold">{{ $text }}</p>
-                                @endif
-                            </div>
-                        @endforeach
                     </section>
                 </div>
             </div>
